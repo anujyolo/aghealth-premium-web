@@ -100,10 +100,10 @@ const Home = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 to-background/30" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12 md:mb-16 animate-fade-in">
-            <h2 className="text-3xl font-bold mb-4 text-[#3c3733] md:text-5xl">
+            <h2 className="text-3xl font-bold mb-4 text-center text-[#634444] md:text-5xl">
               Why Choose A.G. Health Industries
             </h2>
-            <p className="max-w-2xl mx-auto text-[#0c4e4e] text-2xl font-semibold">
+            <p className="max-w-2xl mx-auto font-semibold text-xl text-[#105b56]">
               Trusted by families across Nepal for our commitment to quality and hygiene
             </p>
           </div>
