@@ -1,4 +1,4 @@
-import { ArrowRight, Sparkles, Shield, Heart, Award, Baby, Smile } from 'lucide-react';
+import { ArrowRight, Sparkles, Shield, Heart, Award, Baby, Smile, Cloud, Sun, Star, Car } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -55,8 +55,15 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-20 md:pt-24 pb-16 md:pb-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-soft -z-10" />
+      <section className="relative pt-20 md:pt-24 pb-16 md:pb-24 overflow-hidden" style={{ backgroundColor: '#b9d6b8' }}>
+        {/* Decorative Elements */}
+        <Cloud className="absolute top-10 left-10 w-16 h-16 text-white/40 animate-fade-in" />
+        <Cloud className="absolute top-20 right-20 w-20 h-20 text-white/30 animate-fade-in" style={{ animationDelay: '200ms' }} />
+        <Sun className="absolute top-10 right-1/4 w-24 h-24 text-yellow-300/50 animate-fade-in" style={{ animationDelay: '400ms' }} />
+        <Star className="absolute top-32 left-1/3 w-8 h-8 text-yellow-200/60 animate-fade-in" style={{ animationDelay: '600ms' }} />
+        <Star className="absolute top-40 right-1/3 w-6 h-6 text-yellow-200/50 animate-fade-in" style={{ animationDelay: '800ms' }} />
+        <Baby className="absolute bottom-20 left-20 w-20 h-20 text-primary/30 animate-fade-in" style={{ animationDelay: '1000ms' }} />
+        <Car className="absolute bottom-24 right-32 w-24 h-24 text-primary/40 animate-fade-in" style={{ animationDelay: '1200ms' }} />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">

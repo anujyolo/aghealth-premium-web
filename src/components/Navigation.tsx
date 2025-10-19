@@ -40,7 +40,7 @@ const Navigation = () => {
             <img 
               src={logo} 
               alt="A.G. Health Industries Logo" 
-              className="h-12 w-12 md:h-14 md:w-14 object-contain transition-transform group-hover:scale-105"
+              className="h-16 w-16 md:h-20 md:w-20 object-contain transition-transform group-hover:scale-105"
             />
             <div className="hidden sm:block">
               <div className="text-lg md:text-xl font-bold text-foreground leading-tight">
