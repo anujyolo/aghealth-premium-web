@@ -101,10 +101,10 @@ const Home = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 to-background/10" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12 md:mb-16 animate-fade-in">
-            <h2 className="text-3xl font-bold mb-4 text-center text-[#634444] py-[21px] mx-0 my-[5px] px-[31px] md:text-5xl">
+            <h2 className="text-3xl font-bold mb-4 text-center py-[21px] mx-0 my-[5px] px-[31px] md:text-5xl text-zinc-900">
               Why Choose A.G. Health Industries
             </h2>
-            <p className="max-w-2xl mx-auto font-semibold text-xl text-[#3a342b]">
+            <p className="max-w-2xl mx-auto font-semibold text-xl text-emerald-50">
               Trusted by families across Nepal for our commitment to quality and hygiene
             </p>
           </div>
@@ -186,14 +186,14 @@ const Home = () => {
             {/* Content */}
             <div className="order-1 lg:order-2 space-y-6 animate-fade-in-up">
               <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
-                <span className="font-black text-2xl">Quality You Can Trust</span>
+                <span className="font-black text-2xl text-slate-700">Quality You Can Trust</span>
               </div>
               
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
                 Made in Nepal, Trusted Worldwide
               </h2>
               
-              <p className="text-xl text-[#e4656b] font-bold leading-relaxed">
+              <p className="font-bold leading-relaxed text-neutral-100 text-base">
                 Our state-of-the-art manufacturing facility in Nepal produces hygiene products 
                 that meet international quality standards. Each product undergoes rigorous testing 
                 to ensure safety, comfort, and reliability.
@@ -204,7 +204,7 @@ const Home = () => {
                     <div className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
                       <div className="w-2 h-2 bg-primary rounded-full" />
                     </div>
-                    <span className="text-foreground">{item}</span>
+                    <span className="text-foreground text-lg font-bold">{item}</span>
                   </li>)}
               </ul>
 
