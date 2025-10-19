@@ -193,7 +193,7 @@ const Home = () => {
                 Made in Nepal, Trusted Worldwide
               </h2>
               
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-xl text-[#ddc4a6] font-bold leading-relaxed">
                 Our state-of-the-art manufacturing facility in Nepal produces hygiene products 
                 that meet international quality standards. Each product undergoes rigorous testing 
                 to ensure safety, comfort, and reliability.
