@@ -6,73 +6,70 @@ import heroImage from '@/assets/hero-baby-product.jpg';
 import productsImage from '@/assets/products-hygiene.jpg';
 import factoryBackground from '@/assets/factory-background.jpg';
 import heroFactoryBg from '@/assets/hero-factory-bg.jpg';
-
 const Home = () => {
-  const values = [
-    {
-      icon: Sparkles,
-      title: 'Premium Quality',
-      description: 'International standards in every hygiene product we manufacture',
-    },
-    {
-      icon: Shield,
-      title: 'Safety First',
-      description: 'Dermatologically tested and safe for sensitive skin',
-    },
-    {
-      icon: Heart,
-      title: 'Care & Comfort',
-      description: 'Designed with love for maximum comfort and protection',
-    },
-    {
-      icon: Award,
-      title: 'Trusted Brand',
-      description: 'Preferred choice for families across Nepal',
-    },
-  ];
-
-  const productCategories = [
-    {
-      icon: Baby,
-      title: 'Diapers',
-      description: 'Ultra-soft baby & adult diapers',
-    },
-    {
-      icon: Shield,
-      title: 'Face Masks',
-      description: 'Protection you can trust',
-    },
-    {
-      icon: Heart,
-      title: 'Sanitary Pads',
-      description: 'Comfort during your days',
-    },
-    {
-      icon: Smile,
-      title: 'Toilet Paper',
-      description: 'Gentle, strong & reliable',
-    },
-  ];
-
-  return (
-    <div className="min-h-screen">
+  const values = [{
+    icon: Sparkles,
+    title: 'Premium Quality',
+    description: 'International standards in every hygiene product we manufacture'
+  }, {
+    icon: Shield,
+    title: 'Safety First',
+    description: 'Dermatologically tested and safe for sensitive skin'
+  }, {
+    icon: Heart,
+    title: 'Care & Comfort',
+    description: 'Designed with love for maximum comfort and protection'
+  }, {
+    icon: Award,
+    title: 'Trusted Brand',
+    description: 'Preferred choice for families across Nepal'
+  }];
+  const productCategories = [{
+    icon: Baby,
+    title: 'Diapers',
+    description: 'Ultra-soft baby & adult diapers'
+  }, {
+    icon: Shield,
+    title: 'Face Masks',
+    description: 'Protection you can trust'
+  }, {
+    icon: Heart,
+    title: 'Sanitary Pads',
+    description: 'Comfort during your days'
+  }, {
+    icon: Smile,
+    title: 'Toilet Paper',
+    description: 'Gentle, strong & reliable'
+  }];
+  return <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative pt-20 md:pt-24 pb-16 md:pb-24 overflow-hidden">
         {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroFactoryBg})` }}
-        />
+        <div className="absolute inset-0 bg-cover bg-center" style={{
+        backgroundImage: `url(${heroFactoryBg})`
+      }} />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/20" />
         
         {/* Decorative Elements */}
         <Cloud className="absolute top-10 left-10 w-16 h-16 text-white/40 animate-fade-in" />
-        <Cloud className="absolute top-20 right-20 w-20 h-20 text-white/30 animate-fade-in" style={{ animationDelay: '200ms' }} />
-        <Sun className="absolute top-10 right-1/4 w-24 h-24 text-yellow-300/50 animate-fade-in" style={{ animationDelay: '400ms' }} />
-        <Star className="absolute top-32 left-1/3 w-8 h-8 text-yellow-200/60 animate-fade-in" style={{ animationDelay: '600ms' }} />
-        <Star className="absolute top-40 right-1/3 w-6 h-6 text-yellow-200/50 animate-fade-in" style={{ animationDelay: '800ms' }} />
-        <Baby className="absolute bottom-20 left-20 w-20 h-20 text-primary/30 animate-fade-in" style={{ animationDelay: '1000ms' }} />
-        <Car className="absolute bottom-24 right-32 w-24 h-24 text-primary/40 animate-fade-in" style={{ animationDelay: '1200ms' }} />
+        <Cloud className="absolute top-20 right-20 w-20 h-20 text-white/30 animate-fade-in" style={{
+        animationDelay: '200ms'
+      }} />
+        <Sun className="absolute top-10 right-1/4 w-24 h-24 text-yellow-300/50 animate-fade-in" style={{
+        animationDelay: '400ms'
+      }} />
+        <Star className="absolute top-32 left-1/3 w-8 h-8 text-yellow-200/60 animate-fade-in" style={{
+        animationDelay: '600ms'
+      }} />
+        <Star className="absolute top-40 right-1/3 w-6 h-6 text-yellow-200/50 animate-fade-in" style={{
+        animationDelay: '800ms'
+      }} />
+        <Baby className="absolute bottom-20 left-20 w-20 h-20 text-primary/30 animate-fade-in" style={{
+        animationDelay: '1000ms'
+      }} />
+        <Car className="absolute bottom-24 right-32 w-24 h-24 text-primary/40 animate-fade-in" style={{
+        animationDelay: '1200ms'
+      }} />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -83,7 +80,7 @@ const Home = () => {
                 <span>Premium Hygiene Products</span>
               </div>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold leading-tight lg:text-[l#] text-[#ddc4a6]/75 mx-[2px] my-[2px] px-[9px] py-[9px]">
                 Caring for Hygiene,{' '}
                 <span className="text-gradient-primary">Caring for You</span>
               </h1>
@@ -94,22 +91,13 @@ const Home = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-gradient-primary hover:opacity-90 transition-smooth shadow-medium text-base group"
-                >
+                <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 transition-smooth shadow-medium text-base group">
                   <Link to="/products">
                     Explore Products
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-smooth" />
                   </Link>
                 </Button>
-                <Button
-                  asChild
-                  size="lg"
-                  variant="outline"
-                  className="border-2 border-primary text-primary hover:bg-primary hover:text-white transition-smooth text-base"
-                >
+                <Button asChild size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-white transition-smooth text-base">
                   <Link to="/about">Learn More</Link>
                 </Button>
               </div>
@@ -118,11 +106,7 @@ const Home = () => {
             {/* Hero Image */}
             <div className="relative animate-fade-in">
               <div className="absolute inset-0 bg-gradient-primary rounded-3xl blur-3xl opacity-20 -z-10" />
-              <img
-                src={heroImage}
-                alt="Baby with Sagun Baby Poko Pants premium diapers showcasing product quality"
-                className="rounded-3xl shadow-large w-full h-auto object-cover"
-              />
+              <img src={heroImage} alt="Baby with Sagun Baby Poko Pants premium diapers showcasing product quality" className="rounded-3xl shadow-large w-full h-auto object-cover" />
             </div>
           </div>
         </div>
@@ -130,10 +114,9 @@ const Home = () => {
 
       {/* Values Section */}
       <section className="py-16 md:py-24 relative bg-muted/30">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${factoryBackground})` }}
-        />
+        <div className="absolute inset-0 bg-cover bg-center" style={{
+        backgroundImage: `url(${factoryBackground})`
+      }} />
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 to-background/30" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12 md:mb-16 animate-fade-in">
@@ -146,12 +129,9 @@ const Home = () => {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-            {values.map((value, index) => (
-              <Card
-                key={value.title}
-                className="border-0 shadow-soft hover:shadow-medium transition-smooth bg-white group animate-fade-in"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
+            {values.map((value, index) => <Card key={value.title} className="border-0 shadow-soft hover:shadow-medium transition-smooth bg-white group animate-fade-in" style={{
+            animationDelay: `${index * 100}ms`
+          }}>
                 <CardContent className="p-6 text-center space-y-4">
                   <div className="w-16 h-16 mx-auto bg-gradient-primary rounded-2xl flex items-center justify-center group-hover:scale-110 transition-smooth">
                     <value.icon className="w-8 h-8 text-white" />
@@ -163,8 +143,7 @@ const Home = () => {
                     {value.description}
                   </p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -182,12 +161,9 @@ const Home = () => {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {productCategories.map((category, index) => (
-              <Card
-                key={category.title}
-                className="border-0 shadow-soft hover:shadow-large transition-smooth bg-white group cursor-pointer animate-fade-in"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
+            {productCategories.map((category, index) => <Card key={category.title} className="border-0 shadow-soft hover:shadow-large transition-smooth bg-white group cursor-pointer animate-fade-in" style={{
+            animationDelay: `${index * 100}ms`
+          }}>
                 <CardContent className="p-6 text-center space-y-4">
                   <div className="w-20 h-20 mx-auto bg-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-gradient-primary transition-smooth">
                     <category.icon className="w-10 h-10 text-primary group-hover:text-white transition-smooth" />
@@ -199,16 +175,11 @@ const Home = () => {
                     {category.description}
                   </p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
 
           <div className="text-center">
-            <Button
-              asChild
-              size="lg"
-              className="bg-gradient-primary hover:opacity-90 transition-smooth shadow-medium group"
-            >
+            <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 transition-smooth shadow-medium group">
               <Link to="/products">
                 View All Products
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-smooth" />
@@ -224,11 +195,7 @@ const Home = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Image */}
             <div className="order-2 lg:order-1 animate-fade-in">
-              <img
-                src={productsImage}
-                alt="A.G. Health Industries premium hygiene products"
-                className="rounded-3xl shadow-large w-full h-auto object-cover"
-              />
+              <img src={productsImage} alt="A.G. Health Industries premium hygiene products" className="rounded-3xl shadow-large w-full h-auto object-cover" />
             </div>
 
             {/* Content */}
@@ -248,26 +215,15 @@ const Home = () => {
               </p>
 
               <ul className="space-y-3">
-                {[
-                  'ISO Certified Manufacturing',
-                  'Dermatologically Tested',
-                  'Eco-Friendly Materials',
-                  'Affordable Premium Quality',
-                ].map((item) => (
-                  <li key={item} className="flex items-center space-x-3">
+                {['ISO Certified Manufacturing', 'Dermatologically Tested', 'Eco-Friendly Materials', 'Affordable Premium Quality'].map(item => <li key={item} className="flex items-center space-x-3">
                     <div className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
                       <div className="w-2 h-2 bg-primary rounded-full" />
                     </div>
                     <span className="text-foreground">{item}</span>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
 
-              <Button
-                asChild
-                size="lg"
-                className="bg-gradient-primary hover:opacity-90 transition-smooth shadow-medium group"
-              >
+              <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 transition-smooth shadow-medium group">
                 <Link to="/about">
                   About Our Company
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-smooth" />
@@ -291,27 +247,16 @@ const Home = () => {
               Join thousands of satisfied customers who trust A.G. Health Industries for their daily hygiene needs
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                asChild
-                size="lg"
-                className="bg-white text-primary hover:bg-white/90 transition-smooth shadow-large text-base"
-              >
+              <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 transition-smooth shadow-large text-base">
                 <Link to="/products">Shop Now</Link>
               </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-primary transition-smooth text-base"
-              >
+              <Button asChild size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary transition-smooth text-base">
                 <Link to="/contact">Contact Us</Link>
               </Button>
             </div>
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Home;
