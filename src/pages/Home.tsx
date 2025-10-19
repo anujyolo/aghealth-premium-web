@@ -175,7 +175,7 @@ const Home = () => {
         <div className="absolute inset-0 bg-cover bg-center" style={{
         backgroundImage: `url(${factoryTeam})`
       }} />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/90 to-background/85" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/30 to-background/20" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Image */}
