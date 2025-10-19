@@ -53,10 +53,10 @@ const Navigation = () => {
               className="h-16 w-16 md:h-20 md:w-20 object-contain transition-transform group-hover:scale-105"
             />
             <div className="hidden sm:block">
-              <div className="text-lg md:text-xl font-bold text-foreground leading-tight">
+              <div className="text-lg md:text-xl font-bold leading-tight" style={{ color: '#ddc4a6' }}>
                 A.G. Health Industries
               </div>
-              <div className="text-xs text-muted-foreground">Pvt. Ltd.</div>
+              <div className="text-xs" style={{ color: '#ddc4a6', opacity: 0.8 }}>Pvt. Ltd.</div>
             </div>
           </Link>
 
