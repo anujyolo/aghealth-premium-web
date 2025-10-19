@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import heroImage from '@/assets/hero-baby-product.jpg';
 import productsImage from '@/assets/products-hygiene.jpg';
+import factoryBackground from '@/assets/factory-background.jpg';
 
 const Home = () => {
   const values = [
@@ -120,8 +121,13 @@ const Home = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-16 md:py-24 bg-muted/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 md:py-24 relative bg-muted/30">
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-20"
+          style={{ backgroundImage: `url(${factoryBackground})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 to-background/60" />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12 md:mb-16 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Why Choose A.G. Health Industries
