@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import logo from '@/assets/ag-health-logo.webp';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,9 +37,11 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center transition-transform group-hover:scale-105 shadow-soft">
-              <span className="text-white font-bold text-xl">AG</span>
-            </div>
+            <img 
+              src={logo} 
+              alt="A.G. Health Industries Logo" 
+              className="h-12 w-12 md:h-14 md:w-14 object-contain transition-transform group-hover:scale-105"
+            />
             <div className="hidden sm:block">
               <div className="text-lg md:text-xl font-bold text-foreground leading-tight">
                 A.G. Health Industries

@@ -2,6 +2,9 @@ import { Baby, Shield, Heart, Smile, Package, Star } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import sagunBabyPokoPants from '@/assets/sagun-baby-poko-pants.png';
+import sagunBabyPants from '@/assets/sagun-baby-pants.png';
+import sagunPad from '@/assets/sagun-pad.png';
 
 const Products = () => {
   const categories = [
@@ -120,6 +123,41 @@ const Products = () => {
                     </CardDescription>
                   </div>
                 </CardHeader>
+                
+                {/* Product Images Section */}
+                {category.name === 'Diapers' && (
+                  <div className="px-6 py-4 bg-gradient-soft">
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="bg-white rounded-lg p-4 shadow-soft">
+                        <img 
+                          src={sagunBabyPokoPants} 
+                          alt="Sagun Baby Poko Pants" 
+                          className="w-full h-32 object-contain"
+                        />
+                      </div>
+                      <div className="bg-white rounded-lg p-4 shadow-soft">
+                        <img 
+                          src={sagunBabyPants} 
+                          alt="Sagun Baby Pants" 
+                          className="w-full h-32 object-contain"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                )}
+                
+                {category.name === 'Sanitary Pads' && (
+                  <div className="px-6 py-4 bg-gradient-soft">
+                    <div className="bg-white rounded-lg p-4 shadow-soft max-w-xs mx-auto">
+                      <img 
+                        src={sagunPad} 
+                        alt="Sagun Cotton Comfort Pad" 
+                        className="w-full h-32 object-contain"
+                      />
+                    </div>
+                  </div>
+                )}
+                
                 <CardContent className="pt-6">
                   <ul className="space-y-3">
                     {category.products.map((product) => (
