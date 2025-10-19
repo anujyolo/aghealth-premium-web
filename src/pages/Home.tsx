@@ -103,7 +103,7 @@ const Home = () => {
             <h2 className="text-3xl font-bold mb-4 text-[#3c3733] md:text-5xl">
               Why Choose A.G. Health Industries
             </h2>
-            <p className="text-lg max-w-2xl mx-auto text-[#0c4e4e]">
+            <p className="max-w-2xl mx-auto text-[#0c4e4e] text-2xl font-semibold">
               Trusted by families across Nepal for our commitment to quality and hygiene
             </p>
           </div>
