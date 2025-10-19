@@ -5,7 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import heroImage from '@/assets/hero-baby-product.jpg';
 import productsImage from '@/assets/products-hygiene.jpg';
 import factoryBackground from '@/assets/factory-background.jpg';
-import factoryWorkers from '@/assets/factory-workers.jpg';
+import heroFactoryBg from '@/assets/hero-factory-bg.jpg';
 const Home = () => {
   const values = [{
     icon: Sparkles,
@@ -46,7 +46,7 @@ const Home = () => {
       <section className="relative pt-20 md:pt-24 pb-16 md:pb-24 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 bg-cover bg-center" style={{
-        backgroundImage: `url(${factoryWorkers})`
+        backgroundImage: `url(${heroFactoryBg})`
       }} />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/20" />
         
