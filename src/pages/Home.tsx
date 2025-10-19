@@ -6,6 +6,7 @@ import heroImage from '@/assets/hero-baby-product.jpg';
 import productsImage from '@/assets/products-hygiene.jpg';
 import factoryBackground from '@/assets/factory-workers-new.jpg';
 import heroFactoryBg from '@/assets/hero-factory-bg.jpg';
+import factoryTeam from '@/assets/factory-team.jpg';
 const Home = () => {
   const values = [{
     icon: Sparkles,
@@ -170,8 +171,12 @@ const Home = () => {
       </section>
 
       {/* Featured Products Section */}
-      <section className="py-16 md:py-24 bg-muted/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 md:py-24 relative">
+        <div className="absolute inset-0 bg-cover bg-center" style={{
+        backgroundImage: `url(${factoryTeam})`
+      }} />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/90 to-background/85" />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Image */}
             <div className="order-2 lg:order-1 animate-fade-in">
