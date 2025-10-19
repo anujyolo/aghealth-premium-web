@@ -1,13 +1,13 @@
-import { Target, Eye, Award, Users, Globe, TrendingUp } from 'lucide-react';
+import { Target, Eye, Award, Users, Globe, TrendingUp, Factory, Heart } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-import aboutImage from '@/assets/about-innovation.jpg';
+import factoryImage from '@/assets/factory-clean.jpg';
 
 const About = () => {
   const stats = [
-    { icon: Users, value: '10,000+', label: 'Healthcare Partners' },
-    { icon: Globe, value: '50+', label: 'Countries Served' },
-    { icon: Award, value: '25+', label: 'Years Experience' },
-    { icon: TrendingUp, value: '99.8%', label: 'Customer Satisfaction' },
+    { icon: Users, value: '1000+', label: 'Happy Customers Daily' },
+    { icon: Factory, value: '5+', label: 'Product Categories' },
+    { icon: Award, value: 'ISO', label: 'Certified Facility' },
+    { icon: TrendingUp, value: '99%', label: 'Customer Satisfaction' },
   ];
 
   const values = [
@@ -15,59 +15,60 @@ const About = () => {
       icon: Target,
       title: 'Our Mission',
       description:
-        'To revolutionize healthcare by providing innovative, high-quality medical solutions that enhance patient care and improve lives globally. We are committed to making healthcare accessible, affordable, and effective for everyone.',
+        'To improve hygiene standards across Nepal and beyond by manufacturing premium, affordable hygiene products. We are committed to making quality hygiene accessible to every family, ensuring comfort, safety, and dignity for all.',
     },
     {
       icon: Eye,
       title: 'Our Vision',
       description:
-        'To be the world\'s most trusted healthcare partner, recognized for excellence in medical innovation, quality standards, and patient-centered solutions. We envision a future where quality healthcare is accessible to all.',
+        'To become Nepal\'s most trusted hygiene products manufacturer, recognized for innovation, quality, and social responsibility. We envision a future where every family has access to premium hygiene products that enhance their quality of life.',
     },
   ];
 
   const principles = [
     {
-      title: 'Innovation First',
-      description: 'Continuously advancing healthcare through cutting-edge research and development',
-    },
-    {
       title: 'Quality Assurance',
-      description: 'Maintaining the highest standards in every product and service we deliver',
+      description: 'ISO-certified manufacturing with rigorous quality control at every step',
     },
     {
-      title: 'Patient-Centered',
-      description: 'Putting patient wellbeing and safety at the core of everything we do',
+      title: 'Safety First',
+      description: 'Dermatologically tested products safe for sensitive skin',
     },
     {
-      title: 'Ethical Practice',
-      description: 'Operating with integrity, transparency, and social responsibility',
+      title: 'Innovation',
+      description: 'Continuous research to improve product comfort and performance',
     },
     {
-      title: 'Global Reach',
-      description: 'Delivering healthcare solutions to communities worldwide',
+      title: 'Affordability',
+      description: 'Premium quality at prices every family can afford',
     },
     {
-      title: 'Sustainable Growth',
-      description: 'Building a healthier future for both people and our planet',
+      title: 'Sustainability',
+      description: 'Eco-friendly materials and responsible manufacturing practices',
+    },
+    {
+      title: 'Community Care',
+      description: 'Supporting local communities and creating employment opportunities',
     },
   ];
 
   return (
     <div className="min-h-screen pt-20 md:pt-24 pb-16">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary/5 via-secondary/5 to-background py-16 md:py-20">
+      <section className="bg-gradient-soft py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
             <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Award className="w-4 h-4" />
-              <span>About AG Health</span>
+              <Heart className="w-4 h-4" />
+              <span>About A.G. Health Industries</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Innovation, Quality, Care
+              Caring for Hygiene, Caring for Nepal
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              For over 25 years, AG Health has been at the forefront of healthcare innovation, 
-              delivering premium medical solutions that make a real difference in people's lives.
+              A.G. Health Industries Pvt. Ltd. is a leading manufacturer of premium hygiene products 
+              in Nepal. We're dedicated to improving hygiene standards through innovation, quality, 
+              and affordable products for every family.
             </p>
           </div>
         </div>
@@ -131,27 +132,29 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Founded in 1998, AG Health began with a simple but powerful vision: to make 
-                  quality healthcare accessible to everyone. What started as a small medical 
-                  supply company has grown into a global healthcare leader.
+                  A.G. Health Industries Pvt. Ltd. was founded with a clear purpose: to bring 
+                  world-class hygiene products to Nepal at affordable prices. We recognized the 
+                  need for high-quality, locally manufactured hygiene products that every family 
+                  could trust and afford.
                 </p>
                 <p>
-                  Through dedication to innovation, unwavering commitment to quality, and 
-                  genuine care for patient wellbeing, we've become a trusted partner to 
-                  healthcare professionals in over 50 countries.
+                  Starting with a small facility and a dedicated team, we've grown into one of 
+                  Nepal's trusted hygiene product manufacturers. Our state-of-the-art facility 
+                  uses advanced technology to produce diapers, face masks, sanitary pads, and 
+                  toilet paper that meet international quality standards.
                 </p>
                 <p>
-                  Today, we continue to push boundaries in medical technology, develop 
-                  breakthrough health supplements, and create products that truly make a 
-                  difference in people's lives. Our journey is driven by one constant: 
-                  caring for a healthier tomorrow.
+                  Today, we're proud to serve thousands of families across Nepal, providing 
+                  products that prioritize comfort, safety, and hygiene. Our commitment to 
+                  innovation and quality drives us to continuously improve, ensuring that every 
+                  product we make contributes to better health and hygiene for our communities.
                 </p>
               </div>
             </div>
             <div className="animate-fade-in">
               <img
-                src={aboutImage}
-                alt="AG Health innovation laboratory"
+                src={factoryImage}
+                alt="A.G. Health Industries manufacturing facility"
                 className="rounded-3xl shadow-large w-full h-auto object-cover"
               />
             </div>
@@ -164,10 +167,10 @@ const About = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Our Core Principles
+              Our Core Values
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              The values that guide everything we do at AG Health
+              The principles that guide everything we do at A.G. Health Industries
             </p>
           </div>
 
@@ -189,6 +192,38 @@ const About = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Manufacturing Excellence */}
+      <section className="py-16 md:py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+              Manufacturing Excellence
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Our ISO-certified facility in Nepal employs cutting-edge technology and strict 
+              quality control measures. From raw material selection to final packaging, every 
+              step is monitored to ensure the highest standards of hygiene and quality.
+            </p>
+            <div className="grid sm:grid-cols-3 gap-6 pt-8">
+              {[
+                { icon: Globe, label: 'International Standards' },
+                { icon: Factory, label: 'Modern Facility' },
+                { icon: Users, label: 'Skilled Workforce' },
+              ].map((item, index) => (
+                <div
+                  key={item.label}
+                  className="p-6 rounded-2xl bg-gradient-soft animate-fade-in"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <item.icon className="w-12 h-12 text-primary mx-auto mb-4" />
+                  <div className="font-semibold text-foreground">{item.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

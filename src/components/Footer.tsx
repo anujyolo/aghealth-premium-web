@@ -11,13 +11,16 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center shadow-soft">
                 <span className="text-white font-bold text-xl">AG</span>
               </div>
-              <span className="text-xl font-semibold text-foreground">AG Health</span>
+              <div>
+                <div className="text-lg font-bold text-foreground">A.G. Health Industries</div>
+                <div className="text-xs text-muted-foreground">Pvt. Ltd.</div>
+              </div>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Caring for a healthier tomorrow through innovation, quality, and dedication to better healthcare for all.
+              Caring for hygiene, caring for you. Premium hygiene products manufactured with innovation and quality for Nepal and beyond.
             </p>
             <div className="flex space-x-3">
               <a
@@ -81,11 +84,11 @@ const Footer = () => {
             <h3 className="text-foreground font-semibold mb-4">Products</h3>
             <ul className="space-y-2">
               {[
-                'Medical Supplies',
-                'Health Supplements',
-                'Hygiene Products',
-                'Diagnostic Tools',
-                'Wellness Equipment',
+                'Baby Diapers',
+                'Adult Diapers',
+                'Face Masks',
+                'Sanitary Pads',
+                'Toilet Paper',
               ].map((item) => (
                 <li key={item}>
                   <Link
@@ -106,25 +109,25 @@ const Footer = () => {
               <li className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <span className="text-muted-foreground text-sm">
-                  123 Healthcare Ave, Medical District, City 12345
+                  Kathmandu, Nepal
                 </span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+9771234567890"
                   className="text-muted-foreground hover:text-primary transition-smooth text-sm"
                 >
-                  +1 (234) 567-890
+                  +977 123 456 7890
                 </a>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
                 <a
-                  href="mailto:info@aghealth.com"
+                  href="mailto:info@aghealthindustries.com"
                   className="text-muted-foreground hover:text-primary transition-smooth text-sm"
                 >
-                  info@aghealth.com
+                  info@aghealthindustries.com
                 </a>
               </li>
             </ul>
@@ -135,7 +138,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-muted-foreground text-sm text-center md:text-left">
-              © {currentYear} AG Health. All rights reserved.
+              © {currentYear} A.G. Health Industries Pvt. Ltd. | All Rights Reserved.
             </p>
             <div className="flex space-x-6">
               <Link

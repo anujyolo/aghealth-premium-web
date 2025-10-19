@@ -1,99 +1,100 @@
-import { Calendar, Clock, ArrowRight, Heart, Activity, Pill } from 'lucide-react';
+import { Calendar, Clock, ArrowRight, Heart, Activity, Baby, Shield } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
 const Blog = () => {
   const featuredPost = {
-    title: 'The Future of Personalized Medicine',
+    title: 'The Complete Guide to Choosing Baby Diapers',
     excerpt:
-      'Discover how AI and genomics are revolutionizing healthcare, enabling treatments tailored to individual genetic profiles for better outcomes.',
-    category: 'Innovation',
+      'Learn everything you need to know about selecting the right diaper for your baby, including size guides, material considerations, and tips for preventing diaper rash.',
+    category: 'Baby Care',
     date: '2025-10-15',
     readTime: '8 min read',
-    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=800&q=80',
   };
 
   const posts = [
     {
-      title: '10 Essential Vitamins for Immune Health',
+      title: 'Why Hygiene Products Matter for Daily Health',
       excerpt:
-        'Learn about the key vitamins and minerals that support your immune system and where to find them in your diet.',
-      category: 'Wellness',
-      icon: Pill,
+        'Discover how proper hygiene practices and quality hygiene products contribute to better health and disease prevention.',
+      category: 'Health',
+      icon: Heart,
       date: '2025-10-12',
       readTime: '5 min read',
     },
     {
-      title: 'Understanding Blood Pressure Monitoring',
+      title: 'Understanding Face Mask Protection Levels',
       excerpt:
-        'A comprehensive guide to monitoring blood pressure at home, including best practices and when to consult a doctor.',
-      category: 'Health Tips',
-      icon: Activity,
+        'A comprehensive guide to different types of face masks, their protection levels, and when to use each type.',
+      category: 'Safety',
+      icon: Shield,
       date: '2025-10-10',
       readTime: '6 min read',
     },
     {
-      title: 'Mental Health in the Workplace',
+      title: 'Sustainable Hygiene: Eco-Friendly Choices',
       excerpt:
-        'Strategies for maintaining mental wellness in professional environments and recognizing signs of burnout.',
-      category: 'Mental Health',
-      icon: Heart,
+        'Learn about environmentally conscious hygiene products and how to reduce your environmental footprint.',
+      category: 'Sustainability',
+      icon: Activity,
       date: '2025-10-08',
       readTime: '7 min read',
     },
     {
-      title: 'Proper Hand Hygiene Techniques',
+      title: 'Sanitary Pad Care: Tips for Comfort',
       excerpt:
-        'Step-by-step guide to effective handwashing and sanitization to prevent the spread of infections.',
-      category: 'Prevention',
-      icon: Activity,
+        'Essential tips for choosing the right sanitary pads and maintaining comfort during your menstrual cycle.',
+      category: 'Women\'s Health',
+      icon: Heart,
       date: '2025-10-05',
-      readTime: '4 min read',
+      readTime: '5 min read',
     },
     {
-      title: 'Nutrition for Heart Health',
+      title: 'Adult Diaper Guide for Caregivers',
       excerpt:
-        'Evidence-based dietary recommendations to support cardiovascular health and reduce disease risk.',
-      category: 'Nutrition',
-      icon: Heart,
+        'A helpful guide for caregivers on selecting and using adult diapers with dignity and comfort.',
+      category: 'Elder Care',
+      icon: Baby,
       date: '2025-10-03',
       readTime: '6 min read',
     },
     {
-      title: 'The Role of Sleep in Recovery',
+      title: 'The Importance of Proper Hand Hygiene',
       excerpt:
-        'Understanding how quality sleep contributes to healing, immune function, and overall health.',
-      category: 'Wellness',
-      icon: Activity,
+        'Understanding why handwashing and hand hygiene are crucial for preventing illness and staying healthy.',
+      category: 'Prevention',
+      icon: Shield,
       date: '2025-10-01',
-      readTime: '5 min read',
+      readTime: '4 min read',
     },
   ];
 
   const categories = [
     'All Posts',
-    'Innovation',
-    'Wellness',
-    'Health Tips',
-    'Mental Health',
+    'Baby Care',
+    'Health',
+    'Safety',
+    'Sustainability',
+    'Women\'s Health',
+    'Elder Care',
     'Prevention',
-    'Nutrition',
   ];
 
   return (
     <div className="min-h-screen pt-20 md:pt-24 pb-16">
       {/* Header */}
-      <section className="bg-gradient-to-br from-primary/5 via-secondary/5 to-background py-16 md:py-20">
+      <section className="bg-gradient-soft py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
             <Heart className="w-4 h-4" />
-            <span>Health & Wellness Blog</span>
+            <span>Health & Hygiene Blog</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 animate-fade-in-up">
-            Healthcare Insights & Tips
+            Hygiene Tips & Health Insights
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up">
-            Expert advice, wellness tips, and the latest healthcare innovations to help you live healthier
+            Expert advice on hygiene, health, and wellness to help you and your family stay healthy
           </p>
         </div>
       </section>
@@ -124,7 +125,7 @@ const Blog = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Card className="border-0 shadow-large overflow-hidden animate-fade-in">
             <div className="grid lg:grid-cols-2">
-              <div className="h-64 lg:h-auto bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
+              <div className="h-64 lg:h-auto bg-gradient-soft flex items-center justify-center">
                 <img
                   src={featuredPost.image}
                   alt={featuredPost.title}
@@ -132,7 +133,7 @@ const Blog = () => {
                 />
               </div>
               <CardContent className="p-8 lg:p-12 flex flex-col justify-center space-y-6">
-                <Badge className="bg-secondary/10 text-secondary w-fit border-0">
+                <Badge className="bg-primary/10 text-primary w-fit border-0">
                   Featured Post
                 </Badge>
                 <CardTitle className="text-3xl md:text-4xl text-foreground">
@@ -214,13 +215,13 @@ const Blog = () => {
       {/* Newsletter */}
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="border-0 shadow-large bg-gradient-to-br from-primary via-accent to-secondary overflow-hidden">
+          <Card className="border-0 shadow-large bg-gradient-to-br from-primary via-accent to-primary overflow-hidden">
             <CardContent className="p-8 md:p-12 text-center space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-white">
-                Stay Updated with Health Tips
+                Stay Updated with Hygiene Tips
               </h2>
               <p className="text-lg text-white/90 max-w-2xl mx-auto">
-                Subscribe to our newsletter for the latest healthcare insights, wellness tips, 
+                Subscribe to our newsletter for the latest hygiene insights, health tips, 
                 and product updates delivered to your inbox
               </p>
               <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">

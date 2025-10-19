@@ -1,94 +1,77 @@
-import { Package, Pill, Droplets, Stethoscope, Heart, Activity } from 'lucide-react';
+import { Baby, Shield, Heart, Smile, Package, Star } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 
 const Products = () => {
   const categories = [
     {
-      icon: Stethoscope,
-      name: 'Medical Supplies',
-      description: 'Professional-grade medical equipment and supplies',
+      icon: Baby,
+      name: 'Diapers',
+      description: 'Premium comfort and protection for babies and adults',
       products: [
-        { name: 'Digital Thermometers', tag: 'Essential' },
-        { name: 'Blood Pressure Monitors', tag: 'Popular' },
-        { name: 'Surgical Instruments', tag: 'Professional' },
-        { name: 'Examination Gloves', tag: 'Essential' },
+        { name: 'Baby Diapers - Newborn', size: 'NB (Up to 5kg)', tag: 'Bestseller' },
+        { name: 'Baby Diapers - Small', size: 'S (4-8kg)', tag: 'Popular' },
+        { name: 'Baby Diapers - Medium', size: 'M (6-11kg)', tag: 'Popular' },
+        { name: 'Baby Diapers - Large', size: 'L (9-14kg)', tag: 'Popular' },
+        { name: 'Baby Diapers - XL', size: 'XL (12-17kg)', tag: 'Popular' },
+        { name: 'Adult Diapers', size: 'M, L, XL', tag: 'Premium' },
       ],
       color: 'from-primary to-accent',
     },
     {
-      icon: Pill,
-      name: 'Health Supplements',
-      description: 'Premium vitamins and nutritional supplements',
+      icon: Shield,
+      name: 'Face Masks',
+      description: 'Multi-layer protection for daily safety',
       products: [
-        { name: 'Multivitamin Complex', tag: 'Bestseller' },
-        { name: 'Omega-3 Fish Oil', tag: 'Popular' },
-        { name: 'Vitamin D3', tag: 'Essential' },
-        { name: 'Probiotics', tag: 'New' },
-      ],
-      color: 'from-secondary to-primary',
-    },
-    {
-      icon: Droplets,
-      name: 'Hygiene Products',
-      description: 'Clinical-grade hygiene and sanitation products',
-      products: [
-        { name: 'Hand Sanitizers', tag: 'Essential' },
-        { name: 'Disinfectant Sprays', tag: 'Popular' },
-        { name: 'Antibacterial Soaps', tag: 'Premium' },
-        { name: 'Sterilization Solutions', tag: 'Professional' },
+        { name: '3-Ply Surgical Masks', size: 'Box of 50', tag: 'Essential' },
+        { name: 'N95 Respirator Masks', size: 'Pack of 10', tag: 'Premium' },
+        { name: 'KN95 Face Masks', size: 'Pack of 20', tag: 'Popular' },
+        { name: 'Cloth Face Masks', size: 'Reusable', tag: 'Eco-Friendly' },
+        { name: 'Kids Face Masks', size: 'Ages 3-12', tag: 'New' },
       ],
       color: 'from-accent to-secondary',
     },
     {
-      icon: Activity,
-      name: 'Diagnostic Tools',
-      description: 'Advanced diagnostic equipment and testing kits',
+      icon: Heart,
+      name: 'Sanitary Pads',
+      description: 'Soft, absorbent protection for confident days',
       products: [
-        { name: 'Pulse Oximeters', tag: 'Popular' },
-        { name: 'Glucose Monitors', tag: 'Essential' },
-        { name: 'ECG Machines', tag: 'Professional' },
-        { name: 'Rapid Test Kits', tag: 'New' },
+        { name: 'Regular Flow Pads', size: '10 pads', tag: 'Essential' },
+        { name: 'Heavy Flow Pads', size: '8 pads', tag: 'Popular' },
+        { name: 'Ultra-Thin Pads', size: '12 pads', tag: 'Comfort' },
+        { name: 'Overnight Pads', size: '7 pads', tag: 'Protection' },
+        { name: 'Panty Liners', size: '20 count', tag: 'Daily Use' },
+      ],
+      color: 'from-secondary to-primary',
+    },
+    {
+      icon: Smile,
+      name: 'Toilet Paper',
+      description: 'Soft, strong, and sustainable bathroom tissue',
+      products: [
+        { name: '2-Ply Toilet Rolls', size: 'Pack of 4', tag: 'Bestseller' },
+        { name: '3-Ply Toilet Rolls', size: 'Pack of 6', tag: 'Premium' },
+        { name: 'Jumbo Toilet Rolls', size: 'Pack of 12', tag: 'Value' },
+        { name: 'Scented Toilet Paper', size: 'Pack of 4', tag: 'Fresh' },
       ],
       color: 'from-primary to-secondary',
-    },
-    {
-      icon: Heart,
-      name: 'Wellness Equipment',
-      description: 'Health monitoring and wellness devices',
-      products: [
-        { name: 'Smart Health Trackers', tag: 'Trending' },
-        { name: 'Nebulizers', tag: 'Essential' },
-        { name: 'Massage Therapy Devices', tag: 'Premium' },
-        { name: 'Air Purifiers', tag: 'Popular' },
-      ],
-      color: 'from-secondary to-accent',
-    },
-    {
-      icon: Package,
-      name: 'Emergency Supplies',
-      description: 'Complete emergency and first aid supplies',
-      products: [
-        { name: 'First Aid Kits', tag: 'Essential' },
-        { name: 'Emergency Blankets', tag: 'Safety' },
-        { name: 'Trauma Supplies', tag: 'Professional' },
-        { name: 'Rescue Equipment', tag: 'Critical' },
-      ],
-      color: 'from-accent to-primary',
     },
   ];
 
   const getTagColor = (tag: string) => {
     const colors: Record<string, string> = {
       Essential: 'bg-primary/10 text-primary',
-      Popular: 'bg-secondary/10 text-secondary',
-      Bestseller: 'bg-accent/10 text-accent',
+      Popular: 'bg-accent/10 text-accent',
+      Bestseller: 'bg-secondary/10 text-secondary',
       New: 'bg-destructive/10 text-destructive',
       Premium: 'bg-primary/10 text-primary',
-      Professional: 'bg-secondary/10 text-secondary',
-      Trending: 'bg-accent/10 text-accent',
-      Safety: 'bg-destructive/10 text-destructive',
-      Critical: 'bg-destructive/10 text-destructive',
+      Comfort: 'bg-accent/10 text-accent',
+      Protection: 'bg-secondary/10 text-secondary',
+      'Eco-Friendly': 'bg-accent/10 text-accent',
+      'Daily Use': 'bg-muted text-muted-foreground',
+      Value: 'bg-secondary/10 text-secondary',
+      Fresh: 'bg-accent/10 text-accent',
     };
     return colors[tag] || 'bg-muted text-muted-foreground';
   };
@@ -96,18 +79,18 @@ const Products = () => {
   return (
     <div className="min-h-screen pt-20 md:pt-24 pb-16">
       {/* Header */}
-      <section className="bg-gradient-to-br from-primary/5 via-secondary/5 to-background py-16 md:py-20">
+      <section className="bg-gradient-soft py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
             <Package className="w-4 h-4" />
             <span>Our Products</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 animate-fade-in-up">
-            Comprehensive Healthcare Solutions
+            Premium Hygiene Solutions
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up">
-            Explore our extensive range of premium medical supplies, health supplements, 
-            and wellness products designed for healthcare excellence
+            Explore our complete range of hygiene products manufactured with care, 
+            tested for safety, and designed for your comfort
           </p>
         </div>
       </section>
@@ -115,16 +98,16 @@ const Products = () => {
       {/* Products Grid */}
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
             {categories.map((category, index) => (
               <Card
                 key={category.name}
-                className="border-0 shadow-soft hover:shadow-large transition-smooth bg-white group overflow-hidden animate-fade-in"
+                className="border-0 shadow-soft hover:shadow-large transition-smooth bg-white overflow-hidden animate-fade-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <CardHeader className="space-y-4">
+                <CardHeader className="space-y-4 bg-gradient-soft pb-8">
                   <div
-                    className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-smooth`}
+                    className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center`}
                   >
                     <category.icon className="w-8 h-8 text-white" />
                   </div>
@@ -137,19 +120,24 @@ const Products = () => {
                     </CardDescription>
                   </div>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="pt-6">
                   <ul className="space-y-3">
                     {category.products.map((product) => (
                       <li
                         key={product.name}
-                        className="flex items-center justify-between p-3 rounded-lg hover:bg-muted/50 transition-smooth cursor-pointer"
+                        className="flex items-center justify-between p-4 rounded-lg hover:bg-muted/50 transition-smooth group"
                       >
-                        <span className="text-foreground font-medium">
-                          {product.name}
-                        </span>
+                        <div className="flex-1">
+                          <div className="text-foreground font-medium group-hover:text-primary transition-smooth">
+                            {product.name}
+                          </div>
+                          <div className="text-sm text-muted-foreground mt-1">
+                            {product.size}
+                          </div>
+                        </div>
                         <Badge
                           variant="secondary"
-                          className={`${getTagColor(product.tag)} border-0`}
+                          className={`${getTagColor(product.tag)} border-0 ml-3`}
                         >
                           {product.tag}
                         </Badge>
@@ -163,29 +151,103 @@ const Products = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Features Section */}
       <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            Need Help Finding the Right Product?
-          </h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Our healthcare experts are here to assist you in selecting the perfect products for your needs
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:info@aghealth.com"
-              className="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-gradient-primary text-white font-medium hover:opacity-90 transition-smooth shadow-medium"
-            >
-              Contact Our Team
-            </a>
-            <a
-              href="tel:+1234567890"
-              className="inline-flex items-center justify-center px-8 py-3 rounded-lg border-2 border-primary text-primary font-medium hover:bg-primary hover:text-white transition-smooth"
-            >
-              Call Us Now
-            </a>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Why Choose Our Products
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Every product is crafted with care and tested for your safety
+            </p>
           </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {[
+              {
+                icon: Star,
+                title: 'Premium Quality',
+                description: 'International standards in manufacturing',
+              },
+              {
+                icon: Shield,
+                title: 'Safety Tested',
+                description: 'Dermatologically tested and approved',
+              },
+              {
+                icon: Heart,
+                title: 'Skin-Friendly',
+                description: 'Gentle on sensitive skin',
+              },
+              {
+                icon: Baby,
+                title: 'Comfort First',
+                description: 'Designed for maximum comfort',
+              },
+              {
+                icon: Package,
+                title: 'Value Packs',
+                description: 'Affordable family-sized options',
+              },
+              {
+                icon: Smile,
+                title: 'Trusted Brand',
+                description: 'Preferred by families in Nepal',
+              },
+            ].map((feature, index) => (
+              <Card
+                key={feature.title}
+                className="border-0 shadow-soft hover:shadow-medium transition-smooth bg-white text-center animate-fade-in"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <CardContent className="p-6 space-y-4">
+                  <div className="w-14 h-14 mx-auto bg-gradient-primary rounded-xl flex items-center justify-center">
+                    <feature.icon className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-foreground">
+                    {feature.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    {feature.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 md:py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Card className="border-0 shadow-large bg-gradient-to-br from-primary via-accent to-primary overflow-hidden">
+            <CardContent className="p-8 md:p-12 text-center space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-white">
+                Need Help Choosing Products?
+              </h2>
+              <p className="text-lg text-white/90 max-w-2xl mx-auto">
+                Our team is here to help you find the perfect hygiene products for your needs
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-white text-primary hover:bg-white/90 transition-smooth shadow-large"
+                >
+                  <a href="mailto:info@aghealthindustries.com">Email Us</a>
+                </Button>
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-white text-white hover:bg-white hover:text-primary transition-smooth"
+                >
+                  <a href="tel:+9771234567890">Call Now</a>
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
     </div>

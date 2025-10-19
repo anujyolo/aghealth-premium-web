@@ -35,13 +35,16 @@ const Navigation = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center transition-transform group-hover:scale-105">
+          <Link to="/" className="flex items-center space-x-3 group">
+            <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center transition-transform group-hover:scale-105 shadow-soft">
               <span className="text-white font-bold text-xl">AG</span>
             </div>
-            <span className="text-xl md:text-2xl font-semibold text-foreground">
-              AG Health
-            </span>
+            <div className="hidden sm:block">
+              <div className="text-lg md:text-xl font-bold text-foreground leading-tight">
+                A.G. Health Industries
+              </div>
+              <div className="text-xs text-muted-foreground">Pvt. Ltd.</div>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

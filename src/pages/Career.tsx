@@ -10,70 +10,70 @@ const Career = () => {
     {
       icon: Heart,
       title: 'Health & Wellness',
-      description: 'Comprehensive medical coverage and wellness programs',
+      description: 'Comprehensive health benefits and wellness programs',
     },
     {
       icon: TrendingUp,
       title: 'Career Growth',
-      description: 'Professional development and advancement opportunities',
+      description: 'Training and advancement opportunities',
     },
     {
       icon: Users,
-      title: 'Great Culture',
-      description: 'Collaborative environment with passionate healthcare professionals',
+      title: 'Team Culture',
+      description: 'Collaborative and supportive work environment',
     },
     {
       icon: Award,
       title: 'Recognition',
-      description: 'Performance rewards and employee appreciation programs',
+      description: 'Performance rewards and employee appreciation',
     },
     {
       icon: Globe,
-      title: 'Global Impact',
-      description: 'Make a difference in healthcare worldwide',
+      title: 'Make an Impact',
+      description: 'Contribute to Nepal\'s hygiene standards',
     },
     {
       icon: Briefcase,
       title: 'Work-Life Balance',
-      description: 'Flexible schedules and remote work options',
+      description: 'Fair working hours and time off policies',
     },
   ];
 
   const positions = [
     {
-      title: 'Medical Sales Representative',
+      title: 'Production Supervisor',
+      department: 'Manufacturing',
+      location: 'Kathmandu',
+      type: 'Full-time',
+    },
+    {
+      title: 'Quality Control Specialist',
+      department: 'Quality Assurance',
+      location: 'Kathmandu',
+      type: 'Full-time',
+    },
+    {
+      title: 'Sales Executive',
       department: 'Sales',
       location: 'Multiple Locations',
       type: 'Full-time',
     },
     {
-      title: 'Quality Assurance Specialist',
-      department: 'Quality Control',
-      location: 'Head Office',
-      type: 'Full-time',
-    },
-    {
-      title: 'Healthcare Product Manager',
-      department: 'Product Development',
-      location: 'Hybrid',
-      type: 'Full-time',
-    },
-    {
-      title: 'Clinical Research Associate',
-      department: 'R&D',
-      location: 'Research Center',
-      type: 'Full-time',
-    },
-    {
-      title: 'Supply Chain Coordinator',
-      department: 'Operations',
-      location: 'Distribution Center',
-      type: 'Full-time',
-    },
-    {
-      title: 'Healthcare Marketing Specialist',
+      title: 'Marketing Coordinator',
       department: 'Marketing',
-      location: 'Remote',
+      location: 'Kathmandu',
+      type: 'Full-time',
+    },
+    {
+      title: 'Warehouse Manager',
+      department: 'Operations',
+      location: 'Kathmandu',
+      type: 'Full-time',
+    },
+    {
+      title: 'Machine Operator',
+      department: 'Production',
+      location: 'Kathmandu',
       type: 'Full-time',
     },
   ];
@@ -81,18 +81,18 @@ const Career = () => {
   return (
     <div className="min-h-screen pt-20 md:pt-24 pb-16">
       {/* Header */}
-      <section className="bg-gradient-to-br from-primary/5 via-secondary/5 to-background py-16 md:py-20">
+      <section className="bg-gradient-soft py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
             <Briefcase className="w-4 h-4" />
             <span>Join Our Team</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 animate-fade-in-up">
-            Build Your Career at AG Health
+            Build Your Career with A.G. Health
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up">
-            Join a team of passionate healthcare professionals dedicated to innovation, 
-            quality, and making a positive impact on global health
+            Join our growing team and contribute to improving hygiene standards across Nepal. 
+            We're looking for passionate individuals dedicated to making a difference.
           </p>
         </div>
       </section>
@@ -102,10 +102,10 @@ const Career = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Why Join AG Health?
+              Why Work with Us?
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              We offer more than just a job – we provide a platform for growth and impact
+              We offer more than just a job – we provide opportunities for growth and meaningful impact
             </p>
           </div>
 
@@ -138,10 +138,10 @@ const Career = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Current Openings
+              Current Job Openings
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Explore opportunities to make a difference in healthcare
+              Explore opportunities to grow your career with A.G. Health Industries
             </p>
           </div>
 
@@ -162,7 +162,7 @@ const Career = () => {
                         <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
                           {position.department}
                         </span>
-                        <span className="inline-flex items-center px-3 py-1 rounded-full bg-secondary/10 text-secondary text-sm font-medium">
+                        <span className="inline-flex items-center px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-medium">
                           {position.type}
                         </span>
                       </CardDescription>
@@ -190,10 +190,10 @@ const Career = () => {
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Don't See the Right Role?
+                Submit Your Application
               </h2>
               <p className="text-lg text-muted-foreground">
-                Send us your resume and we'll keep you in mind for future opportunities
+                Don't see the right role? Send us your details and we'll keep you in mind for future opportunities
               </p>
             </div>
 
@@ -201,29 +201,29 @@ const Career = () => {
               <CardContent className="p-8 space-y-6">
                 <div className="space-y-2">
                   <Label htmlFor="name">Full Name *</Label>
-                  <Input id="name" placeholder="John Doe" required />
+                  <Input id="name" placeholder="Your full name" required />
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="email">Email Address *</Label>
-                  <Input id="email" type="email" placeholder="john@example.com" required />
+                  <Input id="email" type="email" placeholder="your@email.com" required />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="phone">Phone Number</Label>
-                  <Input id="phone" type="tel" placeholder="+1 (234) 567-890" />
+                  <Label htmlFor="phone">Phone Number *</Label>
+                  <Input id="phone" type="tel" placeholder="+977 98X XXX XXXX" required />
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="position">Position of Interest</Label>
-                  <Input id="position" placeholder="e.g., Medical Sales Representative" />
+                  <Input id="position" placeholder="e.g., Production Supervisor" />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="message">Cover Letter / Message *</Label>
+                  <Label htmlFor="message">Cover Letter / Why Join Us? *</Label>
                   <Textarea
                     id="message"
-                    placeholder="Tell us about yourself and why you'd like to join AG Health..."
+                    placeholder="Tell us about yourself and why you'd like to join A.G. Health Industries..."
                     rows={6}
                     required
                   />
@@ -240,7 +240,7 @@ const Career = () => {
 
                 <p className="text-sm text-muted-foreground text-center">
                   By submitting this form, you agree to our privacy policy and consent to being 
-                  contacted about career opportunities at AG Health.
+                  contacted about career opportunities at A.G. Health Industries Pvt. Ltd.
                 </p>
               </CardContent>
             </Card>
@@ -249,13 +249,13 @@ const Career = () => {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-16 bg-gradient-to-br from-primary via-accent to-secondary">
+      <section className="py-16 bg-gradient-to-br from-primary via-accent to-primary">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Have Questions About Careers?
           </h2>
           <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-            Our HR team is here to help. Reach out to learn more about opportunities at AG Health.
+            Our HR team is here to help. Reach out to learn more about opportunities at A.G. Health Industries.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -263,7 +263,7 @@ const Career = () => {
               size="lg"
               className="bg-white text-primary hover:bg-white/90 transition-smooth shadow-large"
             >
-              <a href="mailto:careers@aghealth.com">Email HR Team</a>
+              <a href="mailto:careers@aghealthindustries.com">Email HR Team</a>
             </Button>
             <Button
               asChild
@@ -271,7 +271,7 @@ const Career = () => {
               variant="outline"
               className="border-2 border-white text-white hover:bg-white hover:text-primary transition-smooth"
             >
-              <a href="tel:+1234567890">Call Us</a>
+              <a href="tel:+9771234567890">Call Us</a>
             </Button>
           </div>
         </div>
