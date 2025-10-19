@@ -6,6 +6,7 @@ import heroImage from '@/assets/hero-baby-product.jpg';
 import productsImage from '@/assets/products-hygiene.jpg';
 import factoryBackground from '@/assets/factory-workers-new.jpg';
 import heroFactoryBg from '@/assets/hero-factory-bg.jpg';
+import factoryTeam from '@/assets/factory-team.jpg';
 const Home = () => {
   const values = [{
     icon: Sparkles,
@@ -97,7 +98,7 @@ const Home = () => {
         <div className="absolute inset-0 bg-cover bg-center" style={{
         backgroundImage: `url(${factoryBackground})`
       }} />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 to-background/30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/20 to-background/10" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12 md:mb-16 animate-fade-in">
             <h2 className="text-3xl font-bold mb-4 text-center text-[#634444] py-[21px] mx-0 my-[5px] px-[31px] md:text-5xl">
@@ -170,8 +171,12 @@ const Home = () => {
       </section>
 
       {/* Featured Products Section */}
-      <section className="py-16 md:py-24 bg-muted/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 md:py-24 relative">
+        <div className="absolute inset-0 bg-cover bg-center" style={{
+        backgroundImage: `url(${factoryTeam})`
+      }} />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/30 to-background/20" />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Image */}
             <div className="order-2 lg:order-1 animate-fade-in">
@@ -204,7 +209,7 @@ const Home = () => {
               </ul>
 
               <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 transition-smooth shadow-medium group">
-                <Link to="/about" className="text-center text-lg">
+                <Link to="/about">
                   About Our Company
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-smooth" />
                 </Link>
