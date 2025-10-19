@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import heroImage from '@/assets/hero-baby-product.jpg';
 import productsImage from '@/assets/products-hygiene.jpg';
-import factoryBackground from '@/assets/factory-background.jpg';
+import factoryBackground from '@/assets/factory-workers-new.jpg';
 import heroFactoryBg from '@/assets/hero-factory-bg.jpg';
 const Home = () => {
   const values = [{
