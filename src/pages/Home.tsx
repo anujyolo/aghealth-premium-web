@@ -86,7 +86,7 @@ const Home = () => {
             {/* Hero Image */}
             <div className="relative animate-fade-in">
               <div className="absolute inset-0 bg-gradient-primary rounded-3xl blur-3xl opacity-20 -z-10" />
-              <img src={heroImage} alt="Baby with Sagun Baby Poko Pants premium diapers showcasing product quality" className="rounded-3xl shadow-large w-full h-auto object-cover" />
+              <img src={heroImage} alt="Baby with Sagun Baby Poko Pants premium diapers showcasing product quality" className="rounded-3xl shadow-large max-w-lg mx-auto h-auto object-cover" />
             </div>
           </div>
         </div>
