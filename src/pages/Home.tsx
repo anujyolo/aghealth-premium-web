@@ -2,7 +2,7 @@ import { ArrowRight, Sparkles, Shield, Heart, Award, Baby, Smile, Cloud, Sun, St
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import heroImage from '@/assets/hero-hygiene.jpg';
+import heroImage from '@/assets/hero-baby-product.jpg';
 import productsImage from '@/assets/products-hygiene.jpg';
 
 const Home = () => {
@@ -111,7 +111,7 @@ const Home = () => {
               <div className="absolute inset-0 bg-gradient-primary rounded-3xl blur-3xl opacity-20 -z-10" />
               <img
                 src={heroImage}
-                alt="Happy family in clean, hygienic home environment"
+                alt="Baby with Sagun Baby Poko Pants premium diapers showcasing product quality"
                 className="rounded-3xl shadow-large w-full h-auto object-cover"
               />
             </div>
