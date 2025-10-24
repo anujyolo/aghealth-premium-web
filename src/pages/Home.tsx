@@ -153,7 +153,7 @@ const Home = () => {
           }}>
                 <CardContent className="p-6 text-center space-y-4">
                   {index === 0 ? (
-                    <div className="w-20 h-20 mx-auto flex items-center justify-center">
+                    <div className="w-32 h-32 mx-auto flex items-center justify-center">
                       <img src={sagunBabyPantsLogo} alt="Sagun Baby Pants logo" className="w-full h-full object-contain" />
                     </div>
                   ) : index === 1 ? (
