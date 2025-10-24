@@ -8,6 +8,7 @@ import factoryBackground from '@/assets/factory-workers-new.jpg';
 import heroFactoryBg from '@/assets/hero-factory-bg.jpg';
 import factoryTeam from '@/assets/factory-team.jpg';
 import herooBackground from '@/assets/heroo.webp';
+import sagunBabyPantsLogo from '@/assets/sagun-baby-pants-logo.png';
 const Home = () => {
   const values = [{
     icon: Sparkles,
@@ -149,9 +150,15 @@ const Home = () => {
             animationDelay: `${index * 100}ms`
           }}>
                 <CardContent className="p-6 text-center space-y-4">
-                  <div className="w-20 h-20 mx-auto bg-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-gradient-primary transition-smooth">
-                    <category.icon className="w-10 h-10 text-primary group-hover:text-white transition-smooth" />
-                  </div>
+                  {index === 0 ? (
+                    <div className="w-20 h-20 mx-auto flex items-center justify-center">
+                      <img src={sagunBabyPantsLogo} alt="Sagun Baby Pants logo" className="w-full h-full object-contain" />
+                    </div>
+                  ) : (
+                    <div className="w-20 h-20 mx-auto bg-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-gradient-primary transition-smooth">
+                      <category.icon className="w-10 h-10 text-primary group-hover:text-white transition-smooth" />
+                    </div>
+                  )}
                   <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-smooth">
                     {category.title}
                   </h3>
