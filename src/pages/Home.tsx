@@ -99,7 +99,7 @@ const Home = () => {
         <div className="absolute inset-0 bg-cover bg-center" style={{
         backgroundImage: `url(${factoryBackground})`
       }} />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 to-background/70" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12 md:mb-16 animate-fade-in">
             <h2 className="text-3xl font-bold mb-4 text-center py-[21px] mx-0 my-[5px] px-[31px] md:text-5xl text-[#dbdbdb]">
@@ -132,14 +132,14 @@ const Home = () => {
 
       {/* Product Categories Preview */}
       <section className="py-16 md:py-24 relative">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${herooBackground})` }} />
+        <div className="absolute inset-0 bg-cover bg-center" style={{
+        backgroundImage: `url(${herooBackground})`
+      }} />
         <div className="absolute inset-0 bg-black/50" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Our Hygiene Products
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <h2 className="text-3xl mb-4 text-[#ddc4a6]/75 font-extrabold md:text-5xl">Our Hygiene products</h2>
+            <p className="max-w-2xl mx-auto text-[#16a69d] text-2xl font-bold">
               Complete range of premium hygiene solutions for everyday needs
             </p>
           </div>
