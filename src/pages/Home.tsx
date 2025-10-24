@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import heroImage from '@/assets/hero-baby-product.jpg';
-import productsImage from '@/assets/products-hygiene.jpg';
+import productsCrowd from '@/assets/products-crowd.jpg';
 import factoryBackground from '@/assets/factory-workers-new.jpg';
 import heroFactoryBg from '@/assets/hero-factory-bg.jpg';
 import factoryTeam from '@/assets/factory-team.jpg';
@@ -200,7 +200,7 @@ const Home = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Image */}
             <div className="order-2 lg:order-1 animate-fade-in">
-              <img src={productsImage} alt="A.G. Health Industries premium hygiene products" className="rounded-3xl shadow-large w-full h-auto object-cover" />
+              <img src={productsCrowd} alt="A.G. Health Industries premium hygiene products trusted by thousands in Nepal" className="rounded-3xl shadow-large w-full h-auto object-cover" />
             </div>
 
             {/* Content */}
