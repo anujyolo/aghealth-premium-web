@@ -141,7 +141,7 @@ const Home = () => {
         <div className="absolute inset-0 bg-black/50" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-3xl mb-4 text-[#ddc4a6]/75 font-extrabold md:text-5xl">Our Hygiene products</h2>
+            <h2 className="text-4xl mb-4 text-[#ddc4a6]/75 font-extrabold md:text-6xl">Our Hygiene products</h2>
             <p className="max-w-2xl mx-auto text-[#16a69d] text-xl font-bold">
               Complete range of premium hygiene solutions for everyday needs
             </p>
