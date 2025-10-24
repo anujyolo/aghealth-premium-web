@@ -10,6 +10,7 @@ import factoryTeam from '@/assets/factory-team.jpg';
 import herooBackground from '@/assets/heroo.webp';
 import sagunBabyPantsLogo from '@/assets/sagun-baby-pants-logo.png';
 import sagunFaceMasks from '@/assets/sagun-face-masks.jpg';
+import sagunPadLogo from '@/assets/sagun-pad-logo.png';
 const Home = () => {
   const values = [{
     icon: Sparkles,
@@ -158,6 +159,10 @@ const Home = () => {
                   ) : index === 1 ? (
                     <div className="w-20 h-20 mx-auto flex items-center justify-center">
                       <img src={sagunFaceMasks} alt="Sagun disposable protective face masks" className="w-full h-full object-contain rounded-lg" />
+                    </div>
+                  ) : index === 2 ? (
+                    <div className="w-20 h-20 mx-auto flex items-center justify-center">
+                      <img src={sagunPadLogo} alt="Sagun sanitary pad logo" className="w-full h-full object-contain" />
                     </div>
                   ) : (
                     <div className="w-20 h-20 mx-auto bg-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-gradient-primary transition-smooth">
