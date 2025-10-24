@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import agHealthLogo from '@/assets/ag-health-logo.webp';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,9 +12,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center shadow-soft">
-                <span className="text-white font-bold text-xl">AG</span>
-              </div>
+              <img src={agHealthLogo} alt="A.G. Health Industries logo" className="w-12 h-12 object-contain" />
               <div>
                 <div className="text-lg font-bold text-foreground">A.G. Health Industries</div>
                 <div className="text-xs text-muted-foreground">Pvt. Ltd.</div>
