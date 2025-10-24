@@ -157,16 +157,16 @@ const Home = () => {
                       <img src={sagunBabyPantsLogo} alt="Sagun Baby Pants logo" className="w-full h-full object-contain" />
                     </div>
                   ) : index === 1 ? (
-                    <div className="w-20 h-20 mx-auto flex items-center justify-center">
+                    <div className="w-32 h-32 mx-auto flex items-center justify-center">
                       <img src={sagunFaceMasks} alt="Sagun disposable protective face masks" className="w-full h-full object-contain rounded-lg" />
                     </div>
                   ) : index === 2 ? (
-                    <div className="w-20 h-20 mx-auto flex items-center justify-center">
+                    <div className="w-32 h-32 mx-auto flex items-center justify-center">
                       <img src={sagunPadLogo} alt="Sagun sanitary pad logo" className="w-full h-full object-contain" />
                     </div>
                   ) : (
-                    <div className="w-20 h-20 mx-auto bg-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-gradient-primary transition-smooth">
-                      <category.icon className="w-10 h-10 text-primary group-hover:text-white transition-smooth" />
+                    <div className="w-32 h-32 mx-auto bg-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-gradient-primary transition-smooth">
+                      <category.icon className="w-12 h-12 text-primary group-hover:text-white transition-smooth" />
                     </div>
                   )}
                   <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-smooth">
