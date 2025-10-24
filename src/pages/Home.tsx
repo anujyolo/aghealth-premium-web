@@ -200,7 +200,7 @@ const Home = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Image */}
             <div className="order-2 lg:order-1 animate-fade-in">
-              <img src={labTesting} alt="A.G. Health Industries quality testing laboratory ensuring product safety" className="rounded-3xl shadow-large max-w-xs mx-auto h-auto object-cover" />
+              <img src={labTesting} alt="A.G. Health Industries quality testing laboratory ensuring product safety" className="rounded-3xl shadow-large max-w-[250px] ml-auto h-auto object-cover" />
             </div>
 
             {/* Content */}
