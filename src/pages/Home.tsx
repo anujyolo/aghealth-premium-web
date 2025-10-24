@@ -220,7 +220,7 @@ const Home = () => {
               </p>
 
               <ul className="space-y-3">
-                {['ISO Certified Manufacturing', 'Dermatologically Tested', 'Eco-Friendly Materials', 'Affordable Premium Quality'].map(item => <li key={item} className="flex items-center space-x-3">
+                {['ISO and NS Certified Manufacturing', 'Dermatologically Tested', 'Eco-Friendly Materials', 'Affordable Premium Quality'].map(item => <li key={item} className="flex items-center space-x-3">
                     <div className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
                       <div className="w-2 h-2 bg-primary rounded-full" />
                     </div>
