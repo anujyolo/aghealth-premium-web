@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import heroImage from '@/assets/hero-baby-product.jpg';
-import labTesting from '@/assets/lab-testing.jpg';
+import sagunNsMark from '@/assets/sagun-ns-mark.png';
 import factoryBackground from '@/assets/factory-workers-new.jpg';
 import heroFactoryBg from '@/assets/hero-factory-bg.jpg';
 import factoryTeam from '@/assets/factory-team.jpg';
@@ -200,7 +200,7 @@ const Home = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Image */}
             <div className="order-2 lg:order-1 animate-fade-in">
-              <img src={labTesting} alt="A.G. Health Industries quality testing laboratory ensuring product safety" className="rounded-3xl shadow-large max-w-[250px] mr-auto h-auto object-cover" />
+              <img src={sagunNsMark} alt="Sagun NS Mark certification logo" className="rounded-3xl shadow-large max-w-[250px] mr-auto h-auto object-cover" />
             </div>
 
             {/* Content */}
