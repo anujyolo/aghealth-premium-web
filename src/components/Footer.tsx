@@ -23,7 +23,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-3">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/profile.php?id=61556698594648"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-primary/10 hover:bg-primary flex items-center justify-center transition-smooth group"
