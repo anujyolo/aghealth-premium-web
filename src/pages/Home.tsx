@@ -99,7 +99,7 @@ const Home = () => {
         <div className="absolute inset-0 bg-cover bg-center" style={{
         backgroundImage: `url(${factoryBackground})`
       }} />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 to-background/70" />
+        <div className="absolute inset-0 bg-black/40" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12 md:mb-16 animate-fade-in">
             <h2 className="text-3xl font-bold mb-4 text-center py-[21px] mx-0 my-[5px] px-[31px] md:text-5xl text-[#dbdbdb]">
