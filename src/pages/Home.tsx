@@ -225,7 +225,7 @@ const Home = () => {
                     <div className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
                       <div className="w-2 h-2 bg-primary rounded-full" />
                     </div>
-                    <span className="text-foreground text-lg font-bold">{item}</span>
+                    <span className="text-white text-lg font-bold">{item}</span>
                   </li>)}
               </ul>
 
