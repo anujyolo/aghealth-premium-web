@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import heroImage from '@/assets/hero-baby-product.jpg';
-import sagunNsMark from '@/assets/sagun-ns-mark.png';
+import nepalCulture from '@/assets/nepal-culture.png';
 import factoryBackground from '@/assets/factory-workers-new.jpg';
 import heroFactoryBg from '@/assets/hero-factory-bg.jpg';
 import factoryTeam from '@/assets/factory-team.jpg';
@@ -201,7 +201,7 @@ const Home = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Image */}
             <div className="order-2 lg:order-1 animate-fade-in">
-              <img src={sagunNsMark} alt="Sagun NS Mark certification logo" className="rounded-3xl shadow-large w-full max-w-7xl ml-8 h-auto object-cover" />
+              <img src={nepalCulture} alt="Culture of Nepal travel imagery" className="rounded-3xl shadow-large w-full max-w-7xl ml-8 h-auto object-cover" />
             </div>
 
             {/* Content */}
