@@ -11,6 +11,7 @@ import herooBackground from '@/assets/heroo.webp';
 import sagunBabyPantsLogo from '@/assets/sagun-baby-pants-logo.png';
 import sagunFaceMasks from '@/assets/sagun-face-masks.jpg';
 import sagunPadLogo from '@/assets/sagun-pad-logo.png';
+import sagunToiletPaperLogo from '@/assets/sagun-toilet-paper-logo.jpg';
 const Home = () => {
   const values = [{
     icon: Sparkles,
@@ -165,8 +166,8 @@ const Home = () => {
                       <img src={sagunPadLogo} alt="Sagun sanitary pad logo" className="w-full h-full object-contain" />
                     </div>
                   ) : (
-                    <div className="w-32 h-32 mx-auto bg-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-gradient-primary transition-smooth">
-                      <category.icon className="w-12 h-12 text-primary group-hover:text-white transition-smooth" />
+                    <div className="w-32 h-32 mx-auto flex items-center justify-center">
+                      <img src={sagunToiletPaperLogo} alt="Sagun toilet paper logo" className="w-full h-full object-contain" />
                     </div>
                   )}
                   <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-smooth">
