@@ -1,12 +1,11 @@
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import agHealthLogo from '@/assets/ag-health-logo.webp';
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  return (
-    <footer className="border-t border-border" style={{ backgroundColor: '#a8b6a8' }}>
+  return <footer className="border-t border-border" style={{
+    backgroundColor: '#a8b6a8'
+  }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Info */}
@@ -22,40 +21,16 @@ const Footer = () => {
               Caring for hygiene, caring for you. Premium hygiene products manufactured with innovation and quality for Nepal and beyond.
             </p>
             <div className="flex space-x-3">
-              <a
-                href="https://www.facebook.com/profile.php?id=61556698594648"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-primary/10 hover:bg-primary flex items-center justify-center transition-smooth group"
-                aria-label="Facebook"
-              >
+              <a href="https://www.facebook.com/profile.php?id=61556698594648" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-primary/10 hover:bg-primary flex items-center justify-center transition-smooth group" aria-label="Facebook">
                 <Facebook className="w-4 h-4 text-primary group-hover:text-white transition-smooth" />
               </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-primary/10 hover:bg-primary flex items-center justify-center transition-smooth group"
-                aria-label="Twitter"
-              >
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-primary/10 hover:bg-primary flex items-center justify-center transition-smooth group" aria-label="Twitter">
                 <Twitter className="w-4 h-4 text-primary group-hover:text-white transition-smooth" />
               </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-primary/10 hover:bg-primary flex items-center justify-center transition-smooth group"
-                aria-label="LinkedIn"
-              >
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-primary/10 hover:bg-primary flex items-center justify-center transition-smooth group" aria-label="LinkedIn">
                 <Linkedin className="w-4 h-4 text-primary group-hover:text-white transition-smooth" />
               </a>
-              <a
-                href="https://www.instagram.com/sagun_diapers_/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-primary/10 hover:bg-primary flex items-center justify-center transition-smooth group"
-                aria-label="Instagram"
-              >
+              <a href="https://www.instagram.com/sagun_diapers_/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-primary/10 hover:bg-primary flex items-center justify-center transition-smooth group" aria-label="Instagram">
                 <Instagram className="w-4 h-4 text-primary group-hover:text-white transition-smooth" />
               </a>
             </div>
@@ -65,16 +40,11 @@ const Footer = () => {
           <div>
             <h3 className="text-foreground font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              {['Home', 'Our Products', 'About', 'Blog', 'Career'].map((item) => (
-                <li key={item}>
-                  <Link
-                    to={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`}
-                    className="text-muted-foreground hover:text-primary transition-smooth text-sm"
-                  >
+              {['Home', 'Our Products', 'About', 'Blog', 'Career'].map(item => <li key={item}>
+                  <Link to={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`} className="text-muted-foreground hover:text-primary transition-smooth text-sm">
                     {item}
                   </Link>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -82,22 +52,11 @@ const Footer = () => {
           <div>
             <h3 className="text-foreground font-semibold mb-4">Products</h3>
             <ul className="space-y-2">
-              {[
-                'Baby Diapers',
-                'Adult Diapers',
-                'Face Masks',
-                'Sanitary Pads',
-                'Toilet Paper',
-              ].map((item) => (
-                <li key={item}>
-                  <Link
-                    to="/products"
-                    className="text-muted-foreground hover:text-primary transition-smooth text-sm"
-                  >
+              {['Baby Diapers', 'Adult Diapers', 'Face Masks', 'Sanitary Pads', 'Toilet Paper'].map(item => <li key={item}>
+                  <Link to="/products" className="text-muted-foreground hover:text-primary transition-smooth text-sm">
                     {item}
                   </Link>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -113,19 +72,11 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <a
-                  href="tel:+9771234567890"
-                  className="text-muted-foreground hover:text-primary transition-smooth text-sm"
-                >
-                  +977 123 456 7890
-                </a>
+                <a href="tel:+9771234567890" className="text-muted-foreground hover:text-primary transition-smooth text-sm">+977 9801116979</a>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-                <a
-                  href="mailto:info@aghealthindustries.com"
-                  className="text-muted-foreground hover:text-primary transition-smooth text-sm"
-                >
+                <a href="mailto:info@aghealthindustries.com" className="text-muted-foreground hover:text-primary transition-smooth text-sm">
                   info@aghealthindustries.com
                 </a>
               </li>
@@ -140,24 +91,16 @@ const Footer = () => {
               © {currentYear} A.G. Health Industries Pvt. Ltd. | All Rights Reserved.
             </p>
             <div className="flex space-x-6">
-              <Link
-                to="/privacy"
-                className="text-muted-foreground hover:text-primary transition-smooth text-sm"
-              >
+              <Link to="/privacy" className="text-muted-foreground hover:text-primary transition-smooth text-sm">
                 Privacy Policy
               </Link>
-              <Link
-                to="/terms"
-                className="text-muted-foreground hover:text-primary transition-smooth text-sm"
-              >
+              <Link to="/terms" className="text-muted-foreground hover:text-primary transition-smooth text-sm">
                 Terms of Service
               </Link>
             </div>
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
