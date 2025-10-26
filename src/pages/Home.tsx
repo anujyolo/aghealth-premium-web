@@ -199,7 +199,7 @@ const Home = () => {
             {/* Content */}
             <div className="order-1 lg:order-2 space-y-6 animate-fade-in-up flex flex-col items-center text-center ml-8">
               <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
-                <span className="font-black text-2xl text-slate-700">Quality You Can Trust</span>
+                <span className="font-black text-2xl text-[#16a69d]">Quality You Can Trust</span>
               </div>
               
               <h2 className="text-3xl md:text-4xl font-bold text-[#ddc4a6bf]">
