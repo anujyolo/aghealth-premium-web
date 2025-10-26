@@ -210,7 +210,7 @@ const Home = () => {
                 <span className="font-black text-2xl text-slate-700">Quality You Can Trust</span>
               </div>
               
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#ddc4a6bf]">
                 Made in Nepal, Trusted Worldwide
               </h2>
               
