@@ -32,7 +32,7 @@ const About = () => {
     description: 'To become Nepal\'s most trusted hygiene products manufacturer, recognized for innovation, quality, and social responsibility. We envision a future where every family has access to premium hygiene products that enhance their quality of life.'
   }, {
     icon: BookOpen,
-    title: 'Our Story',
+    title: 'Our Past',
     description: 'Founded with a passion for improving hygiene standards in Nepal, A.G. Health Industries began as a vision to create quality products that every family could afford. Through dedication, innovation, and unwavering commitment to excellence, we have grown into a leading manufacturer, serving thousands of families daily while maintaining our core values of quality, affordability, and social responsibility.'
   }, {
     icon: Building,
