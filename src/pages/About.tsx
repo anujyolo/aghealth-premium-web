@@ -237,6 +237,20 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* Our Parent Company */}
+      <section className="py-16 md:py-20 bg-black/40 backdrop-blur-sm">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#ddc4a6bf' }}>
+              Our Parent Company
+            </h2>
+            <p className="text-lg leading-relaxed" style={{ color: '#16a69d' }}>
+              AG Health Industries Pvt. Ltd. is part of the Adhikari Group of Companies, a diversified business conglomerate with a strong presence across multiple sectors in Nepal. Our parent company's legacy of excellence and commitment to quality has been the foundation upon which AG Health Industries was built. With decades of experience in manufacturing and distribution, the Adhikari Group has established itself as a trusted name in Nepal's industrial landscape, providing employment opportunities and contributing to the nation's economic growth.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>;
 };
 export default About;
