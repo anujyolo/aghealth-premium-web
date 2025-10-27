@@ -150,9 +150,7 @@ const About = () => {
               </div>
               <div className="space-y-6 animate-fade-in-up">
                 <h3 className="text-2xl md:text-3xl font-bold text-foreground">Mr. Gangadhar Adhikari</h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Add description here about this team member's role, experience, and contribution to A.G. Health Industries. Describe their vision and leadership approach.
-                </p>
+                <p className="text-xl text-muted-foreground font-medium">Founder, Managing Director</p>
               </div>
             </div>
           </div>
