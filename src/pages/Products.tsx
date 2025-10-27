@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import sagunBabyPokoPants from '@/assets/sagun-baby-poko-pants.png';
 import sagunBabyPants from '@/assets/sagun-baby-pants.png';
 import sagunPad from '@/assets/sagun-pad.png';
+import productsBackground from '@/assets/factory-clean.jpg';
 
 const Products = () => {
   const categories = [
@@ -80,7 +81,13 @@ const Products = () => {
   };
 
   return (
-    <div className="min-h-screen pt-20 md:pt-24 pb-16">
+    <div className="min-h-screen pt-20 md:pt-24 pb-16 relative">
+      <div 
+        className="fixed inset-0 bg-cover bg-center bg-no-repeat -z-10"
+        style={{ backgroundImage: `url(${productsBackground})` }}
+      />
+      <div className="fixed inset-0 bg-black/60 -z-10" />
+      
       {/* Header */}
       <section className="bg-gradient-soft py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
