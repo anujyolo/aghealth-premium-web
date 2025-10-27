@@ -282,14 +282,6 @@ const Products = () => {
                 >
                   <a href="mailto:info@aghealthindustries.com">Email Us</a>
                 </Button>
-                <Button
-                  asChild
-                  size="lg"
-                  variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-primary transition-smooth"
-                >
-                  <a href="tel:+9771234567890">Call Now</a>
-                </Button>
               </div>
             </CardContent>
           </Card>
