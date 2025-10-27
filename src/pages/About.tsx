@@ -3,6 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import teamMember1 from '@/assets/team-member-1-updated.jpg';
 import teamMember2 from '@/assets/team-member-2.jpg';
 import teamMember3 from '@/assets/team-member-3.jpg';
+import factoryBuilding from '@/assets/factory-building.jpg';
 const About = () => {
   const stats = [{
     icon: Users,
@@ -49,7 +50,12 @@ const About = () => {
     title: 'Community Care',
     description: 'Supporting local communities and creating employment opportunities'
   }];
-  return <div className="min-h-screen pt-20 md:pt-24 pb-16">
+  return <div className="min-h-screen pt-20 md:pt-24 pb-16 relative">
+      <div 
+        className="fixed inset-0 bg-cover bg-center bg-no-repeat -z-10"
+        style={{ backgroundImage: `url(${factoryBuilding})` }}
+      />
+      <div className="fixed inset-0 bg-black/50 -z-10" />
       {/* Hero Section */}
       <section className="bg-gradient-soft py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
