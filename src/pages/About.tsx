@@ -1,4 +1,4 @@
-import { Target, Eye, Award, Users, Globe, TrendingUp, Factory, Heart } from 'lucide-react';
+import { Target, Eye, Award, Users, Globe, TrendingUp, Factory, Heart, BookOpen } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import teamMember1 from '@/assets/team-member-1-updated.jpg';
 import teamMember2 from '@/assets/team-member-2.jpg';
@@ -30,6 +30,10 @@ const About = () => {
     icon: Eye,
     title: 'Our Vision',
     description: 'To become Nepal\'s most trusted hygiene products manufacturer, recognized for innovation, quality, and social responsibility. We envision a future where every family has access to premium hygiene products that enhance their quality of life.'
+  }, {
+    icon: BookOpen,
+    title: 'Our Story',
+    description: 'Founded with a passion for improving hygiene standards in Nepal, A.G. Health Industries began as a vision to create quality products that every family could afford. Through dedication, innovation, and unwavering commitment to excellence, we have grown into a leading manufacturer, serving thousands of families daily while maintaining our core values of quality, affordability, and social responsibility.'
   }];
   const principles = [{
     title: 'Quality Assurance',
@@ -98,7 +102,7 @@ const About = () => {
       {/* Mission & Vision */}
       <section className="py-16 md:py-20 bg-black/40 backdrop-blur-sm">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
             {values.map((value, index) => <Card key={value.title} className="border-0 shadow-soft hover:shadow-medium transition-smooth bg-white animate-fade-in" style={{
             animationDelay: `${index * 150}ms`
           }}>
