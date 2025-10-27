@@ -133,7 +133,7 @@ const About = () => {
                 <img src={teamMember1} alt="Leadership team member" className="rounded-3xl shadow-large w-full h-auto object-cover" />
               </div>
               <div className="space-y-6 animate-fade-in-up">
-                <h3 className="text-2xl md:text-3xl font-bold text-foreground">Mr. Tilak Prasad Adhikari</h3>
+                <h3 className="text-2xl md:text-3xl font-bold" style={{ color: '#ddc4a6bf' }}>Mr. Tilak Prasad Adhikari</h3>
                 <p className="text-xl text-muted-foreground font-medium">Founder, Chairman</p>
               </div>
             </div>
