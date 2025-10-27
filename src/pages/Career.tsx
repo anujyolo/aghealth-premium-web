@@ -123,8 +123,8 @@ const Career = () => {
           }}>
               Why Work with Us?
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">We offer more than just a
- job – we provide opportunities for growth and meaningful impact</p>
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: '#ddc4a6bf' }}>We offer more than just a
+ job – we provide opportunities for growth and meaningful impact</p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
