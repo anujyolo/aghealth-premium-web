@@ -152,7 +152,7 @@ const About = () => {
             {/* Third Team Member */}
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="animate-fade-in">
-                <img src={teamMember3} alt="Leadership team member" className="rounded-3xl shadow-large w-full h-auto object-cover" />
+                <img src={teamMember3} alt="Leadership team member" className="rounded-3xl shadow-large w-full max-w-md mx-auto h-auto object-cover" />
               </div>
               <div className="space-y-6 animate-fade-in-up">
                 <h3 className="text-2xl md:text-3xl font-bold" style={{ color: '#ddc4a6bf' }}>Mr. Gangadhar Adhikari</h3>
