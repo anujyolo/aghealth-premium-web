@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
+import careerBackground from '@/assets/career-background.webp';
 
 const Career = () => {
   const benefits = [
@@ -109,7 +110,13 @@ const Career = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-20 md:pt-24 pb-16">
+    <div className="min-h-screen pt-20 md:pt-24 pb-16 relative">
+      <div 
+        className="fixed inset-0 bg-cover bg-center bg-no-repeat -z-10"
+        style={{ backgroundImage: `url(${careerBackground})` }}
+      />
+      <div className="fixed inset-0 bg-black/60 -z-10" />
+      
       {/* Header */}
       <section className="bg-gradient-soft py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
