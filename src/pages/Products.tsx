@@ -98,7 +98,7 @@ const Products = () => {
           <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-up" style={{ color: '#ddc4a6bf' }}>
             Premium Hygiene Solutions
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up">
+          <p className="text-lg md:text-xl max-w-3xl mx-auto animate-fade-in-up" style={{ color: '#16a69d' }}>
             Explore our complete range of hygiene products manufactured with care, 
             tested for safety, and designed for your comfort
           </p>
