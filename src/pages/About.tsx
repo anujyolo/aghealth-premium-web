@@ -170,7 +170,7 @@ const About = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#16a69d' }}>
               Our Core Values
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: '#ddc4a6bf' }}>
               The principles that guide everything we do at A.G. Health Industries
             </p>
           </div>
