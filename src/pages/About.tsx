@@ -141,7 +141,7 @@ const About = () => {
             {/* Second Team Member */}
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6 animate-fade-in-up lg:order-1">
-                <h3 className="text-2xl md:text-3xl font-bold text-foreground">Mr. Dolraj Adhikari</h3>
+                <h3 className="text-2xl md:text-3xl font-bold" style={{ color: '#ddc4a6bf' }}>Mr. Dolraj Adhikari</h3>
                 <p className="text-xl text-muted-foreground font-medium">Founder, CEO</p>
               </div>
               <div className="animate-fade-in lg:order-2">
