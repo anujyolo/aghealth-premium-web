@@ -1,4 +1,4 @@
-import { Target, Eye, Award, Users, Globe, TrendingUp, Factory, Heart, BookOpen, Building } from 'lucide-react';
+import { Target, Eye, Award, Users, Globe, TrendingUp, Factory, Heart, BookOpen, Building, ShieldCheck } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import teamMember1 from '@/assets/team-member-1-updated.jpg';
 import teamMember2 from '@/assets/team-member-2.jpg';
@@ -17,6 +17,10 @@ const About = () => {
     icon: Award,
     value: 'ISO',
     label: 'Certified Facility'
+  }, {
+    icon: ShieldCheck,
+    value: 'NS',
+    label: 'Nepal Standard Mark'
   }, {
     icon: TrendingUp,
     value: '99%',
@@ -87,7 +91,7 @@ const About = () => {
       {/* Stats Section */}
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-8">
             {stats.map((stat, index) => <Card key={stat.label} className="border-0 shadow-soft hover:shadow-medium transition-smooth bg-white text-center animate-fade-in" style={{
             animationDelay: `${index * 100}ms`
           }}>
