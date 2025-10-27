@@ -31,8 +31,6 @@ const Products = () => {
       products: [
         { name: '3-Ply Surgical Masks', size: 'Box of 50', tag: 'Essential' },
         { name: 'N95 Respirator Masks', size: 'Pack of 10', tag: 'Premium' },
-        { name: 'KN95 Face Masks', size: 'Pack of 20', tag: 'Popular' },
-        { name: 'Cloth Face Masks', size: 'Reusable', tag: 'Eco-Friendly' },
         { name: 'Kids Face Masks', size: 'Ages 3-12', tag: 'New' },
       ],
       color: 'from-accent to-secondary',
