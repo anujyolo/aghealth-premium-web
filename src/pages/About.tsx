@@ -1,6 +1,8 @@
 import { Target, Eye, Award, Users, Globe, TrendingUp, Factory, Heart } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-import factoryImage from '@/assets/factory-clean.jpg';
+import teamMember1 from '@/assets/team-member-1.jpg';
+import teamMember2 from '@/assets/team-member-2.jpg';
+import teamMember3 from '@/assets/team-member-3.jpg';
 
 const About = () => {
   const stats = [
@@ -122,41 +124,74 @@ const About = () => {
         </div>
       </section>
 
-      {/* Story Section */}
+      {/* Leadership Team Section */}
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 animate-fade-in-up">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                Our Story
-              </h2>
-              <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
-                <p>
-                  A.G. Health Industries Pvt. Ltd. was founded with a clear purpose: to bring 
-                  world-class hygiene products to Nepal at affordable prices. We recognized the 
-                  need for high-quality, locally manufactured hygiene products that every family 
-                  could trust and afford.
-                </p>
-                <p>
-                  Starting with a small facility and a dedicated team, we've grown into one of 
-                  Nepal's trusted hygiene product manufacturers. Our state-of-the-art facility 
-                  uses advanced technology to produce diapers, face masks, sanitary pads, and 
-                  toilet paper that meet international quality standards.
-                </p>
-                <p>
-                  Today, we're proud to serve thousands of families across Nepal, providing 
-                  products that prioritize comfort, safety, and hygiene. Our commitment to 
-                  innovation and quality drives us to continuously improve, ensuring that every 
-                  product we make contributes to better health and hygiene for our communities.
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Our Leadership Team
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Meet the visionaries driving A.G. Health Industries forward
+            </p>
+          </div>
+
+          <div className="space-y-16">
+            {/* First Team Member */}
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="animate-fade-in">
+                <img
+                  src={teamMember1}
+                  alt="Leadership team member"
+                  className="rounded-3xl shadow-large w-full h-auto object-cover"
+                />
+              </div>
+              <div className="space-y-6 animate-fade-in-up">
+                <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+                  Leadership Title
+                </h3>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Add description here about this team member's role, experience, and contribution to A.G. Health Industries. Describe their vision and leadership approach.
                 </p>
               </div>
             </div>
-            <div className="animate-fade-in">
-              <img
-                src={factoryImage}
-                alt="A.G. Health Industries manufacturing facility"
-                className="rounded-3xl shadow-large w-full h-auto object-cover"
-              />
+
+            {/* Second Team Member */}
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6 animate-fade-in-up lg:order-1">
+                <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+                  Leadership Title
+                </h3>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Add description here about this team member's role, experience, and contribution to A.G. Health Industries. Describe their vision and leadership approach.
+                </p>
+              </div>
+              <div className="animate-fade-in lg:order-2">
+                <img
+                  src={teamMember2}
+                  alt="Leadership team member"
+                  className="rounded-3xl shadow-large w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Third Team Member */}
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="animate-fade-in">
+                <img
+                  src={teamMember3}
+                  alt="Leadership team member"
+                  className="rounded-3xl shadow-large w-full h-auto object-cover"
+                />
+              </div>
+              <div className="space-y-6 animate-fade-in-up">
+                <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+                  Leadership Title
+                </h3>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Add description here about this team member's role, experience, and contribution to A.G. Health Industries. Describe their vision and leadership approach.
+                </p>
+              </div>
             </div>
           </div>
         </div>
