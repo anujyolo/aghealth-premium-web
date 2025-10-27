@@ -59,7 +59,37 @@ const Career = () => {
       type: 'Full-time',
     },
     {
+      title: 'Financial Analyst',
+      department: 'Finance',
+      location: 'Kathmandu',
+      type: 'Full-time',
+    },
+    {
+      title: 'Accountant',
+      department: 'Finance',
+      location: 'Kathmandu',
+      type: 'Full-time',
+    },
+    {
+      title: 'Finance Manager',
+      department: 'Finance',
+      location: 'Kathmandu',
+      type: 'Full-time',
+    },
+    {
       title: 'Marketing Coordinator',
+      department: 'Marketing',
+      location: 'Kathmandu',
+      type: 'Full-time',
+    },
+    {
+      title: 'Digital Marketing Specialist',
+      department: 'Marketing',
+      location: 'Kathmandu',
+      type: 'Full-time',
+    },
+    {
+      title: 'Brand Manager',
       department: 'Marketing',
       location: 'Kathmandu',
       type: 'Full-time',
