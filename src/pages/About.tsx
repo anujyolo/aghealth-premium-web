@@ -64,7 +64,7 @@ const About = () => {
               <Heart className="w-4 h-4" />
               <span>About A.G. Health Industries</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#ddc4a6bf' }}>
               Caring for Hygiene, Caring for Nepal
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
