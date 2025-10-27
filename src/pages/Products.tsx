@@ -6,6 +6,7 @@ import sagunBabyPokoPants from '@/assets/sagun-baby-poko-pants.png';
 import sagunBabyPants from '@/assets/sagun-baby-pants.png';
 import sagunPad from '@/assets/sagun-pad.png';
 import productsBackground from '@/assets/factory-clean.jpg';
+import sagunFaceMaskBox from '@/assets/sagun-face-mask-box.jpg';
 
 const Products = () => {
   const categories = [
@@ -148,6 +149,18 @@ const Products = () => {
                           className="w-full h-32 object-contain"
                         />
                       </div>
+                    </div>
+                  </div>
+                )}
+                
+                {category.name === 'Face Masks' && (
+                  <div className="px-6 py-4 bg-gradient-soft">
+                    <div className="bg-white rounded-lg p-4 shadow-soft max-w-xs mx-auto">
+                      <img 
+                        src={sagunFaceMaskBox} 
+                        alt="Sagun Disposable Protective Face Masks" 
+                        className="w-full h-32 object-contain"
+                      />
                     </div>
                   </div>
                 )}
