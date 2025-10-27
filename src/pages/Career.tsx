@@ -127,7 +127,7 @@ const Career = () => {
           <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-up" style={{ color: '#ddc4a6bf' }}>
             Build Your Career with A.G. Health
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up">
+          <p className="text-lg md:text-xl max-w-3xl mx-auto animate-fade-in-up" style={{ color: '#16a69d' }}>
             Join our growing team and contribute to improving hygiene standards across Nepal. 
             We're looking for passionate individuals dedicated to making a difference.
           </p>
