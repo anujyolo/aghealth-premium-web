@@ -5,116 +5,92 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import careerBackground from '@/assets/career-background.webp';
-
 const Career = () => {
-  const benefits = [
-    {
-      icon: Heart,
-      title: 'Health & Wellness',
-      description: 'Comprehensive health benefits and wellness programs',
-    },
-    {
-      icon: TrendingUp,
-      title: 'Career Growth',
-      description: 'Training and advancement opportunities',
-    },
-    {
-      icon: Users,
-      title: 'Team Culture',
-      description: 'Collaborative and supportive work environment',
-    },
-    {
-      icon: Award,
-      title: 'Recognition',
-      description: 'Performance rewards and employee appreciation',
-    },
-    {
-      icon: Globe,
-      title: 'Make an Impact',
-      description: 'Contribute to Nepal\'s hygiene standards',
-    },
-    {
-      icon: Briefcase,
-      title: 'Work-Life Balance',
-      description: 'Fair working hours and time off policies',
-    },
-  ];
-
-  const positions = [
-    {
-      title: 'Production Supervisor',
-      department: 'Manufacturing',
-      location: 'Kathmandu',
-      type: 'Full-time',
-    },
-    {
-      title: 'Quality Control Specialist',
-      department: 'Quality Assurance',
-      location: 'Kathmandu',
-      type: 'Full-time',
-    },
-    {
-      title: 'Sales Executive',
-      department: 'Sales',
-      location: 'Multiple Locations',
-      type: 'Full-time',
-    },
-    {
-      title: 'Financial Analyst',
-      department: 'Finance',
-      location: 'Kathmandu',
-      type: 'Full-time',
-    },
-    {
-      title: 'Accountant',
-      department: 'Finance',
-      location: 'Kathmandu',
-      type: 'Full-time',
-    },
-    {
-      title: 'Finance Manager',
-      department: 'Finance',
-      location: 'Kathmandu',
-      type: 'Full-time',
-    },
-    {
-      title: 'Marketing Coordinator',
-      department: 'Marketing',
-      location: 'Kathmandu',
-      type: 'Full-time',
-    },
-    {
-      title: 'Digital Marketing Specialist',
-      department: 'Marketing',
-      location: 'Kathmandu',
-      type: 'Full-time',
-    },
-    {
-      title: 'Brand Manager',
-      department: 'Marketing',
-      location: 'Kathmandu',
-      type: 'Full-time',
-    },
-    {
-      title: 'Warehouse Manager',
-      department: 'Operations',
-      location: 'Kathmandu',
-      type: 'Full-time',
-    },
-    {
-      title: 'Machine Operator',
-      department: 'Production',
-      location: 'Kathmandu',
-      type: 'Full-time',
-    },
-  ];
-
-  return (
-    <div className="min-h-screen pt-20 md:pt-24 pb-16 relative">
-      <div 
-        className="fixed inset-0 bg-cover bg-center bg-no-repeat -z-10"
-        style={{ backgroundImage: `url(${careerBackground})` }}
-      />
+  const benefits = [{
+    icon: Heart,
+    title: 'Health & Wellness',
+    description: 'Comprehensive health benefits and wellness programs'
+  }, {
+    icon: TrendingUp,
+    title: 'Career Growth',
+    description: 'Training and advancement opportunities'
+  }, {
+    icon: Users,
+    title: 'Team Culture',
+    description: 'Collaborative and supportive work environment'
+  }, {
+    icon: Award,
+    title: 'Recognition',
+    description: 'Performance rewards and employee appreciation'
+  }, {
+    icon: Globe,
+    title: 'Make an Impact',
+    description: 'Contribute to Nepal\'s hygiene standards'
+  }, {
+    icon: Briefcase,
+    title: 'Work-Life Balance',
+    description: 'Fair working hours and time off policies'
+  }];
+  const positions = [{
+    title: 'Production Supervisor',
+    department: 'Manufacturing',
+    location: 'Kathmandu',
+    type: 'Full-time'
+  }, {
+    title: 'Quality Control Specialist',
+    department: 'Quality Assurance',
+    location: 'Kathmandu',
+    type: 'Full-time'
+  }, {
+    title: 'Sales Executive',
+    department: 'Sales',
+    location: 'Multiple Locations',
+    type: 'Full-time'
+  }, {
+    title: 'Financial Analyst',
+    department: 'Finance',
+    location: 'Kathmandu',
+    type: 'Full-time'
+  }, {
+    title: 'Accountant',
+    department: 'Finance',
+    location: 'Kathmandu',
+    type: 'Full-time'
+  }, {
+    title: 'Finance Manager',
+    department: 'Finance',
+    location: 'Kathmandu',
+    type: 'Full-time'
+  }, {
+    title: 'Marketing Coordinator',
+    department: 'Marketing',
+    location: 'Kathmandu',
+    type: 'Full-time'
+  }, {
+    title: 'Digital Marketing Specialist',
+    department: 'Marketing',
+    location: 'Kathmandu',
+    type: 'Full-time'
+  }, {
+    title: 'Brand Manager',
+    department: 'Marketing',
+    location: 'Kathmandu',
+    type: 'Full-time'
+  }, {
+    title: 'Warehouse Manager',
+    department: 'Operations',
+    location: 'Kathmandu',
+    type: 'Full-time'
+  }, {
+    title: 'Machine Operator',
+    department: 'Production',
+    location: 'Kathmandu',
+    type: 'Full-time'
+  }];
+  return <div className="min-h-screen pt-20 md:pt-24 pb-16 relative">
+      <div className="fixed inset-0 bg-cover bg-center bg-no-repeat -z-10" style={{
+      backgroundImage: `url(${careerBackground})`
+    }} />
       <div className="fixed inset-0 bg-black/60 -z-10" />
       
       {/* Header */}
@@ -124,10 +100,14 @@ const Career = () => {
             <Briefcase className="w-4 h-4" />
             <span>Join Our Team</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-up" style={{ color: '#ddc4a6bf' }}>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-up" style={{
+          color: '#ddc4a6bf'
+        }}>
             Build Your Career with A.G. Health
           </h1>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto animate-fade-in-up" style={{ color: '#16a69d' }}>
+          <p className="text-lg md:text-xl max-w-3xl mx-auto animate-fade-in-up" style={{
+          color: '#16a69d'
+        }}>
             Join our growing team and contribute to improving hygiene standards across Nepal. 
             We're looking for passionate individuals dedicated to making a difference.
           </p>
@@ -138,21 +118,19 @@ const Career = () => {
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#16a69d' }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{
+            color: '#16a69d'
+          }}>
               Why Work with Us?
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              We offer more than just a job – we provide opportunities for growth and meaningful impact
-            </p>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">We offer more than just a
+ job – we provide opportunities for growth and meaningful impact</p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {benefits.map((benefit, index) => (
-              <Card
-                key={benefit.title}
-                className="border-0 shadow-soft hover:shadow-medium transition-smooth bg-white group animate-fade-in"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
+            {benefits.map((benefit, index) => <Card key={benefit.title} className="border-0 shadow-soft hover:shadow-medium transition-smooth bg-white group animate-fade-in" style={{
+            animationDelay: `${index * 100}ms`
+          }}>
                 <CardContent className="p-6 text-center space-y-4">
                   <div className="w-16 h-16 mx-auto bg-gradient-primary rounded-2xl flex items-center justify-center group-hover:scale-110 transition-smooth">
                     <benefit.icon className="w-8 h-8 text-white" />
@@ -164,8 +142,7 @@ const Career = () => {
                     {benefit.description}
                   </p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -183,12 +160,9 @@ const Career = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            {positions.map((position, index) => (
-              <Card
-                key={position.title}
-                className="border-0 shadow-soft hover:shadow-medium transition-smooth bg-white group cursor-pointer animate-fade-in"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
+            {positions.map((position, index) => <Card key={position.title} className="border-0 shadow-soft hover:shadow-medium transition-smooth bg-white group cursor-pointer animate-fade-in" style={{
+            animationDelay: `${index * 100}ms`
+          }}>
                 <CardHeader>
                   <div className="flex items-start justify-between">
                     <div className="space-y-2">
@@ -215,8 +189,7 @@ const Career = () => {
                     Apply Now
                   </Button>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -258,12 +231,7 @@ const Career = () => {
 
                 <div className="space-y-2">
                   <Label htmlFor="message">Cover Letter / Why Join Us? *</Label>
-                  <Textarea
-                    id="message"
-                    placeholder="Tell us about yourself and why you'd like to join A.G. Health Industries..."
-                    rows={6}
-                    required
-                  />
+                  <Textarea id="message" placeholder="Tell us about yourself and why you'd like to join A.G. Health Industries..." rows={6} required />
                 </div>
 
                 <div className="space-y-2">
@@ -295,26 +263,15 @@ const Career = () => {
             Our HR team is here to help. Reach out to learn more about opportunities at A.G. Health Industries.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              asChild
-              size="lg"
-              className="bg-white text-primary hover:bg-white/90 transition-smooth shadow-large"
-            >
+            <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 transition-smooth shadow-large">
               <a href="mailto:careers@aghealthindustries.com">Email HR Team</a>
             </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-primary transition-smooth"
-            >
+            <Button asChild size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary transition-smooth">
               <a href="tel:+9771234567890">Call Us</a>
             </Button>
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Career;
