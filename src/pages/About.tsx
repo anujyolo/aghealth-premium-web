@@ -1,6 +1,6 @@
 import { Target, Eye, Award, Users, Globe, TrendingUp, Factory, Heart } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-import teamMember1 from '@/assets/team-member-1.jpg';
+import teamMember1 from '@/assets/team-member-1-updated.jpg';
 import teamMember2 from '@/assets/team-member-2.jpg';
 import teamMember3 from '@/assets/team-member-3.jpg';
 
