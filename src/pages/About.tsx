@@ -4,6 +4,8 @@ import teamMember1 from '@/assets/team-member-1-updated.jpg';
 import teamMember2 from '@/assets/team-member-2.jpg';
 import teamMember3 from '@/assets/team-member-3.jpg';
 import factoryBuilding from '@/assets/factory-building.jpg';
+import parbatiAgroLogo from '@/assets/parbati-agro-logo.png';
+import bhuMaduLogo from '@/assets/bhu-madu-logo.png';
 const About = () => {
   const stats = [{
     icon: Users,
@@ -241,13 +243,21 @@ const About = () => {
       {/* Our Parent Company */}
       <section className="py-16 md:py-20 bg-black/40 backdrop-blur-sm">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
             <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#ddc4a6bf' }}>
               Our Parent Company
             </h2>
             <p className="text-lg leading-relaxed" style={{ color: '#16a69d' }}>
               AG Health Industries Pvt. Ltd. is part of the Adhikari Group of Companies, a diversified business conglomerate with a strong presence across multiple sectors in Nepal. Our parent company's legacy of excellence and commitment to quality has been the foundation upon which AG Health Industries was built. With decades of experience in manufacturing and distribution, the Adhikari Group has established itself as a trusted name in Nepal's industrial landscape, providing employment opportunities and contributing to the nation's economic growth.
             </p>
+            <div className="grid sm:grid-cols-2 gap-8 pt-8">
+              <div className="p-8 rounded-3xl bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-smooth">
+                <img src={parbatiAgroLogo} alt="Parbati Agro Industries" className="w-48 h-48 mx-auto object-contain" />
+              </div>
+              <div className="p-8 rounded-3xl bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-smooth">
+                <img src={bhuMaduLogo} alt="Bhu-Madu Himalayan Honey" className="w-48 h-48 mx-auto object-contain" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
