@@ -95,7 +95,7 @@ const Products = () => {
             <Package className="w-4 h-4" />
             <span>Our Products</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 animate-fade-in-up">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-up" style={{ color: '#ddc4a6bf' }}>
             Premium Hygiene Solutions
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up">
