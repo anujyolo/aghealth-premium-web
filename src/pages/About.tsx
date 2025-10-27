@@ -197,7 +197,7 @@ const About = () => {
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+            <h2 className="text-3xl md:text-4xl font-bold" style={{ color: '#ddc4a6bf' }}>
               Manufacturing Excellence
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
