@@ -45,7 +45,6 @@ const Products = () => {
         { name: 'Heavy Flow Pads', size: '8 pads', tag: 'Popular' },
         { name: 'Ultra-Thin Pads', size: '12 pads', tag: 'Comfort' },
         { name: 'Overnight Pads', size: '7 pads', tag: 'Protection' },
-        { name: 'Panty Liners', size: '20 count', tag: 'Daily Use' },
       ],
       color: 'from-secondary to-primary',
     },
