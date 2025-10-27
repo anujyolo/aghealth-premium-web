@@ -219,7 +219,7 @@ const About = () => {
               animationDelay: `${index * 100}ms`
             }}>
                   <item.icon className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <div className="font-semibold text-foreground">{item.label}</div>
+                  <div className="font-semibold" style={{ color: '#ddc4a6bf' }}>{item.label}</div>
                 </div>)}
             </div>
           </div>
