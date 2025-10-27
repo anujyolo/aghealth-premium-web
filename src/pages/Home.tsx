@@ -250,9 +250,6 @@ const Home = () => {
               <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 transition-smooth shadow-large text-base">
                 <Link to="/products">Shop Now</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary transition-smooth text-base">
-                <Link to="/contact">Contact Us</Link>
-              </Button>
             </div>
           </div>
         </div>
