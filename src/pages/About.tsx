@@ -200,7 +200,7 @@ const About = () => {
             <h2 className="text-3xl md:text-4xl font-bold" style={{ color: '#ddc4a6bf' }}>
               Manufacturing Excellence
             </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg leading-relaxed" style={{ color: '#16a69d' }}>
               Our ISO-certified facility in Nepal employs cutting-edge technology and strict 
               quality control measures. From raw material selection to final packaging, every 
               step is monitored to ensure the highest standards of hygiene and quality.
