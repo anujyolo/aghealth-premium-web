@@ -99,7 +99,7 @@ const About = () => {
             {stats.map((stat, index) => <Card key={stat.label} className="border-0 shadow-soft hover:shadow-medium transition-smooth bg-gray-100 text-center animate-fade-in" style={{
             animationDelay: `${index * 100}ms`
           }}>
-                <CardContent className="p-8 space-y-4 relative" style={stat.value === 'ISO' ? {
+                <CardContent className="p-8 pt-12 space-y-4 relative" style={stat.value === 'ISO' ? {
               backgroundImage: `url(${isoLogo})`,
               backgroundSize: 'contain',
               backgroundPosition: 'center',
