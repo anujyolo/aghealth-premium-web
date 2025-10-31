@@ -111,7 +111,7 @@ const About = () => {
                     <stat.icon className="w-8 h-8 text-white" />
                   </div>
                   <div className="text-4xl font-bold text-primary">{stat.value}</div>
-                  <div className="text-muted-foreground font-medium mt-4 mx-[31px]">{stat.label}</div>
+                  <div className="text-muted-foreground font-medium mt-8 mx-[31px]">{stat.label}</div>
                 </CardContent>
               </Card>)}
           </div>
