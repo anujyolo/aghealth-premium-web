@@ -118,7 +118,7 @@ const About = () => {
                     </div> : <div className="w-16 h-16 mx-auto bg-gradient-primary rounded-2xl flex items-center justify-center">
                       <stat.icon className="w-8 h-8 text-white" />
                     </div>}
-                  <div className="text-4xl font-bold text-primary">{stat.value}</div>
+                  <div className="text-4xl font-bold" style={{ color: '#ddc4a6bf' }}>{stat.value}</div>
                   <div className="text-muted-foreground font-medium mt-8 mx-[31px]">{stat.label}</div>
                 </CardContent>
               </Card>)}
