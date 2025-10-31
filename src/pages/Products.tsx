@@ -5,7 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import sagunBabyPokoPants from '@/assets/sagun-baby-poko-pants.png';
-import sagunBabyPantsLogo from '@/assets/sagun-baby-pants-logo.png';
+import sagunBabyPantsLogo from '@/assets/sagun-baby-pants-logo-new.png';
 import sagunPad from '@/assets/sagun-pad.png';
 import productsBackground from '@/assets/products-background.png';
 import sagunFaceMaskBox from '@/assets/sagun-face-mask-box.jpg';
