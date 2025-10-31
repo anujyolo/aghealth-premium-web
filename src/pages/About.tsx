@@ -8,6 +8,8 @@ import parbatiAgroLogo from '@/assets/parbati-agro-logo.png';
 import bhuMaduLogo from '@/assets/bhu-madu-logo.png';
 import isoLogo from '@/assets/iso-logo.png';
 import isoLogoNew from '@/assets/iso-logo-new.png';
+import agHealthLogoNew from '@/assets/ag-health-logo-new.webp';
+import sagunNsMarkNew from '@/assets/sagun-ns-mark-new.png';
 import historyIcon from '@/assets/history-icon.jpg';
 const About = () => {
   const stats = [{
@@ -116,6 +118,14 @@ const About = () => {
                   {stat.value === 'ISO' ? (
                     <div className="w-24 h-24 mx-auto flex items-center justify-center">
                       <img src={isoLogoNew} alt="ISO Certified" className="w-full h-full object-contain" />
+                    </div>
+                  ) : stat.value === '5+' ? (
+                    <div className="w-24 h-24 mx-auto flex items-center justify-center">
+                      <img src={agHealthLogoNew} alt="A.G. Health Industries" className="w-full h-full object-contain" />
+                    </div>
+                  ) : stat.value === 'NS' ? (
+                    <div className="w-24 h-24 mx-auto flex items-center justify-center">
+                      <img src={sagunNsMarkNew} alt="Nepal Standard Mark" className="w-full h-full object-contain" />
                     </div>
                   ) : (
                     <div className="w-16 h-16 mx-auto bg-gradient-primary rounded-2xl flex items-center justify-center">
