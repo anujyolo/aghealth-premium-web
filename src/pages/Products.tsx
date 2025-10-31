@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import sagunBabyPokoPants from '@/assets/sagun-baby-poko-pants.png';
-import sagunBabyPants from '@/assets/sagun-baby-pants.png';
+import sagunBabyPantsLogo from '@/assets/sagun-baby-pants-logo.png';
 import sagunPad from '@/assets/sagun-pad.png';
 import productsBackground from '@/assets/products-background.png';
 import sagunFaceMaskBox from '@/assets/sagun-face-mask-box.jpg';
@@ -14,6 +14,7 @@ const Products = () => {
       icon: Baby,
       name: 'Diapers',
       description: 'Premium comfort and protection for babies and adults',
+      logo: sagunBabyPantsLogo,
       products: [
         { name: 'Baby Diapers - Newborn', size: 'NB (Up to 5kg)', tag: 'Bestseller' },
         { name: 'Baby Diapers - Small', size: 'S (4-8kg)', tag: 'Popular' },
@@ -117,7 +118,11 @@ const Products = () => {
                   <div
                     className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center`}
                   >
-                    <category.icon className="w-8 h-8 text-white" />
+                    {category.logo ? (
+                      <img src={category.logo} alt={category.name} className="w-full h-full object-contain p-2" />
+                    ) : (
+                      <category.icon className="w-8 h-8 text-white" />
+                    )}
                   </div>
                   <div>
                     <CardTitle className="text-2xl text-foreground mb-2">
@@ -142,7 +147,7 @@ const Products = () => {
                       </div>
                       <div className="bg-white rounded-lg p-4 shadow-soft">
                         <img 
-                          src={sagunBabyPants} 
+                          src={sagunBabyPantsLogo} 
                           alt="Sagun Baby Pants" 
                           className="w-full h-32 object-contain"
                         />
