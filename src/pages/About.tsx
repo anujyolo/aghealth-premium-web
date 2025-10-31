@@ -108,7 +108,7 @@ const About = () => {
             {stats.map((stat, index) => <Card key={stat.label} className="border-0 shadow-soft hover:shadow-medium transition-smooth bg-gray-100 text-center animate-fade-in" style={{
             animationDelay: `${index * 100}ms`
           }}>
-                <CardContent className="p-8 pt-12 space-y-4 relative px-0 py-0">
+                <CardContent className="p-8 pt-12 space-y-4 relative px-0 py-0 bg-transparent">
                   {stat.value === 'ISO' ? <div className="w-24 h-24 mx-auto flex items-center justify-center">
                       <img src={isoLogoNew} alt="ISO Certified" className="w-full h-full object-contain" />
                     </div> : stat.value === '5+' ? <div className="w-24 h-24 mx-auto flex items-center justify-center">
