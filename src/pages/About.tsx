@@ -40,7 +40,25 @@ const About = () => {
   }, {
     icon: BookOpen,
     title: 'Our History',
-    description: 'In 2052 B.S., our humble beginnings took root in the far western region of Kailali with the establishment of Nava Durga Enterprises. This small retail store was our first step toward a greater vision. Inspired by success and a desire to make a national impact, we founded Parvati Agro Industries Pvt. Ltd. in 2059 B.S. Named in memory of our sister, Parvati Adhikari, this company focused on providing high-quality, affordable food staples like rice, soybean, beaten rice, and edible oil to communities throughout Nepal.\n\nRecognizing the opportunity to contribute positively to the nation\'s well-being, we ventured into the health sector. Building upon the success of Parvati Agro Industries Pvt. Ltd, we initiated research and development for AG Health Industries Pvt. Ltd. in 2073 B.S. Strategically choosing Nepal\'s industrial hub, Tilottama-16 in Rupandehi, we established our factory. This central location optimizes efficient distribution across the country. Currently, we proudly manufacture and distribute "Sagun Baby Poko Pants" and "Sagun Pads", offering superior hygiene products at accessible prices.\n\nAG Health Industries is dedicated to combining affordability with unwavering quality. Utilizing advanced Chinese and American technology, our operations provide employment to approximately 600 Nepali citizens nationwide. We now produce three essential hygiene products – diapers, sanitary pads, and disposable masks – with plans to expand our offerings to include napkin and tissue paper in the near future.'
+    description: '',
+    sections: [
+      {
+        title: 'The Beginning (2052 B.S.)',
+        text: 'In 2052 B.S., our humble beginnings took root in the far western region of Kailali with the establishment of Nava Durga Enterprises. This small retail store was our first step toward a greater vision.'
+      },
+      {
+        title: 'Expanding Our Vision (2059 B.S.)',
+        text: 'Inspired by success and a desire to make a national impact, we founded Parvati Agro Industries Pvt. Ltd. in 2059 B.S. Named in memory of our sister, Parvati Adhikari, this company focused on providing high-quality, affordable food staples like rice, soybean, beaten rice, and edible oil to communities throughout Nepal.'
+      },
+      {
+        title: 'Entering Health Sector (2073 B.S.)',
+        text: 'Recognizing the opportunity to contribute positively to the nation\'s well-being, we ventured into the health sector. Building upon the success of Parvati Agro Industries Pvt. Ltd, we initiated research and development for AG Health Industries Pvt. Ltd. in 2073 B.S. Strategically choosing Nepal\'s industrial hub, Tilottama-16 in Rupandehi, we established our factory. This central location optimizes efficient distribution across the country.'
+      },
+      {
+        title: 'Today & Tomorrow',
+        text: 'Currently, we proudly manufacture and distribute "Sagun Baby Poko Pants" and "Sagun Pads", offering superior hygiene products at accessible prices. AG Health Industries is dedicated to combining affordability with unwavering quality. Utilizing advanced Chinese and American technology, our operations provide employment to approximately 600 Nepali citizens nationwide. We now produce three essential hygiene products – diapers, sanitary pads, and disposable masks – with plans to expand our offerings to include napkin and tissue paper in the near future.'
+      }
+    ]
   }, {
     icon: Building,
     title: 'About Us',
@@ -130,9 +148,24 @@ const About = () => {
                     <value.icon className="w-8 h-8 text-white" />
                   </div>
                   <h2 className="text-3xl font-bold text-foreground">{value.title}</h2>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    {value.description}
-                  </p>
+                  {value.description ? (
+                    <p className="text-lg text-muted-foreground leading-relaxed">
+                      {value.description}
+                    </p>
+                  ) : (
+                    'sections' in value && value.sections && (
+                      <div className="space-y-6">
+                        {value.sections.map((section: { title: string; text: string }, idx: number) => (
+                          <div key={idx} className="space-y-3">
+                            <h3 className="text-xl font-semibold text-primary">{section.title}</h3>
+                            <p className="text-base text-muted-foreground leading-relaxed">
+                              {section.text}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    )
+                  )}
                 </CardContent>
               </Card>)}
           </div>
