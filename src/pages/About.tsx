@@ -6,6 +6,7 @@ import teamMember3 from '@/assets/team-member-3.jpg';
 import factoryBuilding from '@/assets/factory-building.jpg';
 import parbatiAgroLogo from '@/assets/parbati-agro-logo.png';
 import bhuMaduLogo from '@/assets/bhu-madu-logo.png';
+import isoLogo from '@/assets/iso-logo.png';
 const About = () => {
   const stats = [{
     icon: Users,
@@ -97,7 +98,17 @@ const About = () => {
             {stats.map((stat, index) => <Card key={stat.label} className="border-0 shadow-soft hover:shadow-medium transition-smooth bg-gray-100 text-center animate-fade-in" style={{
             animationDelay: `${index * 100}ms`
           }}>
-                <CardContent className="p-8 space-y-4">
+                <CardContent 
+                  className="p-8 space-y-4 relative"
+                  style={stat.value === 'ISO' ? {
+                    backgroundImage: `url(${isoLogo})`,
+                    backgroundSize: 'contain',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundBlendMode: 'multiply',
+                    backgroundColor: 'rgba(255, 255, 255, 0.95)'
+                  } : {}}
+                >
                   <div className="w-16 h-16 mx-auto bg-gradient-primary rounded-2xl flex items-center justify-center">
                     <stat.icon className="w-8 h-8 text-white" />
                   </div>
