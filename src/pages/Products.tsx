@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import sagunBabyPokoPants from '@/assets/sagun-baby-poko-pants.png';
 import sagunBabyPants from '@/assets/sagun-baby-pants.png';
 import sagunPad from '@/assets/sagun-pad.png';
-import productsBackground from '@/assets/factory-clean.jpg';
+import productsBackground from '@/assets/products-background.png';
 import sagunFaceMaskBox from '@/assets/sagun-face-mask-box.jpg';
 
 const Products = () => {
