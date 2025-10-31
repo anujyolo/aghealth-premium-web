@@ -105,10 +105,10 @@ const About = () => {
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-8">
-            {stats.map((stat, index) => <Card key={stat.label} className="border-0 shadow-soft hover:shadow-medium transition-smooth bg-transparent text-center animate-fade-in" style={{
+            {stats.map((stat, index) => <Card key={stat.label} className="border-0 shadow-soft hover:shadow-medium transition-smooth bg-gray-100 text-center animate-fade-in" style={{
             animationDelay: `${index * 100}ms`
           }}>
-                <CardContent className="p-8 pt-12 space-y-4 relative px-0 py-[10px]">
+                <CardContent className="p-8 pt-12 space-y-4 relative px-0 py-0">
                   {stat.value === 'ISO' ? <div className="w-24 h-24 mx-auto flex items-center justify-center">
                       <img src={isoLogoNew} alt="ISO Certified" className="w-full h-full object-contain" />
                     </div> : stat.value === '5+' ? <div className="w-24 h-24 mx-auto flex items-center justify-center">
@@ -118,7 +118,7 @@ const About = () => {
                     </div> : <div className="w-16 h-16 mx-auto bg-gradient-primary rounded-2xl flex items-center justify-center">
                       <stat.icon className="w-8 h-8 text-white" />
                     </div>}
-                  <div className="text-4xl font-bold" style={{ color: '#ddc4a6bf' }}>{stat.value}</div>
+                  <div className="text-4xl font-bold text-primary">{stat.value}</div>
                   <div className="text-muted-foreground font-medium mt-8 mx-[31px]">{stat.label}</div>
                 </CardContent>
               </Card>)}
