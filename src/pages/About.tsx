@@ -38,32 +38,29 @@ const About = () => {
     title: 'Our Vision',
     description: 'To become Nepal\'s most trusted hygiene products manufacturer, recognized for innovation, quality, and social responsibility. We envision a future where every family has access to premium hygiene products that enhance their quality of life.'
   }, {
-    icon: BookOpen,
-    title: 'Our History',
-    description: '',
-    sections: [
-      {
-        title: 'The Beginning (2052 B.S.)',
-        text: 'In 2052 B.S., our humble beginnings took root in the far western region of Kailali with the establishment of Nava Durga Enterprises. This small retail store was our first step toward a greater vision.'
-      },
-      {
-        title: 'Expanding Our Vision (2059 B.S.)',
-        text: 'Inspired by success and a desire to make a national impact, we founded Parvati Agro Industries Pvt. Ltd. in 2059 B.S. Named in memory of our sister, Parvati Adhikari, this company focused on providing high-quality, affordable food staples like rice, soybean, beaten rice, and edible oil to communities throughout Nepal.'
-      },
-      {
-        title: 'Entering Health Sector (2073 B.S.)',
-        text: 'Recognizing the opportunity to contribute positively to the nation\'s well-being, we ventured into the health sector. Building upon the success of Parvati Agro Industries Pvt. Ltd, we initiated research and development for AG Health Industries Pvt. Ltd. in 2073 B.S. Strategically choosing Nepal\'s industrial hub, Tilottama-16 in Rupandehi, we established our factory. This central location optimizes efficient distribution across the country.'
-      },
-      {
-        title: 'Today & Tomorrow',
-        text: 'Currently, we proudly manufacture and distribute "Sagun Baby Poko Pants" and "Sagun Pads", offering superior hygiene products at accessible prices. AG Health Industries is dedicated to combining affordability with unwavering quality. Utilizing advanced Chinese and American technology, our operations provide employment to approximately 600 Nepali citizens nationwide. We now produce three essential hygiene products – diapers, sanitary pads, and disposable masks – with plans to expand our offerings to include napkin and tissue paper in the near future.'
-      }
-    ]
-  }, {
     icon: Building,
     title: 'About Us',
     description: 'AG Health Industries, established in 2073 B.S. as Nepal\'s first diaper manufacturer, spans 4 Bigha and employs over 200 people. Specializing in disposable face masks, sanitary napkins, and baby diapers, we prioritize meeting customer demands through rigorous quality control and cutting-edge technology. Our modern facilities and scientific management system have significantly boosted our brand\'s national recognition, particularly during the COVID period, ensuring independence in hygienic products. By sourcing raw materials globally and maintaining stringent quality control from raw material inspection to finished product inspection, we guarantee the highest standards. Our talented team, driven by creativity and integrity, is dedicated to manufacturing premium disposable diapers and developing well-known brands in the hygienic sector, reflecting our commitment to excellence and innovation. Leveraging advanced production tools and market research, we continuously develop products to meet evolving market demands. Our extensive dealer management system and experienced marketing team have expanded our reach across major cities, provinces, and autonomous regions nationwide.\n\nAG Health offers a diverse range of feminine, adult, and newborn diapers, catering to ages from zero to one hundred. Our brands include "Sagun Baby Poko pants" and "Buget" for babies, SAGUN for adults, and Sagun for sanitary napkins. We are committed to delivering top-notch quality and service through advanced production tools and rigorous control systems. Our dealer management system and marketing team have expanded our network across major cities, provinces, and autonomous regions. By fostering dealer relationships and providing support, we ensure our products reach diverse customers. Strategic initiatives, including targeted advertising, promotions, and strong distribution channels, have boosted market penetration and visibility. This approach helps us address regional demands, adapt to trends, and maintain a competitive edge in the hygienic product sector.'
   }];
+
+  const historyTimeline = [
+    {
+      title: 'The Beginning (2052 B.S.)',
+      text: 'In 2052 B.S., our humble beginnings took root in the far western region of Kailali with the establishment of Nava Durga Enterprises. This small retail store was our first step toward a greater vision.'
+    },
+    {
+      title: 'Expanding Our Vision (2059 B.S.)',
+      text: 'Inspired by success and a desire to make a national impact, we founded Parvati Agro Industries Pvt. Ltd. in 2059 B.S. Named in memory of our sister, Parvati Adhikari, this company focused on providing high-quality, affordable food staples like rice, soybean, beaten rice, and edible oil to communities throughout Nepal.'
+    },
+    {
+      title: 'Entering Health Sector (2073 B.S.)',
+      text: 'Recognizing the opportunity to contribute positively to the nation\'s well-being, we ventured into the health sector. Building upon the success of Parvati Agro Industries Pvt. Ltd, we initiated research and development for AG Health Industries Pvt. Ltd. in 2073 B.S. Strategically choosing Nepal\'s industrial hub, Tilottama-16 in Rupandehi, we established our factory. This central location optimizes efficient distribution across the country.'
+    },
+    {
+      title: 'Today & Tomorrow',
+      text: 'Currently, we proudly manufacture and distribute "Sagun Baby Poko Pants" and "Sagun Pads", offering superior hygiene products at accessible prices. AG Health Industries is dedicated to combining affordability with unwavering quality. Utilizing advanced Chinese and American technology, our operations provide employment to approximately 600 Nepali citizens nationwide. We now produce three essential hygiene products – diapers, sanitary pads, and disposable masks – with plans to expand our offerings to include napkin and tissue paper in the near future.'
+    }
+  ];
   const principles = [{
     title: 'Quality Assurance',
     description: 'ISO-certified manufacturing with rigorous quality control at every step'
@@ -139,7 +136,7 @@ const About = () => {
       {/* Mission & Vision */}
       <section className="py-16 md:py-20 bg-black/40 backdrop-blur-sm">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
             {values.map((value, index) => <Card key={value.title} className="border-0 shadow-soft hover:shadow-medium transition-smooth bg-white animate-fade-in" style={{
             animationDelay: `${index * 150}ms`
           }}>
@@ -148,27 +145,38 @@ const About = () => {
                     <value.icon className="w-8 h-8 text-white" />
                   </div>
                   <h2 className="text-3xl font-bold text-foreground">{value.title}</h2>
-                  {value.description ? (
-                    <p className="text-lg text-muted-foreground leading-relaxed">
-                      {value.description}
-                    </p>
-                  ) : (
-                    'sections' in value && value.sections && (
-                      <div className="space-y-6">
-                        {value.sections.map((section: { title: string; text: string }, idx: number) => (
-                          <div key={idx} className="space-y-3">
-                            <h3 className="text-xl font-semibold text-primary">{section.title}</h3>
-                            <p className="text-base text-muted-foreground leading-relaxed">
-                              {section.text}
-                            </p>
-                          </div>
-                        ))}
-                      </div>
-                    )
-                  )}
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    {value.description}
+                  </p>
                 </CardContent>
               </Card>)}
           </div>
+        </div>
+      </section>
+
+      {/* Our History - Standalone Section */}
+      <section className="py-16 md:py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Card className="border-0 shadow-soft hover:shadow-medium transition-smooth bg-white animate-fade-in max-w-5xl mx-auto">
+            <CardContent className="p-8 md:p-12 space-y-8">
+              <div className="flex items-center space-x-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center flex-shrink-0">
+                  <BookOpen className="w-8 h-8 text-white" />
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground">Our History</h2>
+              </div>
+              <div className="space-y-8">
+                {historyTimeline.map((section, idx) => (
+                  <div key={idx} className="space-y-3 pl-4 border-l-4 border-primary/30">
+                    <h3 className="text-xl md:text-2xl font-semibold text-primary">{section.title}</h3>
+                    <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                      {section.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
