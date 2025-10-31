@@ -66,10 +66,9 @@ const About = () => {
     description: 'Supporting local communities and creating employment opportunities'
   }];
   return <div className="min-h-screen pt-20 md:pt-24 pb-16 relative">
-      <div 
-        className="fixed inset-0 bg-cover bg-center bg-no-repeat -z-10"
-        style={{ backgroundImage: `url(${factoryBuilding})` }}
-      />
+      <div className="fixed inset-0 bg-cover bg-center bg-no-repeat -z-10" style={{
+      backgroundImage: `url(${factoryBuilding})`
+    }} />
       <div className="fixed inset-0 bg-black/50 -z-10" />
       {/* Hero Section */}
       <section className="bg-gradient-soft py-16 md:py-20">
@@ -79,7 +78,9 @@ const About = () => {
               <Heart className="w-4 h-4" />
               <span>About A.G. Health Industries</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#ddc4a6bf' }}>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6" style={{
+            color: '#ddc4a6bf'
+          }}>
               Caring for Hygiene, Caring for Nepal
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
@@ -98,22 +99,19 @@ const About = () => {
             {stats.map((stat, index) => <Card key={stat.label} className="border-0 shadow-soft hover:shadow-medium transition-smooth bg-gray-100 text-center animate-fade-in" style={{
             animationDelay: `${index * 100}ms`
           }}>
-                <CardContent 
-                  className="p-8 space-y-4 relative"
-                  style={stat.value === 'ISO' ? {
-                    backgroundImage: `url(${isoLogo})`,
-                    backgroundSize: 'contain',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundBlendMode: 'multiply',
-                    backgroundColor: 'rgba(255, 255, 255, 0.95)'
-                  } : {}}
-                >
+                <CardContent className="p-8 space-y-4 relative" style={stat.value === 'ISO' ? {
+              backgroundImage: `url(${isoLogo})`,
+              backgroundSize: 'contain',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              backgroundBlendMode: 'multiply',
+              backgroundColor: 'rgba(255, 255, 255, 0.95)'
+            } : {}}>
                   <div className="w-16 h-16 mx-auto bg-gradient-primary rounded-2xl flex items-center justify-center">
                     <stat.icon className="w-8 h-8 text-white" />
                   </div>
                   <div className="text-4xl font-bold text-primary">{stat.value}</div>
-                  <div className="text-muted-foreground font-medium">{stat.label}</div>
+                  <div className="text-muted-foreground font-medium my-0 py-0">{stat.label}</div>
                 </CardContent>
               </Card>)}
           </div>
@@ -145,8 +143,12 @@ const About = () => {
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#ddc4a6bf' }}>Founder's and CEO</h2>
-            <p className="text-lg max-w-2xl mx-auto" style={{ color: '#16a69d' }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{
+            color: '#ddc4a6bf'
+          }}>Founder's and CEO</h2>
+            <p className="text-lg max-w-2xl mx-auto" style={{
+            color: '#16a69d'
+          }}>
               Meet the visionaries driving A.G. Health Industries forward
             </p>
           </div>
@@ -158,7 +160,9 @@ const About = () => {
                 <img src={teamMember1} alt="Leadership team member" className="rounded-3xl shadow-large w-full h-auto object-cover" />
               </div>
               <div className="space-y-6 animate-fade-in-up">
-                <h3 className="text-2xl md:text-3xl font-bold" style={{ color: '#ddc4a6bf' }}>Mr. Tilak Prasad Adhikari</h3>
+                <h3 className="text-2xl md:text-3xl font-bold" style={{
+                color: '#ddc4a6bf'
+              }}>Mr. Tilak Prasad Adhikari</h3>
                 <p className="text-xl text-muted-foreground font-medium">Founder, Chairman</p>
               </div>
             </div>
@@ -166,7 +170,9 @@ const About = () => {
             {/* Second Team Member */}
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6 animate-fade-in-up lg:order-1">
-                <h3 className="text-2xl md:text-3xl font-bold" style={{ color: '#ddc4a6bf' }}>Mr. Dolraj Adhikari</h3>
+                <h3 className="text-2xl md:text-3xl font-bold" style={{
+                color: '#ddc4a6bf'
+              }}>Mr. Dolraj Adhikari</h3>
                 <p className="text-xl text-muted-foreground font-medium">Founder, CEO</p>
               </div>
               <div className="animate-fade-in lg:order-2">
@@ -180,7 +186,9 @@ const About = () => {
                 <img src={teamMember3} alt="Leadership team member" className="rounded-3xl shadow-large w-full max-w-md mx-auto h-auto object-cover" />
               </div>
               <div className="space-y-6 animate-fade-in-up">
-                <h3 className="text-2xl md:text-3xl font-bold" style={{ color: '#ddc4a6bf' }}>Mr. Gangadhar Adhikari</h3>
+                <h3 className="text-2xl md:text-3xl font-bold" style={{
+                color: '#ddc4a6bf'
+              }}>Mr. Gangadhar Adhikari</h3>
                 <p className="text-xl text-muted-foreground font-medium">Founder, Managing Director</p>
               </div>
             </div>
@@ -192,10 +200,14 @@ const About = () => {
       <section className="py-16 md:py-20 bg-black/40 backdrop-blur-sm">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#16a69d' }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{
+            color: '#16a69d'
+          }}>
               Our Core Values
             </h2>
-            <p className="text-lg max-w-2xl mx-auto" style={{ color: '#ddc4a6bf' }}>
+            <p className="text-lg max-w-2xl mx-auto" style={{
+            color: '#ddc4a6bf'
+          }}>
               The principles that guide everything we do at A.G. Health Industries
             </p>
           </div>
@@ -222,10 +234,14 @@ const About = () => {
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold" style={{ color: '#ddc4a6bf' }}>
+            <h2 className="text-3xl md:text-4xl font-bold" style={{
+            color: '#ddc4a6bf'
+          }}>
               Manufacturing Excellence
             </h2>
-            <p className="text-lg leading-relaxed" style={{ color: '#16a69d' }}>
+            <p className="text-lg leading-relaxed" style={{
+            color: '#16a69d'
+          }}>
               Our ISO-certified facility in Nepal employs cutting-edge technology and strict 
               quality control measures. From raw material selection to final packaging, every 
               step is monitored to ensure the highest standards of hygiene and quality.
@@ -244,7 +260,9 @@ const About = () => {
               animationDelay: `${index * 100}ms`
             }}>
                   <item.icon className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <div className="font-semibold" style={{ color: '#ddc4a6bf' }}>{item.label}</div>
+                  <div className="font-semibold" style={{
+                color: '#ddc4a6bf'
+              }}>{item.label}</div>
                 </div>)}
             </div>
           </div>
@@ -255,10 +273,14 @@ const About = () => {
       <section className="py-16 md:py-20 bg-black/40 backdrop-blur-sm">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#ddc4a6bf' }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{
+            color: '#ddc4a6bf'
+          }}>
               Our Parent Company
             </h2>
-            <p className="text-lg leading-relaxed" style={{ color: '#16a69d' }}>
+            <p className="text-lg leading-relaxed" style={{
+            color: '#16a69d'
+          }}>
               AG Health Industries Pvt. Ltd. is part of the Adhikari Group of Companies, a diversified business conglomerate with a strong presence across multiple sectors in Nepal. Our parent company's legacy of excellence and commitment to quality has been the foundation upon which AG Health Industries was built. With decades of experience in manufacturing and distribution, the Adhikari Group has established itself as a trusted name in Nepal's industrial landscape, providing employment opportunities and contributing to the nation's economic growth.
             </p>
             <div className="grid sm:grid-cols-2 gap-8 pt-8">
