@@ -323,6 +323,15 @@ const Products = () => {
             </DialogDescription>
           </DialogHeader>
           <div className="space-y-6 py-4">
+            {/* Product Image Area */}
+            <div className="w-full h-48 bg-gradient-soft rounded-xl flex items-center justify-center overflow-hidden border-2 border-dashed border-muted">
+              <div className="text-center p-4">
+                <Package className="w-12 h-12 text-muted-foreground mx-auto mb-2" />
+                <p className="text-sm text-muted-foreground">Product Image</p>
+                <p className="text-xs text-muted-foreground mt-1">Display area for product photo</p>
+              </div>
+            </div>
+
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm text-muted-foreground mb-1">Size</p>
