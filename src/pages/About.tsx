@@ -9,7 +9,7 @@ import bhuMaduLogo from '@/assets/bhu-madu-logo.png';
 import isoLogo from '@/assets/iso-logo.png';
 import isoLogoNew from '@/assets/iso-logo-new.png';
 import agHealthLogoNew from '@/assets/ag-health-logo-new.webp';
-import sagunNsMarkNew from '@/assets/sagun-ns-mark-new.png';
+import sagunNsMarkNew from '@/assets/sagun-ns-mark-updated.png';
 import historyIcon from '@/assets/history-icon.jpg';
 const About = () => {
   const stats = [{
