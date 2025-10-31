@@ -185,7 +185,11 @@ const Products = () => {
                     {category.products.map((product) => (
                       <li
                         key={product.name}
-                        className="flex items-center justify-between p-4 rounded-lg hover:bg-muted/50 transition-smooth group"
+                        onClick={() => {
+                          // Navigate to product detail - you can customize this
+                          console.log('Clicked product:', product.name);
+                        }}
+                        className="flex items-center justify-between p-4 rounded-lg hover:bg-muted/50 transition-smooth group cursor-pointer"
                       >
                         <div className="flex-1">
                           <div className="text-foreground font-medium group-hover:text-primary transition-smooth">
