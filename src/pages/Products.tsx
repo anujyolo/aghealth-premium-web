@@ -115,7 +115,7 @@ const Products = () => {
             {categories.map((category, index) => (
               <Card
                 key={category.name}
-                className="border-0 shadow-soft hover:shadow-large transition-smooth bg-white/80 backdrop-blur-sm overflow-hidden animate-fade-in"
+                className="border-0 shadow-soft hover:shadow-large transition-smooth bg-white/50 backdrop-blur-sm overflow-hidden animate-fade-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <CardHeader className="space-y-4 bg-gradient-soft pb-8">
