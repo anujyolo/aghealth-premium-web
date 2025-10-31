@@ -185,7 +185,10 @@ const Career = () => {
                     <Globe className="w-4 h-4 mr-2" />
                     <span>{position.location}</span>
                   </div>
-                  <Button className="w-full bg-gradient-primary hover:opacity-90 transition-smooth">
+                  <Button 
+                    className="w-full bg-gradient-primary hover:opacity-90 transition-smooth"
+                    onClick={() => document.getElementById('application-form')?.scrollIntoView({ behavior: 'smooth' })}
+                  >
                     Apply Now
                   </Button>
                 </CardContent>
@@ -195,7 +198,7 @@ const Career = () => {
       </section>
 
       {/* Application Form */}
-      <section className="py-16 md:py-20">
+      <section id="application-form" className="py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-12">
