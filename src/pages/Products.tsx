@@ -292,7 +292,7 @@ const Products = () => {
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Card className="border-0 shadow-large bg-gradient-to-br from-primary/80 via-accent/80 to-primary/80 overflow-hidden">
-            <CardContent className="p-8 md:p-12 text-center space-y-6 bg-black/20">
+            <CardContent className="p-8 md:p-12 text-center space-y-6 bg-black/50">
               <h2 className="text-3xl md:text-4xl font-bold text-white">
                 Need Help Choosing Products?
               </h2>
