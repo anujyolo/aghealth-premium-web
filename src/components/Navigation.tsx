@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Cloud, Sun, Star, Baby, Car, Heart, Sparkles } from 'lucide-react';
+import { Menu, X, Cloud, Sun, Star, Baby, Car, Heart, Sparkles, Mail, Phone, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import logo from '@/assets/ag-health-logo.webp';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isContactOpen, setIsContactOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -79,7 +81,10 @@ const Navigation = () => {
 
           {/* CTA Button - Desktop */}
           <div className="hidden md:block">
-            <Button className="bg-gradient-primary hover:opacity-90 transition-smooth shadow-soft">
+            <Button 
+              onClick={() => setIsContactOpen(true)}
+              className="bg-gradient-primary hover:opacity-90 transition-smooth shadow-soft"
+            >
               Contact Us
             </Button>
           </div>
@@ -117,7 +122,13 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="pt-2">
-                <Button className="w-full bg-gradient-primary hover:opacity-90 transition-smooth">
+                <Button 
+                  onClick={() => {
+                    setIsContactOpen(true);
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className="w-full bg-gradient-primary hover:opacity-90 transition-smooth"
+                >
                   Contact Us
                 </Button>
               </div>
@@ -125,6 +136,71 @@ const Navigation = () => {
           </div>
         )}
       </div>
+
+      {/* Contact Modal */}
+      <Dialog open={isContactOpen} onOpenChange={setIsContactOpen}>
+        <DialogContent className="sm:max-w-[500px]">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold">Contact Us</DialogTitle>
+            <DialogDescription>
+              Get in touch with A.G. Health Industries
+            </DialogDescription>
+          </DialogHeader>
+          <div className="space-y-6 py-4">
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <Mail className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                <div>
+                  <p className="font-semibold text-foreground">Email</p>
+                  <a 
+                    href="mailto:info@aghealthindustries.com" 
+                    className="text-muted-foreground hover:text-primary transition-smooth"
+                  >
+                    info@aghealthindustries.com
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <Phone className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                <div>
+                  <p className="font-semibold text-foreground">Phone</p>
+                  <a 
+                    href="tel:+977-71-590123" 
+                    className="text-muted-foreground hover:text-primary transition-smooth"
+                  >
+                    +977-71-590123
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                <div>
+                  <p className="font-semibold text-foreground">Address</p>
+                  <p className="text-muted-foreground">
+                    Tilottama-16, Rupandehi, Nepal
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="pt-4 border-t">
+              <p className="text-sm text-muted-foreground mb-4">
+                For product inquiries, orders, or partnership opportunities, feel free to reach out to us.
+              </p>
+              <Button 
+                className="w-full bg-gradient-primary hover:opacity-90"
+                onClick={() => {
+                  window.location.href = 'mailto:info@aghealthindustries.com';
+                }}
+              >
+                Send Email
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </nav>
   );
 };
