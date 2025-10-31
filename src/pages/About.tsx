@@ -7,6 +7,7 @@ import factoryBuilding from '@/assets/factory-building.jpg';
 import parbatiAgroLogo from '@/assets/parbati-agro-logo.png';
 import bhuMaduLogo from '@/assets/bhu-madu-logo.png';
 import isoLogo from '@/assets/iso-logo.png';
+import historyIcon from '@/assets/history-icon.jpg';
 const About = () => {
   const stats = [{
     icon: Users,
@@ -180,8 +181,8 @@ const About = () => {
           <Card className="border-0 shadow-soft hover:shadow-medium transition-smooth bg-white animate-fade-in max-w-5xl mx-auto">
             <CardContent className="p-8 md:p-12 space-y-8">
               <div className="flex items-center space-x-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center flex-shrink-0">
-                  <BookOpen className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 overflow-hidden">
+                  <img src={historyIcon} alt="History" className="w-full h-full object-cover" />
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground">Our History</h2>
               </div>
