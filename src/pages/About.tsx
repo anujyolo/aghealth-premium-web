@@ -42,25 +42,19 @@ const About = () => {
     title: 'Our Vision',
     description: 'To become Nepal\'s most trusted hygiene products manufacturer, recognized for innovation, quality, and social responsibility. We envision a future where every family has access to premium hygiene products that enhance their quality of life.'
   }];
-
-  const historyTimeline = [
-    {
-      title: 'The Beginning (2052 B.S.)',
-      text: 'In 2052 B.S., our humble beginnings took root in the far western region of Kailali with the establishment of Nava Durga Enterprises. This small retail store was our first step toward a greater vision.'
-    },
-    {
-      title: 'Expanding Our Vision (2059 B.S.)',
-      text: 'Inspired by success and a desire to make a national impact, we founded Parvati Agro Industries Pvt. Ltd. in 2059 B.S. Named in memory of our sister, Parvati Adhikari, this company focused on providing high-quality, affordable food staples like rice, soybean, beaten rice, and edible oil to communities throughout Nepal.'
-    },
-    {
-      title: 'Entering Health Sector (2073 B.S.)',
-      text: 'Recognizing the opportunity to contribute positively to the nation\'s well-being, we ventured into the health sector. Building upon the success of Parvati Agro Industries Pvt. Ltd, we initiated research and development for AG Health Industries Pvt. Ltd. in 2073 B.S. Strategically choosing Nepal\'s industrial hub, Tilottama-16 in Rupandehi, we established our factory. This central location optimizes efficient distribution across the country.'
-    },
-    {
-      title: 'Today & Tomorrow',
-      text: 'Currently, we proudly manufacture and distribute "Sagun Baby Poko Pants" and "Sagun Pads", offering superior hygiene products at accessible prices. AG Health Industries is dedicated to combining affordability with unwavering quality. Utilizing advanced Chinese and American technology, our operations provide employment to approximately 600 Nepali citizens nationwide. We now produce three essential hygiene products – diapers, sanitary pads, and disposable masks – with plans to expand our offerings to include napkin and tissue paper in the near future.'
-    }
-  ];
+  const historyTimeline = [{
+    title: 'The Beginning (2052 B.S.)',
+    text: 'In 2052 B.S., our humble beginnings took root in the far western region of Kailali with the establishment of Nava Durga Enterprises. This small retail store was our first step toward a greater vision.'
+  }, {
+    title: 'Expanding Our Vision (2059 B.S.)',
+    text: 'Inspired by success and a desire to make a national impact, we founded Parvati Agro Industries Pvt. Ltd. in 2059 B.S. Named in memory of our sister, Parvati Adhikari, this company focused on providing high-quality, affordable food staples like rice, soybean, beaten rice, and edible oil to communities throughout Nepal.'
+  }, {
+    title: 'Entering Health Sector (2073 B.S.)',
+    text: 'Recognizing the opportunity to contribute positively to the nation\'s well-being, we ventured into the health sector. Building upon the success of Parvati Agro Industries Pvt. Ltd, we initiated research and development for AG Health Industries Pvt. Ltd. in 2073 B.S. Strategically choosing Nepal\'s industrial hub, Tilottama-16 in Rupandehi, we established our factory. This central location optimizes efficient distribution across the country.'
+  }, {
+    title: 'Today & Tomorrow',
+    text: 'Currently, we proudly manufacture and distribute "Sagun Baby Poko Pants" and "Sagun Pads", offering superior hygiene products at accessible prices. AG Health Industries is dedicated to combining affordability with unwavering quality. Utilizing advanced Chinese and American technology, our operations provide employment to approximately 600 Nepali citizens nationwide. We now produce three essential hygiene products – diapers, sanitary pads, and disposable masks – with plans to expand our offerings to include napkin and tissue paper in the near future.'
+  }];
   const principles = [{
     title: 'Quality Assurance',
     description: 'ISO-certified manufacturing with rigorous quality control at every step'
@@ -114,24 +108,16 @@ const About = () => {
             {stats.map((stat, index) => <Card key={stat.label} className="border-0 shadow-soft hover:shadow-medium transition-smooth bg-gray-100 text-center animate-fade-in" style={{
             animationDelay: `${index * 100}ms`
           }}>
-                <CardContent className="p-8 pt-12 space-y-4 relative">
-                  {stat.value === 'ISO' ? (
-                    <div className="w-24 h-24 mx-auto flex items-center justify-center">
+                <CardContent className="p-8 pt-12 space-y-4 relative px-0 py-[10px]">
+                  {stat.value === 'ISO' ? <div className="w-24 h-24 mx-auto flex items-center justify-center">
                       <img src={isoLogoNew} alt="ISO Certified" className="w-full h-full object-contain" />
-                    </div>
-                  ) : stat.value === '5+' ? (
-                    <div className="w-24 h-24 mx-auto flex items-center justify-center">
+                    </div> : stat.value === '5+' ? <div className="w-24 h-24 mx-auto flex items-center justify-center">
                       <img src={agHealthLogoNew} alt="A.G. Health Industries" className="w-full h-full object-contain" />
-                    </div>
-                  ) : stat.value === 'NS' ? (
-                    <div className="w-24 h-24 mx-auto flex items-center justify-center">
+                    </div> : stat.value === 'NS' ? <div className="w-24 h-24 mx-auto flex items-center justify-center">
                       <img src={sagunNsMarkNew} alt="Nepal Standard Mark" className="w-full h-full object-contain" />
-                    </div>
-                  ) : (
-                    <div className="w-16 h-16 mx-auto bg-gradient-primary rounded-2xl flex items-center justify-center">
+                    </div> : <div className="w-16 h-16 mx-auto bg-gradient-primary rounded-2xl flex items-center justify-center">
                       <stat.icon className="w-8 h-8 text-white" />
-                    </div>
-                  )}
+                    </div>}
                   <div className="text-4xl font-bold text-primary">{stat.value}</div>
                   <div className="text-muted-foreground font-medium mt-8 mx-[31px]">{stat.label}</div>
                 </CardContent>
@@ -152,14 +138,12 @@ const About = () => {
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground">Our History</h2>
               </div>
               <div className="space-y-8">
-                {historyTimeline.map((section, idx) => (
-                  <div key={idx} className="space-y-3 pl-4 border-l-4 border-primary/30">
+                {historyTimeline.map((section, idx) => <div key={idx} className="space-y-3 pl-4 border-l-4 border-primary/30">
                     <h3 className="text-xl md:text-2xl font-semibold text-primary">{section.title}</h3>
                     <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                       {section.text}
                     </p>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </CardContent>
           </Card>
