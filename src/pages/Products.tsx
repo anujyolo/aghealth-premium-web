@@ -1,7 +1,9 @@
-import { Baby, Shield, Heart, Smile, Package, Star } from 'lucide-react';
+import { useState } from 'react';
+import { Baby, Shield, Heart, Smile, Package, Star, X } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import sagunBabyPokoPants from '@/assets/sagun-baby-poko-pants.png';
 import sagunBabyPantsLogo from '@/assets/sagun-baby-pants-logo.png';
 import sagunPad from '@/assets/sagun-pad.png';
@@ -9,6 +11,8 @@ import productsBackground from '@/assets/products-background.png';
 import sagunFaceMaskBox from '@/assets/sagun-face-mask-box.jpg';
 
 const Products = () => {
+  const [selectedProduct, setSelectedProduct] = useState<{name: string, size: string, tag: string, category: string} | null>(null);
+
   const categories = [
     {
       icon: Baby,
@@ -186,8 +190,10 @@ const Products = () => {
                       <li
                         key={product.name}
                         onClick={() => {
-                          // Navigate to product detail - you can customize this
-                          console.log('Clicked product:', product.name);
+                          setSelectedProduct({
+                            ...product,
+                            category: category.name
+                          });
                         }}
                         className="flex items-center justify-between p-4 rounded-lg hover:bg-muted/50 transition-smooth group cursor-pointer"
                       >
@@ -306,6 +312,60 @@ const Products = () => {
           </Card>
         </div>
       </section>
+
+      {/* Product Detail Modal */}
+      <Dialog open={!!selectedProduct} onOpenChange={(open) => !open && setSelectedProduct(null)}>
+        <DialogContent className="sm:max-w-[500px]">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold">{selectedProduct?.name}</DialogTitle>
+            <DialogDescription className="text-base">
+              Category: {selectedProduct?.category}
+            </DialogDescription>
+          </DialogHeader>
+          <div className="space-y-6 py-4">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sm text-muted-foreground mb-1">Size</p>
+                <p className="text-lg font-semibold">{selectedProduct?.size}</p>
+              </div>
+              <Badge variant="secondary" className={`${getTagColor(selectedProduct?.tag || '')} border-0`}>
+                {selectedProduct?.tag}
+              </Badge>
+            </div>
+            
+            <div className="space-y-2">
+              <h4 className="font-semibold text-foreground">Product Features</h4>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li className="flex items-start gap-2">
+                  <Star className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                  <span>Premium quality materials for maximum comfort</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Star className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                  <span>ISO certified manufacturing standards</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Star className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                  <span>Dermatologically tested and safe</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Star className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                  <span>Made in Nepal with pride</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="flex gap-3">
+              <Button className="flex-1" onClick={() => setSelectedProduct(null)}>
+                Close
+              </Button>
+              <Button className="flex-1" variant="outline" asChild>
+                <a href="mailto:info@aghealthindustries.com">Contact for Order</a>
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
