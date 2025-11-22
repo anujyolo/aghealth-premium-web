@@ -123,7 +123,9 @@ const Career = () => {
           }}>
               Why Work with Us?
             </h2>
-            <p className="text-lg max-w-2xl mx-auto" style={{ color: '#ddc4a6bf' }}>We offer more than just a
+            <p className="text-lg max-w-2xl mx-auto" style={{
+            color: '#ddc4a6bf'
+          }}>We offer more than just a
  job – we provide opportunities for growth and meaningful impact</p>
           </div>
 
@@ -151,7 +153,9 @@ const Career = () => {
       <section className="py-16 md:py-20 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#ddc4a6bf' }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{
+            color: '#ddc4a6bf'
+          }}>
               Current Job Openings
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -185,10 +189,9 @@ const Career = () => {
                     <Globe className="w-4 h-4 mr-2" />
                     <span>{position.location}</span>
                   </div>
-                  <Button 
-                    className="w-full bg-gradient-primary hover:opacity-90 transition-smooth"
-                    onClick={() => document.getElementById('application-form')?.scrollIntoView({ behavior: 'smooth' })}
-                  >
+                  <Button className="w-full bg-gradient-primary hover:opacity-90 transition-smooth" onClick={() => document.getElementById('application-form')?.scrollIntoView({
+                behavior: 'smooth'
+              })}>
                     Apply Now
                   </Button>
                 </CardContent>
@@ -257,7 +260,7 @@ const Career = () => {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-16 bg-gradient-to-br from-primary via-accent to-primary">
+      <section className="py-16 bg-gradient-to-br from-primary via-accent to-primary bg-[#b5e5e2]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Have Questions About Careers?
