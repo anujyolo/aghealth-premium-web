@@ -158,7 +158,7 @@ const Career = () => {
           }}>
               Current Job Openings
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg max-w-2xl mx-auto text-[#a1aaea]">
               Explore opportunities to grow your career with A.G. Health Industries
             </p>
           </div>
