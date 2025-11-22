@@ -130,17 +130,17 @@ const Career = () => {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {benefits.map((benefit, index) => <Card key={benefit.title} className="border-0 shadow-soft hover:shadow-medium transition-smooth bg-white group animate-fade-in" style={{
+            {benefits.map((benefit, index) => <Card key={benefit.title} className="border-0 shadow-soft hover:shadow-medium transition-smooth bg-white/10 backdrop-blur-sm group animate-fade-in" style={{
             animationDelay: `${index * 100}ms`
           }}>
                 <CardContent className="p-6 text-center space-y-4">
                   <div className="w-16 h-16 mx-auto bg-gradient-primary rounded-2xl flex items-center justify-center group-hover:scale-110 transition-smooth">
                     <benefit.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground">
+                  <h3 className="text-xl font-semibold text-amber-100">
                     {benefit.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-white/90 leading-relaxed">
                     {benefit.description}
                   </p>
                 </CardContent>
@@ -164,13 +164,13 @@ const Career = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            {positions.map((position, index) => <Card key={position.title} className="border-0 shadow-soft hover:shadow-medium transition-smooth bg-white group cursor-pointer animate-fade-in" style={{
+            {positions.map((position, index) => <Card key={position.title} className="border-0 shadow-soft hover:shadow-medium transition-smooth bg-white/10 backdrop-blur-sm group cursor-pointer animate-fade-in" style={{
             animationDelay: `${index * 100}ms`
           }}>
                 <CardHeader>
                   <div className="flex items-start justify-between">
                     <div className="space-y-2">
-                      <CardTitle className="text-xl text-foreground group-hover:text-primary transition-smooth">
+                      <CardTitle className="text-xl text-amber-100 group-hover:text-primary transition-smooth">
                         {position.title}
                       </CardTitle>
                       <CardDescription className="flex flex-wrap gap-2 text-base">
@@ -185,7 +185,7 @@ const Career = () => {
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <div className="flex items-center text-muted-foreground">
+                  <div className="flex items-center text-white/90">
                     <Globe className="w-4 h-4 mr-2" />
                     <span>{position.location}</span>
                   </div>
@@ -213,7 +213,7 @@ const Career = () => {
               </p>
             </div>
 
-            <Card className="border-0 shadow-large">
+            <Card className="border-0 shadow-large bg-white/10 backdrop-blur-sm">
               <CardContent className="p-8 space-y-6">
                 <div className="space-y-2">
                   <Label htmlFor="name">Full Name *</Label>
