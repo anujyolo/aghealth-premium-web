@@ -129,18 +129,18 @@ const About = () => {
       {/* Our History - Standalone Section */}
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="border-0 shadow-soft hover:shadow-medium transition-smooth bg-white animate-fade-in max-w-5xl mx-auto">
+          <Card className="border-0 shadow-soft hover:shadow-medium transition-smooth bg-white/10 backdrop-blur-sm animate-fade-in max-w-5xl mx-auto">
             <CardContent className="p-8 md:p-12 space-y-8">
               <div className="flex items-center space-x-4">
                 <div className="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 overflow-hidden">
                   <img src={historyIcon} alt="History" className="w-full h-full object-cover" />
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground">Our History</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-amber-100">Our History</h2>
               </div>
               <div className="space-y-8">
                 {historyTimeline.map((section, idx) => <div key={idx} className="space-y-3 pl-4 border-l-4 border-primary/30">
-                    <h3 className="text-xl md:text-2xl font-semibold text-primary">{section.title}</h3>
-                    <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                    <h3 className="text-xl md:text-2xl font-semibold text-amber-200">{section.title}</h3>
+                    <p className="text-base md:text-lg text-white/90 leading-relaxed">
                       {section.text}
                     </p>
                   </div>)}
