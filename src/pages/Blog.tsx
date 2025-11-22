@@ -6,7 +6,6 @@ import pregnancyImg from '@/assets/category-pregnancy.jpg';
 import newbornImg from '@/assets/category-newborn.jpg';
 import infantImg from '@/assets/category-infant.jpg';
 import toddlersImg from '@/assets/category-toddlers.webp';
-import motherBabyNoBg from '@/assets/mother-baby-nobg.png';
 
 const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState('All Posts');
@@ -154,15 +153,6 @@ const Blog = () => {
         <svg className="absolute bottom-0 left-0 w-full h-16 opacity-30" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 30C360 10 720 50 1080 30C1260 20 1350 40 1440 30V60H0V30Z" fill="#fef3c7" />
         </svg>
-
-        {/* Mother and baby image positioned near categories */}
-        <div className="absolute right-8 top-1/2 -translate-y-1/2 hidden xl:block z-0 opacity-90 animate-fade-in">
-          <img
-            src={motherBabyNoBg}
-            alt="Mother with baby"
-            className="w-48 h-auto transform -scale-x-100"
-          />
-        </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-wrap gap-6 justify-center">
