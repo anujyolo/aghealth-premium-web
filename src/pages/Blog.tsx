@@ -2,6 +2,10 @@ import { useState } from 'react';
 import { Calendar, Clock, ArrowRight, Heart, Activity, Baby, Shield } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import pregnancyImg from '@/assets/category-pregnancy.jpg';
+import newbornImg from '@/assets/category-newborn.jpg';
+import infantImg from '@/assets/category-infant.jpg';
+import toddlersImg from '@/assets/category-toddlers.webp';
 
 const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState('All Posts');
@@ -80,11 +84,11 @@ const Blog = () => {
   ];
 
   const categories = [
-    'All Posts',
-    'Pregnancy',
-    'Newborn',
-    'Infant',
-    'Toddlers',
+    { name: 'All Posts', image: null },
+    { name: 'Pregnancy', image: pregnancyImg },
+    { name: 'Newborn', image: newbornImg },
+    { name: 'Infant', image: infantImg },
+    { name: 'Toddlers', image: toddlersImg },
   ];
 
   const filteredPosts = selectedCategory === 'All Posts' 
@@ -112,20 +116,39 @@ const Blog = () => {
       {/* Categories */}
       <section className="py-8 border-b border-border">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap gap-3 justify-center">
+          <div className="flex flex-wrap gap-4 justify-center">
             {categories.map((category) => (
-              <Badge
-                key={category}
-                variant={category === selectedCategory ? 'default' : 'outline'}
-                className={`px-4 py-2 cursor-pointer transition-smooth ${
-                  category === selectedCategory
-                    ? 'bg-gradient-primary text-white hover:opacity-90'
-                    : 'hover:bg-primary hover:text-white hover:border-primary'
+              <div
+                key={category.name}
+                className={`flex flex-col items-center gap-2 cursor-pointer transition-smooth group ${
+                  category.name === selectedCategory ? 'scale-105' : 'hover:scale-105'
                 }`}
-                onClick={() => setSelectedCategory(category)}
+                onClick={() => setSelectedCategory(category.name)}
               >
-                {category}
-              </Badge>
+                {category.image && (
+                  <div className={`w-20 h-20 rounded-full overflow-hidden border-4 transition-smooth ${
+                    category.name === selectedCategory 
+                      ? 'border-primary shadow-large' 
+                      : 'border-border group-hover:border-primary'
+                  }`}>
+                    <img
+                      src={category.image}
+                      alt={category.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )}
+                <Badge
+                  variant={category.name === selectedCategory ? 'default' : 'outline'}
+                  className={`px-4 py-2 transition-smooth ${
+                    category.name === selectedCategory
+                      ? 'bg-gradient-primary text-white'
+                      : 'group-hover:bg-primary group-hover:text-white group-hover:border-primary'
+                  }`}
+                >
+                  {category.name}
+                </Badge>
+              </div>
             ))}
           </div>
         </div>
