@@ -6,7 +6,7 @@ import pregnancyImg from '@/assets/category-pregnancy.jpg';
 import newbornImg from '@/assets/category-newborn.jpg';
 import infantImg from '@/assets/category-infant.jpg';
 import toddlersImg from '@/assets/category-toddlers.webp';
-import heroMotherBaby from '@/assets/hero-mother-baby.jpg';
+import motherBabyNoBg from '@/assets/mother-baby-nobg.png';
 
 const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState('All Posts');
@@ -133,32 +133,17 @@ const Blog = () => {
         </svg>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
-            {/* Left Content */}
-            <div className="text-center lg:text-left">
-              <div className="inline-flex items-center space-x-2 bg-amber-100 text-amber-700 px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
-                <Heart className="w-4 h-4" />
-                <span>Health & Hygiene Blog</span>
-              </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-amber-600 mb-6 animate-fade-in-up">
-                Hygiene Tips & Health Insights
-              </h1>
-              <p className="text-lg md:text-xl text-gray-700 max-w-3xl lg:max-w-none animate-fade-in-up">
-                Expert advice on hygiene, health, and wellness to help you and your family stay healthy
-              </p>
+          <div className="text-center">
+            <div className="inline-flex items-center space-x-2 bg-amber-100 text-amber-700 px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
+              <Heart className="w-4 h-4" />
+              <span>Health & Hygiene Blog</span>
             </div>
-
-            {/* Right Image */}
-            <div className="hidden lg:flex justify-end items-center animate-fade-in">
-              <div className="relative w-full max-w-md">
-                <img
-                  src={heroMotherBaby}
-                  alt="Mother with baby"
-                  className="w-full h-auto transform -scale-x-100 mix-blend-multiply"
-                  style={{ filter: 'contrast(1.1) brightness(1.05)' }}
-                />
-              </div>
-            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-amber-600 mb-6 animate-fade-in-up">
+              Hygiene Tips & Health Insights
+            </h1>
+            <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto animate-fade-in-up">
+              Expert advice on hygiene, health, and wellness to help you and your family stay healthy
+            </p>
           </div>
         </div>
       </section>
@@ -169,6 +154,15 @@ const Blog = () => {
         <svg className="absolute bottom-0 left-0 w-full h-16 opacity-30" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 30C360 10 720 50 1080 30C1260 20 1350 40 1440 30V60H0V30Z" fill="#fef3c7" />
         </svg>
+
+        {/* Mother and baby image positioned near categories */}
+        <div className="absolute right-8 top-1/2 -translate-y-1/2 hidden xl:block z-0 opacity-90 animate-fade-in">
+          <img
+            src={motherBabyNoBg}
+            alt="Mother with baby"
+            className="w-48 h-auto transform -scale-x-100"
+          />
+        </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-wrap gap-6 justify-center">
