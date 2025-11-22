@@ -82,7 +82,11 @@ const Blog = () => {
       </section>
 
       {/* Categories */}
-      <section className="relative py-12 bg-gradient-to-b from-amber-50/50 to-white border-b border-amber-200/50 overflow-hidden">
+      <section className="relative py-12 border-b border-amber-200/50 overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat -z-10" style={{
+          backgroundImage: `url(${blogBackground})`
+        }} />
+        <div className="absolute inset-0 bg-black/60 -z-10" />
         {/* Subtle wave decoration */}
         <svg className="absolute bottom-0 left-0 w-full h-16 opacity-30" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 30C360 10 720 50 1080 30C1260 20 1350 40 1440 30V60H0V30Z" fill="#fef3c7" />
@@ -128,7 +132,11 @@ const Blog = () => {
       </section>
 
       {/* Featured Post */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 relative">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat -z-10" style={{
+          backgroundImage: `url(${blogBackground})`
+        }} />
+        <div className="absolute inset-0 bg-black/60 -z-10" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Card className="border-0 shadow-large overflow-hidden animate-fade-in">
             <div className="grid lg:grid-cols-2">
@@ -240,7 +248,11 @@ const Blog = () => {
       </section>
 
       {/* Newsletter */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 relative">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat -z-10" style={{
+          backgroundImage: `url(${blogBackground})`
+        }} />
+        <div className="absolute inset-0 bg-black/60 -z-10" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Card className="border-0 shadow-large bg-gradient-to-br from-primary via-accent to-primary overflow-hidden">
             <CardContent className="p-8 md:p-12 text-center space-y-6">
