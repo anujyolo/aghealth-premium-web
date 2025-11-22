@@ -178,7 +178,7 @@ const Blog = () => {
       {/* Blog Posts Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-foreground mb-12 text-center">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">
             Latest Articles
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -186,7 +186,7 @@ const Blog = () => {
               <Card
                 key={post.title}
                 onClick={() => navigate(`/blog/${post.slug}`)}
-                className="border-0 shadow-soft hover:shadow-large transition-smooth bg-white group cursor-pointer animate-fade-in overflow-hidden"
+                className="border-0 shadow-soft hover:shadow-large transition-smooth bg-white/10 backdrop-blur-sm group cursor-pointer animate-fade-in overflow-hidden"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 {post.image && (
@@ -205,13 +205,13 @@ const Blog = () => {
                   >
                     {post.category}
                   </Badge>
-                  <CardTitle className="text-xl text-foreground group-hover:text-primary transition-smooth">
+                  <CardTitle className="text-xl text-white group-hover:text-amber-400 transition-smooth">
                     {post.title}
                   </CardTitle>
-                  <CardDescription>{post.excerpt}</CardDescription>
+                  <CardDescription className="text-white/80">{post.excerpt}</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <div className="flex items-center space-x-4 text-sm text-muted-foreground">
+                  <div className="flex items-center space-x-4 text-sm text-white/70">
                     <div className="flex items-center space-x-2">
                       <Calendar className="w-4 h-4" />
                       <span>{post.date}</span>
@@ -226,7 +226,7 @@ const Blog = () => {
                       e.stopPropagation();
                       navigate(`/blog/${post.slug}`);
                     }}
-                    className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-smooth group"
+                    className="inline-flex items-center text-amber-400 font-medium hover:text-amber-300 transition-smooth group"
                   >
                     Read More
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-smooth" />
