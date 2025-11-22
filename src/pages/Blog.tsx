@@ -6,10 +6,18 @@ import pregnancyImg from '@/assets/category-pregnancy.jpg';
 import newbornImg from '@/assets/category-newborn.jpg';
 import infantImg from '@/assets/category-infant.jpg';
 import toddlersImg from '@/assets/category-toddlers.webp';
-import blogPregnancy from '@/assets/blog-pregnancy.jpg';
-import blogNewborn from '@/assets/blog-newborn.jpg';
-import blogInfant from '@/assets/blog-infant.jpg';
-import blogToddler from '@/assets/blog-toddler.jpg';
+import blogPregnancyTips from '@/assets/blog-pregnancy-tips.jpg';
+import blogPrenatalVitamins from '@/assets/blog-prenatal-vitamins.jpg';
+import blogNewbornSleep from '@/assets/blog-newborn-sleep.jpg';
+import blogDiapering from '@/assets/blog-diapering.jpg';
+import blogBreastfeeding from '@/assets/blog-breastfeeding.jpg';
+import blogMilestones from '@/assets/blog-milestones.jpg';
+import blogSolids from '@/assets/blog-solids.jpg';
+import blogSkinCare from '@/assets/blog-skin-care.jpg';
+import blogPottyTraining from '@/assets/blog-potty-training.jpg';
+import blogHygieneHabits from '@/assets/blog-hygiene-habits.jpg';
+import blogToddlerNutrition from '@/assets/blog-toddler-nutrition.jpg';
+import blogTantrums from '@/assets/blog-tantrums.jpg';
 
 const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState('All Posts');
@@ -21,7 +29,7 @@ const Blog = () => {
     category: 'Pregnancy',
     date: '2025-11-20',
     readTime: '12 min read',
-    image: blogPregnancy,
+    image: blogPrenatalVitamins,
   };
 
   const posts = [
@@ -33,7 +41,7 @@ const Blog = () => {
       icon: Heart,
       date: '2025-11-18',
       readTime: '10 min read',
-      image: blogPregnancy,
+      image: blogPregnancyTips,
     },
     {
       title: 'Prenatal Vitamins: What You Really Need',
@@ -43,7 +51,7 @@ const Blog = () => {
       icon: Heart,
       date: '2025-11-15',
       readTime: '8 min read',
-      image: blogPregnancy,
+      image: blogPrenatalVitamins,
     },
     {
       title: 'Newborn Sleep Guide: First Month Survival Tips',
@@ -53,7 +61,7 @@ const Blog = () => {
       icon: Baby,
       date: '2025-11-12',
       readTime: '11 min read',
-      image: blogNewborn,
+      image: blogNewbornSleep,
     },
     {
       title: 'Diapering 101: Complete Guide for New Parents',
@@ -63,7 +71,7 @@ const Blog = () => {
       icon: Baby,
       date: '2025-11-10',
       readTime: '9 min read',
-      image: blogNewborn,
+      image: blogDiapering,
     },
     {
       title: 'Breastfeeding Success: Tips and Troubleshooting',
@@ -73,7 +81,7 @@ const Blog = () => {
       icon: Heart,
       date: '2025-11-08',
       readTime: '13 min read',
-      image: blogNewborn,
+      image: blogBreastfeeding,
     },
     {
       title: 'Infant Development Milestones: 0-12 Months',
@@ -83,7 +91,7 @@ const Blog = () => {
       icon: Activity,
       date: '2025-11-05',
       readTime: '12 min read',
-      image: blogInfant,
+      image: blogMilestones,
     },
     {
       title: 'Starting Solids: Baby-Led Weaning Guide',
@@ -93,7 +101,7 @@ const Blog = () => {
       icon: Baby,
       date: '2025-11-02',
       readTime: '10 min read',
-      image: blogInfant,
+      image: blogSolids,
     },
     {
       title: 'Baby Skin Care: Preventing and Treating Diaper Rash',
@@ -103,7 +111,7 @@ const Blog = () => {
       icon: Shield,
       date: '2025-10-30',
       readTime: '8 min read',
-      image: blogInfant,
+      image: blogSkinCare,
     },
     {
       title: 'Potty Training Success: A Step-by-Step Guide',
@@ -113,7 +121,7 @@ const Blog = () => {
       icon: Shield,
       date: '2025-10-28',
       readTime: '11 min read',
-      image: blogToddler,
+      image: blogPottyTraining,
     },
     {
       title: 'Toddler Hygiene Habits: Building a Daily Routine',
@@ -123,7 +131,7 @@ const Blog = () => {
       icon: Shield,
       date: '2025-10-25',
       readTime: '9 min read',
-      image: blogToddler,
+      image: blogHygieneHabits,
     },
     {
       title: 'Toddler Nutrition: Picky Eater Solutions',
@@ -133,7 +141,7 @@ const Blog = () => {
       icon: Heart,
       date: '2025-10-22',
       readTime: '10 min read',
-      image: blogToddler,
+      image: blogToddlerNutrition,
     },
     {
       title: 'Managing Toddler Tantrums: Calm Parenting Strategies',
@@ -143,7 +151,7 @@ const Blog = () => {
       icon: Activity,
       date: '2025-10-20',
       readTime: '12 min read',
-      image: blogToddler,
+      image: blogTantrums,
     },
   ];
 
