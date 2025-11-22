@@ -8,6 +8,7 @@ import newbornImg from '@/assets/category-newborn.jpg';
 import infantImg from '@/assets/category-infant.jpg';
 import toddlersImg from '@/assets/category-toddlers.webp';
 import blogPrenatalVitamins from '@/assets/blog-prenatal-vitamins.jpg';
+import blogBackground from '@/assets/blog-background.png';
 import { blogPosts } from '@/data/blogData';
 
 const Blog = () => {
@@ -172,7 +173,11 @@ const Blog = () => {
       </section>
 
       {/* Blog Posts Grid */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 relative">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat -z-10" style={{
+          backgroundImage: `url(${blogBackground})`
+        }} />
+        <div className="absolute inset-0 bg-black/60 -z-10" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-foreground mb-12 text-center">
             Latest Articles
