@@ -133,7 +133,7 @@ const Blog = () => {
         {/* Featured Post */}
         <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="border-0 shadow-large overflow-hidden animate-fade-in">
+          <Card className="border-0 shadow-large overflow-hidden animate-fade-in bg-white/10 backdrop-blur-sm">
             <div className="grid lg:grid-cols-2">
               <div className="h-64 lg:h-auto bg-gradient-soft flex items-center justify-center">
                 <img
@@ -143,16 +143,16 @@ const Blog = () => {
                 />
               </div>
               <CardContent className="p-8 lg:p-12 flex flex-col justify-center space-y-6">
-                <Badge className="bg-primary/10 text-primary w-fit border-0">
+                <Badge className="bg-amber-500/20 text-amber-300 w-fit border-0">
                   Featured Post
                 </Badge>
-                <CardTitle className="text-3xl md:text-4xl text-foreground">
+                <CardTitle className="text-3xl md:text-4xl text-white">
                   {featuredPost.title}
                 </CardTitle>
-                <CardDescription className="text-lg">
+                <CardDescription className="text-lg text-white/80">
                   {featuredPost.excerpt}
                 </CardDescription>
-                <div className="flex items-center space-x-6 text-sm text-muted-foreground">
+                <div className="flex items-center space-x-6 text-sm text-white/70">
                   <div className="flex items-center space-x-2">
                     <Calendar className="w-4 h-4" />
                     <span>{featuredPost.date}</span>
@@ -164,7 +164,7 @@ const Blog = () => {
                 </div>
                 <button 
                   onClick={() => navigate(`/blog/${featuredPost.slug}`)}
-                  className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-smooth group w-fit"
+                  className="inline-flex items-center text-amber-400 font-medium hover:text-amber-300 transition-smooth group w-fit"
                 >
                   Read Full Article
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-smooth" />
