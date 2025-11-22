@@ -6,6 +6,10 @@ import pregnancyImg from '@/assets/category-pregnancy.jpg';
 import newbornImg from '@/assets/category-newborn.jpg';
 import infantImg from '@/assets/category-infant.jpg';
 import toddlersImg from '@/assets/category-toddlers.webp';
+import blogPregnancy from '@/assets/blog-pregnancy.jpg';
+import blogNewborn from '@/assets/blog-newborn.jpg';
+import blogInfant from '@/assets/blog-infant.jpg';
+import blogToddler from '@/assets/blog-toddler.jpg';
 
 const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState('All Posts');
@@ -17,7 +21,7 @@ const Blog = () => {
     category: 'Pregnancy',
     date: '2025-11-20',
     readTime: '12 min read',
-    image: 'https://images.unsplash.com/photo-1493101561940-44833c61f38e?w=800&q=80',
+    image: blogPregnancy,
   };
 
   const posts = [
@@ -29,7 +33,7 @@ const Blog = () => {
       icon: Heart,
       date: '2025-11-18',
       readTime: '10 min read',
-      image: 'https://images.unsplash.com/photo-1493101561940-44833c61f38e?w=600&q=80',
+      image: blogPregnancy,
     },
     {
       title: 'Prenatal Vitamins: What You Really Need',
@@ -39,7 +43,7 @@ const Blog = () => {
       icon: Heart,
       date: '2025-11-15',
       readTime: '8 min read',
-      image: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&q=80',
+      image: blogPregnancy,
     },
     {
       title: 'Newborn Sleep Guide: First Month Survival Tips',
@@ -49,7 +53,7 @@ const Blog = () => {
       icon: Baby,
       date: '2025-11-12',
       readTime: '11 min read',
-      image: 'https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=600&q=80',
+      image: blogNewborn,
     },
     {
       title: 'Diapering 101: Complete Guide for New Parents',
@@ -59,7 +63,7 @@ const Blog = () => {
       icon: Baby,
       date: '2025-11-10',
       readTime: '9 min read',
-      image: 'https://images.unsplash.com/photo-1522771930-78848d9293e8?w=600&q=80',
+      image: blogNewborn,
     },
     {
       title: 'Breastfeeding Success: Tips and Troubleshooting',
@@ -69,7 +73,7 @@ const Blog = () => {
       icon: Heart,
       date: '2025-11-08',
       readTime: '13 min read',
-      image: 'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=600&q=80',
+      image: blogNewborn,
     },
     {
       title: 'Infant Development Milestones: 0-12 Months',
@@ -79,7 +83,7 @@ const Blog = () => {
       icon: Activity,
       date: '2025-11-05',
       readTime: '12 min read',
-      image: 'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=600&q=80',
+      image: blogInfant,
     },
     {
       title: 'Starting Solids: Baby-Led Weaning Guide',
@@ -89,7 +93,7 @@ const Blog = () => {
       icon: Baby,
       date: '2025-11-02',
       readTime: '10 min read',
-      image: 'https://images.unsplash.com/photo-1522771930-78848d9293e8?w=600&q=80',
+      image: blogInfant,
     },
     {
       title: 'Baby Skin Care: Preventing and Treating Diaper Rash',
@@ -99,7 +103,7 @@ const Blog = () => {
       icon: Shield,
       date: '2025-10-30',
       readTime: '8 min read',
-      image: 'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=600&q=80',
+      image: blogInfant,
     },
     {
       title: 'Potty Training Success: A Step-by-Step Guide',
@@ -109,7 +113,7 @@ const Blog = () => {
       icon: Shield,
       date: '2025-10-28',
       readTime: '11 min read',
-      image: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&q=80',
+      image: blogToddler,
     },
     {
       title: 'Toddler Hygiene Habits: Building a Daily Routine',
@@ -119,7 +123,7 @@ const Blog = () => {
       icon: Shield,
       date: '2025-10-25',
       readTime: '9 min read',
-      image: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&q=80',
+      image: blogToddler,
     },
     {
       title: 'Toddler Nutrition: Picky Eater Solutions',
@@ -129,7 +133,7 @@ const Blog = () => {
       icon: Heart,
       date: '2025-10-22',
       readTime: '10 min read',
-      image: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&q=80',
+      image: blogToddler,
     },
     {
       title: 'Managing Toddler Tantrums: Calm Parenting Strategies',
@@ -139,7 +143,7 @@ const Blog = () => {
       icon: Activity,
       date: '2025-10-20',
       readTime: '12 min read',
-      image: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&q=80',
+      image: blogToddler,
     },
   ];
 
