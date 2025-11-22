@@ -98,38 +98,75 @@ const Blog = () => {
   return (
     <div className="min-h-screen pt-20 md:pt-24 pb-16">
       {/* Header */}
-      <section className="bg-gradient-soft py-16 md:py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
+      <section className="relative bg-gradient-to-br from-amber-50 via-white to-orange-50 py-16 md:py-20 overflow-hidden">
+        {/* Decorative curved lines */}
+        <svg className="absolute top-0 left-0 w-full h-32 opacity-40" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0C240 40 480 80 720 80C960 80 1200 40 1440 0V120H0V0Z" fill="url(#gradient1)" />
+          <defs>
+            <linearGradient id="gradient1" x1="0" y1="0" x2="1440" y2="0">
+              <stop offset="0%" stopColor="#f59e0b" stopOpacity="0.2" />
+              <stop offset="50%" stopColor="#d97706" stopOpacity="0.3" />
+              <stop offset="100%" stopColor="#f59e0b" stopOpacity="0.2" />
+            </linearGradient>
+          </defs>
+        </svg>
+        
+        <svg className="absolute top-10 left-0 w-full h-24 opacity-30" viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 20C360 60 720 40 1080 60C1260 70 1350 50 1440 40V100H0V20Z" stroke="#d97706" strokeWidth="2" fill="none" />
+        </svg>
+
+        <svg className="absolute bottom-0 left-0 w-full h-32 opacity-40" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 120C240 80 480 40 720 40C960 40 1200 80 1440 120V0H0V120Z" fill="url(#gradient2)" />
+          <defs>
+            <linearGradient id="gradient2" x1="0" y1="120" x2="1440" y2="120">
+              <stop offset="0%" stopColor="#f59e0b" stopOpacity="0.2" />
+              <stop offset="50%" stopColor="#d97706" stopOpacity="0.3" />
+              <stop offset="100%" stopColor="#f59e0b" stopOpacity="0.2" />
+            </linearGradient>
+          </defs>
+        </svg>
+
+        {/* Heart decoration */}
+        <svg className="absolute top-1/2 right-20 w-12 h-12 opacity-50 hidden lg:block" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="#f59e0b" strokeWidth="2" fill="none" />
+        </svg>
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <div className="inline-flex items-center space-x-2 bg-amber-100 text-amber-700 px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
             <Heart className="w-4 h-4" />
             <span>Health & Hygiene Blog</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 animate-fade-in-up">
+          <h1 className="text-4xl md:text-5xl font-bold text-amber-600 mb-6 animate-fade-in-up">
             Hygiene Tips & Health Insights
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up">
+          <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto animate-fade-in-up">
             Expert advice on hygiene, health, and wellness to help you and your family stay healthy
           </p>
         </div>
       </section>
 
       {/* Categories */}
-      <section className="py-8 border-b border-border">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap gap-4 justify-center">
+      <section className="relative py-12 bg-gradient-to-b from-amber-50/50 to-white border-b border-amber-200/50 overflow-hidden">
+        {/* Subtle wave decoration */}
+        <svg className="absolute bottom-0 left-0 w-full h-16 opacity-30" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 30C360 10 720 50 1080 30C1260 20 1350 40 1440 30V60H0V30Z" fill="#fef3c7" />
+        </svg>
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="flex flex-wrap gap-6 justify-center">
             {categories.map((category) => (
               <div
                 key={category.name}
-                className={`flex flex-col items-center gap-2 cursor-pointer transition-smooth group ${
+                className={`flex flex-col items-center gap-3 cursor-pointer transition-smooth group ${
                   category.name === selectedCategory ? 'scale-105' : 'hover:scale-105'
                 }`}
                 onClick={() => setSelectedCategory(category.name)}
               >
                 {category.image && (
-                  <div className={`w-20 h-20 rounded-full overflow-hidden border-4 transition-smooth ${
+                  <div className={`w-24 h-24 rounded-full overflow-hidden border-4 transition-smooth ${
                     category.name === selectedCategory 
-                      ? 'border-primary shadow-large' 
-                      : 'border-border group-hover:border-primary'
+                      ? 'border-amber-500 shadow-xl shadow-amber-200' 
+                      : 'border-amber-200 group-hover:border-amber-400 group-hover:shadow-lg group-hover:shadow-amber-100'
                   }`}>
                     <img
                       src={category.image}
@@ -140,10 +177,10 @@ const Blog = () => {
                 )}
                 <Badge
                   variant={category.name === selectedCategory ? 'default' : 'outline'}
-                  className={`px-4 py-2 transition-smooth ${
+                  className={`px-5 py-2 transition-smooth text-sm font-semibold ${
                     category.name === selectedCategory
-                      ? 'bg-gradient-primary text-white'
-                      : 'group-hover:bg-primary group-hover:text-white group-hover:border-primary'
+                      ? 'bg-gradient-to-r from-amber-500 to-orange-500 text-white border-0 shadow-md'
+                      : 'border-amber-300 text-amber-700 group-hover:bg-amber-500 group-hover:text-white group-hover:border-amber-500'
                   }`}
                 >
                   {category.name}
