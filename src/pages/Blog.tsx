@@ -11,75 +11,135 @@ const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState('All Posts');
 
   const featuredPost = {
-    title: 'The Complete Guide to Choosing Baby Diapers',
+    title: 'Essential Nutrition Guide for a Healthy Pregnancy',
     excerpt:
-      'Learn everything you need to know about selecting the right diaper for your baby, including size guides, material considerations, and tips for preventing diaper rash.',
-    category: 'Infant',
-    date: '2025-10-15',
-    readTime: '8 min read',
-    image: 'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=800&q=80',
+      'Discover the key nutrients, foods to eat and avoid, and meal planning tips to support your baby\'s development and maintain your health throughout pregnancy.',
+    category: 'Pregnancy',
+    date: '2025-11-20',
+    readTime: '12 min read',
+    image: 'https://images.unsplash.com/photo-1493101561940-44833c61f38e?w=800&q=80',
   };
 
   const posts = [
     {
-      title: 'Preparing for Your Baby: Essential Pregnancy Tips',
+      title: '10 Essential Pregnancy Tips for Every Trimester',
       excerpt:
-        'A comprehensive guide for expecting mothers on prenatal care, nutrition, and preparing for your baby\'s arrival.',
+        'From morning sickness remedies to preparing for labor, discover practical advice to help you navigate each stage of pregnancy with confidence and comfort.',
       category: 'Pregnancy',
       icon: Heart,
-      date: '2025-10-12',
-      readTime: '8 min read',
+      date: '2025-11-18',
+      readTime: '10 min read',
       image: 'https://images.unsplash.com/photo-1493101561940-44833c61f38e?w=600&q=80',
     },
     {
-      title: 'Newborn Care Essentials: First 28 Days',
+      title: 'Prenatal Vitamins: What You Really Need',
       excerpt:
-        'Everything new parents need to know about caring for their newborn in the crucial first month.',
+        'Learn which vitamins and minerals are essential during pregnancy, recommended dosages, and how to choose the right prenatal supplement for you and your baby.',
+      category: 'Pregnancy',
+      icon: Heart,
+      date: '2025-11-15',
+      readTime: '8 min read',
+      image: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&q=80',
+    },
+    {
+      title: 'Newborn Sleep Guide: First Month Survival Tips',
+      excerpt:
+        'Master newborn sleep patterns, establish healthy sleep habits, and learn safe sleeping practices to help both you and your baby get the rest you need.',
       category: 'Newborn',
       icon: Baby,
-      date: '2025-10-10',
-      readTime: '10 min read',
+      date: '2025-11-12',
+      readTime: '11 min read',
       image: 'https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=600&q=80',
     },
     {
-      title: 'Infant Development Milestones: 1-12 Months',
+      title: 'Diapering 101: Complete Guide for New Parents',
       excerpt:
-        'Track your baby\'s growth and development with our month-by-month guide to infant milestones.',
+        'Everything you need to know about diapering your newborn including changing techniques, preventing rashes, and choosing between cloth and disposable diapers.',
+      category: 'Newborn',
+      icon: Baby,
+      date: '2025-11-10',
+      readTime: '9 min read',
+      image: 'https://images.unsplash.com/photo-1522771930-78848d9293e8?w=600&q=80',
+    },
+    {
+      title: 'Breastfeeding Success: Tips and Troubleshooting',
+      excerpt:
+        'Expert advice on establishing breastfeeding, proper latching techniques, managing common challenges, and knowing when to seek help from a lactation consultant.',
+      category: 'Newborn',
+      icon: Heart,
+      date: '2025-11-08',
+      readTime: '13 min read',
+      image: 'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=600&q=80',
+    },
+    {
+      title: 'Infant Development Milestones: 0-12 Months',
+      excerpt:
+        'Track your baby\'s physical, cognitive, and social development month by month. Learn what\'s normal and when to consult your pediatrician.',
       category: 'Infant',
       icon: Activity,
-      date: '2025-10-08',
+      date: '2025-11-05',
       readTime: '12 min read',
       image: 'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=600&q=80',
     },
     {
-      title: 'Toddler Hygiene: Building Healthy Habits',
+      title: 'Starting Solids: Baby-Led Weaning Guide',
       excerpt:
-        'Learn how to establish good hygiene routines for toddlers, from potty training to handwashing.',
-      category: 'Toddlers',
-      icon: Shield,
-      date: '2025-10-05',
-      readTime: '7 min read',
-      image: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&q=80',
-    },
-    {
-      title: 'Choosing the Right Diaper Size Guide',
-      excerpt:
-        'A practical guide to selecting the perfect diaper size for your growing baby at every stage.',
+        'Discover when and how to introduce solid foods, safe first foods to try, allergy prevention strategies, and tips for making mealtime enjoyable for your infant.',
       category: 'Infant',
       icon: Baby,
-      date: '2025-10-03',
-      readTime: '5 min read',
+      date: '2025-11-02',
+      readTime: '10 min read',
       image: 'https://images.unsplash.com/photo-1522771930-78848d9293e8?w=600&q=80',
     },
     {
-      title: 'Nutrition During Pregnancy: What to Eat',
+      title: 'Baby Skin Care: Preventing and Treating Diaper Rash',
       excerpt:
-        'Essential nutritional guidelines for expecting mothers to support a healthy pregnancy and baby development.',
-      category: 'Pregnancy',
-      icon: Heart,
-      date: '2025-10-01',
+        'Learn proper infant skin care routines, how to prevent diaper rash, choose gentle products, and treat common skin conditions naturally and effectively.',
+      category: 'Infant',
+      icon: Shield,
+      date: '2025-10-30',
+      readTime: '8 min read',
+      image: 'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=600&q=80',
+    },
+    {
+      title: 'Potty Training Success: A Step-by-Step Guide',
+      excerpt:
+        'Ready to potty train? Learn the signs of readiness, proven techniques, how to handle accidents, and tips for nighttime training to make the transition smooth.',
+      category: 'Toddlers',
+      icon: Shield,
+      date: '2025-10-28',
+      readTime: '11 min read',
+      image: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&q=80',
+    },
+    {
+      title: 'Toddler Hygiene Habits: Building a Daily Routine',
+      excerpt:
+        'Establish essential hygiene habits including handwashing, teeth brushing, bathing, and nail care. Make hygiene fun and develop lifelong healthy habits.',
+      category: 'Toddlers',
+      icon: Shield,
+      date: '2025-10-25',
       readTime: '9 min read',
-      image: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&q=80',
+      image: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&q=80',
+    },
+    {
+      title: 'Toddler Nutrition: Picky Eater Solutions',
+      excerpt:
+        'Overcome mealtime battles with strategies for dealing with picky eaters, ensuring balanced nutrition, and creating positive eating experiences for your toddler.',
+      category: 'Toddlers',
+      icon: Heart,
+      date: '2025-10-22',
+      readTime: '10 min read',
+      image: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&q=80',
+    },
+    {
+      title: 'Managing Toddler Tantrums: Calm Parenting Strategies',
+      excerpt:
+        'Understand why tantrums happen, learn effective de-escalation techniques, and discover positive discipline methods to guide your toddler through big emotions.',
+      category: 'Toddlers',
+      icon: Activity,
+      date: '2025-10-20',
+      readTime: '12 min read',
+      image: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&q=80',
     },
   ];
 
