@@ -92,7 +92,7 @@ const About = () => {
           }}>
               Caring for Hygiene, Caring for Nepal
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+            <p className="text-lg md:text-xl leading-relaxed text-[#4a9fff]">
               A.G. Health Industries Pvt. Ltd. is a leading manufacturer of premium hygiene products 
               in Nepal. We're dedicated to improving hygiene standards through innovation, quality, 
               and affordable products for every family.
