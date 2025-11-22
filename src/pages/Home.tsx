@@ -149,7 +149,7 @@ const Home = () => {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {productCategories.map((category, index) => <Card key={category.title} className="border-0 shadow-soft hover:shadow-large transition-smooth bg-white group cursor-pointer animate-fade-in" style={{
+            {productCategories.map((category, index) => <Card key={category.title} className="border-0 shadow-soft hover:shadow-large transition-smooth bg-white/10 backdrop-blur-sm group cursor-pointer animate-fade-in" style={{
             animationDelay: `${index * 100}ms`
           }}>
                 <CardContent className="p-6 text-center space-y-4">
@@ -162,10 +162,10 @@ const Home = () => {
                     </div> : <div className="w-32 h-32 mx-auto flex items-center justify-center">
                       <img src={sagunToiletPaperLogo} alt="Sagun toilet paper logo" className="w-full h-full object-contain" />
                     </div>}
-                  <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-smooth">
+                  <h3 className="text-xl font-semibold text-amber-100 group-hover:text-primary transition-smooth">
                     {category.title}
                   </h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-white/90">
                     {category.description}
                   </p>
                 </CardContent>
