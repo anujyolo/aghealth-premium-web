@@ -87,7 +87,7 @@ const Career = () => {
     location: 'Kathmandu',
     type: 'Full-time'
   }];
-  return <div className="min-h-screen pt-20 md:pt-24 pb-16 relative">
+  return <div className="min-h-screen pt-20 md:pt-24 pb-0 relative">
       <div className="fixed inset-0 bg-cover bg-center bg-no-repeat -z-10" style={{
       backgroundImage: `url(${careerBackground})`
     }} />
