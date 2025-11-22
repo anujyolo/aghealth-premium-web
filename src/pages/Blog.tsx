@@ -7,7 +7,7 @@ const Blog = () => {
     title: 'The Complete Guide to Choosing Baby Diapers',
     excerpt:
       'Learn everything you need to know about selecting the right diaper for your baby, including size guides, material considerations, and tips for preventing diaper rash.',
-    category: 'Baby Care',
+    category: 'Infant',
     date: '2025-10-15',
     readTime: '8 min read',
     image: 'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=800&q=80',
@@ -15,70 +15,73 @@ const Blog = () => {
 
   const posts = [
     {
-      title: 'Why Hygiene Products Matter for Daily Health',
+      title: 'Preparing for Your Baby: Essential Pregnancy Tips',
       excerpt:
-        'Discover how proper hygiene practices and quality hygiene products contribute to better health and disease prevention.',
-      category: 'Health',
+        'A comprehensive guide for expecting mothers on prenatal care, nutrition, and preparing for your baby\'s arrival.',
+      category: 'Pregnancy',
       icon: Heart,
       date: '2025-10-12',
-      readTime: '5 min read',
+      readTime: '8 min read',
+      image: 'https://images.unsplash.com/photo-1493101561940-44833c61f38e?w=600&q=80',
     },
     {
-      title: 'Understanding Face Mask Protection Levels',
+      title: 'Newborn Care Essentials: First 28 Days',
       excerpt:
-        'A comprehensive guide to different types of face masks, their protection levels, and when to use each type.',
-      category: 'Safety',
-      icon: Shield,
+        'Everything new parents need to know about caring for their newborn in the crucial first month.',
+      category: 'Newborn',
+      icon: Baby,
       date: '2025-10-10',
-      readTime: '6 min read',
+      readTime: '10 min read',
+      image: 'https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=600&q=80',
     },
     {
-      title: 'Sustainable Hygiene: Eco-Friendly Choices',
+      title: 'Infant Development Milestones: 1-12 Months',
       excerpt:
-        'Learn about environmentally conscious hygiene products and how to reduce your environmental footprint.',
-      category: 'Sustainability',
+        'Track your baby\'s growth and development with our month-by-month guide to infant milestones.',
+      category: 'Infant',
       icon: Activity,
       date: '2025-10-08',
-      readTime: '7 min read',
+      readTime: '12 min read',
+      image: 'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=600&q=80',
     },
     {
-      title: 'Sanitary Pad Care: Tips for Comfort',
+      title: 'Toddler Hygiene: Building Healthy Habits',
       excerpt:
-        'Essential tips for choosing the right sanitary pads and maintaining comfort during your menstrual cycle.',
-      category: 'Women\'s Health',
-      icon: Heart,
+        'Learn how to establish good hygiene routines for toddlers, from potty training to handwashing.',
+      category: 'Toddlers',
+      icon: Shield,
       date: '2025-10-05',
-      readTime: '5 min read',
+      readTime: '7 min read',
+      image: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&q=80',
     },
     {
-      title: 'Adult Diaper Guide for Caregivers',
+      title: 'Choosing the Right Diaper Size Guide',
       excerpt:
-        'A helpful guide for caregivers on selecting and using adult diapers with dignity and comfort.',
-      category: 'Elder Care',
+        'A practical guide to selecting the perfect diaper size for your growing baby at every stage.',
+      category: 'Infant',
       icon: Baby,
       date: '2025-10-03',
-      readTime: '6 min read',
+      readTime: '5 min read',
+      image: 'https://images.unsplash.com/photo-1522771930-78848d9293e8?w=600&q=80',
     },
     {
-      title: 'The Importance of Proper Hand Hygiene',
+      title: 'Nutrition During Pregnancy: What to Eat',
       excerpt:
-        'Understanding why handwashing and hand hygiene are crucial for preventing illness and staying healthy.',
-      category: 'Prevention',
-      icon: Shield,
+        'Essential nutritional guidelines for expecting mothers to support a healthy pregnancy and baby development.',
+      category: 'Pregnancy',
+      icon: Heart,
       date: '2025-10-01',
-      readTime: '4 min read',
+      readTime: '9 min read',
+      image: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&q=80',
     },
   ];
 
   const categories = [
     'All Posts',
-    'Baby Care',
-    'Health',
-    'Safety',
-    'Sustainability',
-    'Women\'s Health',
-    'Elder Care',
-    'Prevention',
+    'Pregnancy',
+    'Newborn',
+    'Infant',
+    'Toddlers',
   ];
 
   return (
@@ -172,13 +175,19 @@ const Blog = () => {
             {posts.map((post, index) => (
               <Card
                 key={post.title}
-                className="border-0 shadow-soft hover:shadow-large transition-smooth bg-white group cursor-pointer animate-fade-in"
+                className="border-0 shadow-soft hover:shadow-large transition-smooth bg-white group cursor-pointer animate-fade-in overflow-hidden"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <CardHeader className="space-y-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center group-hover:scale-110 transition-smooth">
-                    <post.icon className="w-8 h-8 text-white" />
+                {post.image && (
+                  <div className="h-48 overflow-hidden">
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-smooth duration-500"
+                    />
                   </div>
+                )}
+                <CardHeader className="space-y-4">
                   <Badge
                     variant="secondary"
                     className="bg-primary/10 text-primary w-fit border-0"
