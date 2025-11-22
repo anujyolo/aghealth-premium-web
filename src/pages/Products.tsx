@@ -9,6 +9,7 @@ import sagunBabyPantsLogo from '@/assets/sagun-baby-pants-logo-new.png';
 import sagunPad from '@/assets/sagun-pad.png';
 import productsBackground from '@/assets/products-background.png';
 import sagunFaceMaskBox from '@/assets/sagun-face-mask-box.jpg';
+import sagunPadProduct from '@/assets/sagun-pad-product.png';
 
 const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState<{name: string, size: string, tag: string, category: string} | null>(null);
@@ -324,12 +325,20 @@ const Products = () => {
           </DialogHeader>
           <div className="space-y-6 py-4">
             {/* Product Image Area */}
-            <div className="w-full h-48 bg-gradient-soft rounded-xl flex items-center justify-center overflow-hidden border-2 border-dashed border-muted">
-              <div className="text-center p-4">
-                <Package className="w-12 h-12 text-muted-foreground mx-auto mb-2" />
-                <p className="text-sm text-muted-foreground">Product Image</p>
-                <p className="text-xs text-muted-foreground mt-1">Display area for product photo</p>
-              </div>
+            <div className="w-full h-48 bg-gradient-soft rounded-xl flex items-center justify-center overflow-hidden">
+              {selectedProduct?.category === 'Sanitary Pads' ? (
+                <img 
+                  src={sagunPadProduct} 
+                  alt={selectedProduct?.name} 
+                  className="w-full h-full object-contain"
+                />
+              ) : (
+                <div className="text-center p-4">
+                  <Package className="w-12 h-12 text-muted-foreground mx-auto mb-2" />
+                  <p className="text-sm text-muted-foreground">Product Image</p>
+                  <p className="text-xs text-muted-foreground mt-1">Display area for product photo</p>
+                </div>
+              )}
             </div>
 
             <div className="flex items-center justify-between">
