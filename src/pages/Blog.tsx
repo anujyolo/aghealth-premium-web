@@ -241,7 +241,7 @@ const Blog = () => {
       {/* Newsletter */}
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="border-0 shadow-large bg-gradient-to-br from-primary via-accent to-primary overflow-hidden">
+          <Card className="border-2 border-amber-500/30 shadow-large bg-white/15 backdrop-blur-md overflow-hidden">
             <CardContent className="p-8 md:p-12 text-center space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-white">
                 Stay Updated with Hygiene Tips
@@ -254,9 +254,9 @@ const Blog = () => {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-white"
+                  className="flex-1 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400 bg-white/90"
                 />
-                <button className="px-8 py-3 bg-white text-primary font-medium rounded-lg hover:bg-white/90 transition-smooth shadow-medium">
+                <button className="px-8 py-3 bg-amber-500 text-white font-medium rounded-lg hover:bg-amber-600 transition-smooth shadow-medium">
                   Subscribe
                 </button>
               </div>
