@@ -18,7 +18,7 @@ const BlogArticle = () => {
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat -z-10" style={{
           backgroundImage: `url(${blogArticleBackground})`
         }} />
-        <div className="absolute inset-0 bg-white/80 -z-10" />
+        <div className="absolute inset-0 bg-black/50 -z-10" />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h1 className="text-3xl font-bold mb-4">Article Not Found</h1>
@@ -41,12 +41,12 @@ const BlogArticle = () => {
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat -z-10" style={{
         backgroundImage: `url(${blogArticleBackground})`
       }} />
-      <div className="absolute inset-0 bg-white/80 -z-10" />
+      <div className="absolute inset-0 bg-black/50 -z-10" />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl relative z-10">
         <button 
           onClick={() => navigate('/blog')}
-          className="inline-flex items-center text-primary hover:text-primary/80 transition-smooth mb-8 group"
+          className="inline-flex items-center text-amber-400 hover:text-amber-300 transition-smooth mb-8 group"
         >
           <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-smooth" />
           Back to Blog
@@ -54,13 +54,13 @@ const BlogArticle = () => {
 
         <article>
           <header className="mb-8">
-            <Badge className="bg-primary/10 text-primary w-fit border-0 mb-4">
+            <Badge className="bg-amber-500/20 text-amber-300 w-fit border-0 mb-4">
               {post.category}
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               {post.title}
             </h1>
-            <div className="flex items-center space-x-6 text-sm text-muted-foreground">
+            <div className="flex items-center space-x-6 text-sm text-white/70">
               <div className="flex items-center space-x-2">
                 <Calendar className="w-4 h-4" />
                 <span>{post.date}</span>
@@ -86,14 +86,14 @@ const BlogArticle = () => {
             </div>
           )}
 
-          <Card className="border-0 shadow-soft">
+          <Card className="border-0 shadow-soft bg-white/10 backdrop-blur-md">
             <CardContent className="p-8 md:p-12">
               <div className="prose prose-lg max-w-none">
-                <p className="text-xl text-muted-foreground mb-8 font-medium">
+                <p className="text-xl text-white/90 mb-8 font-medium">
                   {post.excerpt}
                 </p>
                 
-                <div className="space-y-6 text-foreground leading-relaxed">
+                <div className="space-y-6 text-white/80 leading-relaxed">
                   {post.fullContent.split('\n\n').map((paragraph, index) => (
                     <p key={index}>{paragraph}</p>
                   ))}
