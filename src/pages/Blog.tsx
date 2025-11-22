@@ -1,8 +1,11 @@
+import { useState } from 'react';
 import { Calendar, Clock, ArrowRight, Heart, Activity, Baby, Shield } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
 const Blog = () => {
+  const [selectedCategory, setSelectedCategory] = useState('All Posts');
+
   const featuredPost = {
     title: 'The Complete Guide to Choosing Baby Diapers',
     excerpt:
@@ -84,6 +87,10 @@ const Blog = () => {
     'Toddlers',
   ];
 
+  const filteredPosts = selectedCategory === 'All Posts' 
+    ? posts 
+    : posts.filter(post => post.category === selectedCategory);
+
   return (
     <div className="min-h-screen pt-20 md:pt-24 pb-16">
       {/* Header */}
@@ -109,12 +116,13 @@ const Blog = () => {
             {categories.map((category) => (
               <Badge
                 key={category}
-                variant={category === 'All Posts' ? 'default' : 'outline'}
+                variant={category === selectedCategory ? 'default' : 'outline'}
                 className={`px-4 py-2 cursor-pointer transition-smooth ${
-                  category === 'All Posts'
+                  category === selectedCategory
                     ? 'bg-gradient-primary text-white hover:opacity-90'
                     : 'hover:bg-primary hover:text-white hover:border-primary'
                 }`}
+                onClick={() => setSelectedCategory(category)}
               >
                 {category}
               </Badge>
@@ -172,7 +180,7 @@ const Blog = () => {
             Latest Articles
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {posts.map((post, index) => (
+            {filteredPosts.map((post, index) => (
               <Card
                 key={post.title}
                 className="border-0 shadow-soft hover:shadow-large transition-smooth bg-white group cursor-pointer animate-fade-in overflow-hidden"
