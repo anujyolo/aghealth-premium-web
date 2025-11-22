@@ -16,7 +16,7 @@ export const blogPosts = [
   {
     slug: 'pregnancy-tips-every-trimester',
     title: '10 Essential Pregnancy Tips for Every Trimester',
-    excerpt: 'Navigate your pregnancy journey with confidence using our comprehensive trimester-by-trimester guide covering nutrition, exercise, and preparation.',
+    excerpt: '• First trimester: Combat morning sickness with ginger tea, stay hydrated, start prenatal vitamins\n• Second trimester: Focus on iron-rich foods, begin prenatal yoga, prepare nursery\n• Third trimester: Practice breathing techniques, pack hospital bag, attend childbirth classes\n• Learn when to call doctor and discover natural remedies for discomfort',
     category: 'Pregnancy',
     icon: Heart,
     date: '2025-11-18',
@@ -35,7 +35,7 @@ Warning signs to watch for include severe headaches, vision changes, sudden swel
   {
     slug: 'prenatal-vitamins-guide',
     title: 'Prenatal Vitamins: What You Really Need',
-    excerpt: 'Understand essential nutrients during pregnancy including folic acid, iron, and calcium with recommended dosages and food sources.',
+    excerpt: '• Folic acid (400-800mcg daily): Prevents neural tube defects\n• Iron (27mg daily): Prevents anemia, supports blood volume\n• Calcium (1000mg daily): Builds baby\'s bones and teeth\n• DHA omega-3: Supports brain development\n• Vitamin D (600 IU daily): Aids calcium absorption\n• Learn food sources and when to take for maximum absorption',
     category: 'Pregnancy',
     icon: Heart,
     date: '2025-11-15',
@@ -54,7 +54,7 @@ Choose high-quality supplements that are third-party tested by organizations lik
   {
     slug: 'newborn-sleep-guide',
     title: 'Newborn Sleep Guide: First Month Survival Tips',
-    excerpt: 'Master newborn sleep patterns with safe sleep practices, understanding sleep cycles, and establishing healthy routines from day one.',
+    excerpt: '• Newborns sleep 14-17 hours daily in 2-4 hour stretches\n• Safe sleep: Back on firm mattress, room temperature 68-72°F\n• Recognize sleep cues: Yawning, eye rubbing, fussiness\n• Day-night routine: Bright active days, dark quiet nights\n• Safe swaddling techniques that prevent hip dysplasia\n• Manage parental sleep with tag-team shifts',
     category: 'Newborn',
     icon: Baby,
     date: '2025-11-12',
@@ -77,7 +77,7 @@ Manage parental sleep deprivation with tag-team night shifts where one parent ha
   {
     slug: 'diapering-guide-new-parents',
     title: 'Diapering 101: Complete Guide for New Parents',
-    excerpt: 'Everything about diapering including changing techniques, preventing rashes, choosing between cloth and disposables, and stocking your station.',
+    excerpt: '• Change every 2-3 hours, clean front to back thoroughly\n• Newborns need 8-12 changes daily\n• Prevent rash: Use fragrance-free wipes, zinc oxide cream\n• Cloth vs disposables: Eco-friendly vs convenient options\n• Stock essentials: 70+ diapers weekly, wipes, barrier cream\n• Allow diaper-free time daily for skin health',
     category: 'Newborn',
     icon: Baby,
     date: '2025-11-10',
@@ -100,7 +100,7 @@ Treat diaper rash by increasing change frequency, switching to water-only cleani
   {
     slug: 'breastfeeding-success-guide',
     title: 'Breastfeeding Success: Tips and Troubleshooting',
-    excerpt: 'Achieve breastfeeding success with proper latching techniques, feeding positions, solving common problems, and knowing when to seek help.',
+    excerpt: '• Proper latch: Mouth covers areola, lips flanged, chin touching breast\n• Feed on demand: 8-12 times daily for newborns\n• Positions: Cradle hold, football hold, side-lying for night feeds\n• Solve problems: Engorgement, sore nipples, low supply\n• Signs baby gets enough: 6+ wet diapers, steady weight gain\n• When to seek lactation consultant help',
     category: 'Newborn',
     icon: Heart,
     date: '2025-11-08',
@@ -125,7 +125,7 @@ When to seek lactation consultant help: persistent pain during or after feeds, p
   {
     slug: 'infant-development-milestones',
     title: 'Infant Development Milestones: 0-12 Months',
-    excerpt: 'Track your baby\'s physical, cognitive, and social development month by month with this comprehensive guide to first-year milestones.',
+    excerpt: '• 0-3 months: Lifts head, follows objects, smiles socially\n• 4-6 months: Rolls over, sits with support, babbles, reaches for toys\n• 7-9 months: Sits independently, crawls, responds to name\n• 10-12 months: Pulls to stand, says first words, waves bye-bye\n• Motor skills: Tummy time, encourage reaching and grasping\n• Red flags: No eye contact by 3 months, not sitting by 9 months',
     category: 'Infant',
     icon: Activity,
     date: '2025-11-05',
@@ -152,7 +152,7 @@ Red flags requiring pediatrician visit: no eye contact by 3 months, doesn't smil
   {
     slug: 'starting-solids-baby-led-weaning',
     title: 'Starting Solids: Baby-Led Weaning Guide',
-    excerpt: 'Learn when and how to introduce solid foods, safe first foods, allergy prevention strategies, and making mealtimes enjoyable.',
+    excerpt: '• Start around 6 months when baby sits independently\n• First foods: Soft vegetables, ripe fruits, iron-fortified cereals\n• Safe prep: Cut into finger strips, cook until soft\n• Introduce allergens early: Peanut butter, eggs, dairy, fish\n• Watch for allergic reactions: Rashes, vomiting, breathing issues\n• Offer variety without pressure, respect appetite',
     category: 'Infant',
     icon: Baby,
     date: '2025-11-02',
@@ -177,7 +177,7 @@ Understand that milk remains primary nutrition source until age one - solid food
   {
     slug: 'baby-skin-care-diaper-rash',
     title: 'Baby Skin Care: Preventing and Treating Diaper Rash',
-    excerpt: 'Complete guide to infant skin care including preventing and treating diaper rash, choosing gentle products, and handling common conditions.',
+    excerpt: '• Change diapers every 2-3 hours, pat dry completely\n• Apply zinc oxide barrier cream at every change\n• Treatment: Mild (thick cream), moderate (water only), severe (consult doctor)\n• Choose gentle products: Fragrance-free, hypoallergenic\n• Bathing: Lukewarm water, limit soap, moisturize after\n• Treat cradle cap, baby acne, eczema naturally',
     category: 'Infant',
     icon: Shield,
     date: '2025-10-30',
@@ -198,7 +198,7 @@ When to call pediatrician about skin concerns: rash doesn't improve after 3 days
   {
     slug: 'potty-training-success-guide',
     title: 'Potty Training Success: A Step-by-Step Guide',
-    excerpt: 'Complete potty training guide covering readiness signs, proven techniques, handling accidents, and nighttime training strategies.',
+    excerpt: '• Readiness signs: Stays dry 2+ hours, communicates needs, shows interest\n• Preparation: Introduce potty chair, read books, celebrate successes\n• Training: 3-day intensive or gradual approach, set regular times\n• Handle accidents calmly - normal learning experiences\n• Nighttime: Wait for dry nights, limit fluids before bed\n• Challenges: Regression, fear of flushing, public restrooms',
     category: 'Toddlers',
     icon: Shield,
     date: '2025-10-28',
@@ -227,7 +227,7 @@ Average timeline: Most children achieve daytime dryness between 2-4 years, night
   {
     slug: 'toddler-hygiene-habits-routine',
     title: 'Toddler Hygiene Habits: Building a Daily Routine',
-    excerpt: 'Establish essential hygiene habits including handwashing, teeth brushing, bathing, and nail care with fun, effective strategies.',
+    excerpt: '• Handwashing: 20 seconds with soap, before meals, after bathroom\n• Make fun: Colorful soap, special towel, sing ABC song\n• Teeth brushing: Twice daily, 2 minutes, supervise until age 6-7\n• Bathing: Daily or every other day, gentle soap, fun with toys\n• Nail care: Trim weekly after bath when soft\n• Teach nose-blowing, cover coughs with elbow',
     category: 'Toddlers',
     icon: Shield,
     date: '2025-10-25',
@@ -254,7 +254,7 @@ Create daily routine chart: Visual schedule with pictures helps toddlers remembe
   {
     slug: 'toddler-nutrition-picky-eater',
     title: 'Toddler Nutrition: Picky Eater Solutions',
-    excerpt: 'Overcome mealtime battles with proven strategies for dealing with picky eaters while ensuring balanced nutrition and positive experiences.',
+    excerpt: '• Normal phase ages 2-5: Natural fear of new foods, asserting independence\n• Daily needs: 3 meals + 2-3 snacks, dairy, protein, fruits, vegetables, grains\n• What works: Offer food 10-15 times, tiny portions, eat together as family\n• Avoid: Forcing, bribing with dessert, separate meals, pressure to clean plate\n• Ensure variety: Rotate proteins, rainbow vegetables, whole grains, healthy fats\n• When to worry: Poor weight gain, extreme limitations, mealtime distress',
     category: 'Toddlers',
     icon: Heart,
     date: '2025-10-22',
@@ -281,7 +281,7 @@ Manage mealtime environment for success: Establish regular meal and snack times 
   {
     slug: 'managing-toddler-tantrums',
     title: 'Managing Toddler Tantrums: Calm Parenting Strategies',
-    excerpt: 'Understand tantrum triggers, learn de-escalation techniques, and discover positive discipline methods to guide your toddler through emotions.',
+    excerpt: '• Why: Limited language, desire for independence, overtiredness, hunger\n• Prevention: Consistent routines, advance warnings, offer choices within limits\n• During tantrum: Stay calm, ensure safety, validate feelings, give space\n• After: Offer comfort, discuss what happened, teach emotional vocabulary\n• Positive discipline: Clear consistent limits, natural consequences, praise behavior\n• Seek help: Tantrums over 15 min, self-harm, multiple daily past age 4',
     category: 'Toddlers',
     icon: Activity,
     date: '2025-10-20',
