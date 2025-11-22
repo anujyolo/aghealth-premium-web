@@ -81,62 +81,57 @@ const Blog = () => {
         </div>
       </section>
 
-      {/* Categories */}
-      <section className="relative py-12 border-b border-amber-200/50 overflow-hidden">
+      {/* All sections with shared background */}
+      <div className="relative">
+        {/* Shared background for all sections */}
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat -z-10" style={{
           backgroundImage: `url(${blogBackground})`
         }} />
         <div className="absolute inset-0 bg-black/60 -z-10" />
-        {/* Subtle wave decoration */}
-        <svg className="absolute bottom-0 left-0 w-full h-16 opacity-30" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 30C360 10 720 50 1080 30C1260 20 1350 40 1440 30V60H0V30Z" fill="#fef3c7" />
-        </svg>
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex flex-wrap gap-6 justify-center">
-            {categories.map((category) => (
-              <div
-                key={category.name}
-                className={`flex flex-col items-center gap-3 cursor-pointer transition-smooth group ${
-                  category.name === selectedCategory ? 'scale-105' : 'hover:scale-105'
-                }`}
-                onClick={() => setSelectedCategory(category.name)}
-              >
-                {category.image && (
-                  <div className={`w-24 h-24 rounded-full overflow-hidden border-4 transition-smooth ${
-                    category.name === selectedCategory 
-                      ? 'border-amber-500 shadow-xl shadow-amber-200' 
-                      : 'border-amber-200 group-hover:border-amber-400 group-hover:shadow-lg group-hover:shadow-amber-100'
-                  }`}>
-                    <img
-                      src={category.image}
-                      alt={category.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                )}
-                <Badge
-                  variant={category.name === selectedCategory ? 'default' : 'outline'}
-                  className={`px-5 py-2 transition-smooth text-sm font-semibold ${
-                    category.name === selectedCategory
-                      ? 'bg-gradient-to-r from-amber-500 to-orange-500 text-white border-0 shadow-md'
-                      : 'border-amber-300 text-amber-700 group-hover:bg-amber-500 group-hover:text-white group-hover:border-amber-500'
+        {/* Categories */}
+        <section className="py-12 overflow-hidden">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="flex flex-wrap gap-6 justify-center">
+              {categories.map((category) => (
+                <div
+                  key={category.name}
+                  className={`flex flex-col items-center gap-3 cursor-pointer transition-smooth group ${
+                    category.name === selectedCategory ? 'scale-105' : 'hover:scale-105'
                   }`}
+                  onClick={() => setSelectedCategory(category.name)}
                 >
-                  {category.name}
-                </Badge>
-              </div>
-            ))}
+                  {category.image && (
+                    <div className={`w-24 h-24 rounded-full overflow-hidden border-4 transition-smooth ${
+                      category.name === selectedCategory 
+                        ? 'border-amber-500 shadow-xl shadow-amber-200' 
+                        : 'border-amber-200 group-hover:border-amber-400 group-hover:shadow-lg group-hover:shadow-amber-100'
+                    }`}>
+                      <img
+                        src={category.image}
+                        alt={category.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  )}
+                  <Badge
+                    variant={category.name === selectedCategory ? 'default' : 'outline'}
+                    className={`px-5 py-2 transition-smooth text-sm font-semibold ${
+                      category.name === selectedCategory
+                        ? 'bg-gradient-to-r from-amber-500 to-orange-500 text-white border-0 shadow-md'
+                        : 'border-amber-300 text-amber-700 group-hover:bg-amber-500 group-hover:text-white group-hover:border-amber-500'
+                    }`}
+                  >
+                    {category.name}
+                  </Badge>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Featured Post */}
-      <section className="py-16 md:py-20 relative">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat -z-10" style={{
-          backgroundImage: `url(${blogBackground})`
-        }} />
-        <div className="absolute inset-0 bg-black/60 -z-10" />
+        {/* Featured Post */}
+        <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Card className="border-0 shadow-large overflow-hidden animate-fade-in">
             <div className="grid lg:grid-cols-2">
@@ -181,11 +176,7 @@ const Blog = () => {
       </section>
 
       {/* Blog Posts Grid */}
-      <section className="py-16 relative">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat -z-10" style={{
-          backgroundImage: `url(${blogBackground})`
-        }} />
-        <div className="absolute inset-0 bg-black/60 -z-10" />
+      <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-foreground mb-12 text-center">
             Latest Articles
@@ -248,11 +239,7 @@ const Blog = () => {
       </section>
 
       {/* Newsletter */}
-      <section className="py-16 md:py-20 relative">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat -z-10" style={{
-          backgroundImage: `url(${blogBackground})`
-        }} />
-        <div className="absolute inset-0 bg-black/60 -z-10" />
+      <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Card className="border-0 shadow-large bg-gradient-to-br from-primary via-accent to-primary overflow-hidden">
             <CardContent className="p-8 md:p-12 text-center space-y-6">
@@ -277,6 +264,9 @@ const Blog = () => {
           </Card>
         </div>
       </section>
+    </div>
+    {/* End of shared background wrapper */}
+    
     </div>
   );
 };
