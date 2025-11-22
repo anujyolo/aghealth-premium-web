@@ -3,6 +3,7 @@ import { Calendar, Clock, ArrowLeft, Heart, Activity, Baby, Shield } from 'lucid
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { blogPosts } from '@/data/blogData';
+import blogArticleBackground from '@/assets/blog-article-background.png';
 
 const BlogArticle = () => {
   const { slug } = useParams();
@@ -12,8 +13,14 @@ const BlogArticle = () => {
   
   if (!post) {
     return (
-      <div className="min-h-screen pt-24 pb-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="min-h-screen pt-24 pb-16 relative">
+        {/* Background */}
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat -z-10" style={{
+          backgroundImage: `url(${blogArticleBackground})`
+        }} />
+        <div className="absolute inset-0 bg-white/80 -z-10" />
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h1 className="text-3xl font-bold mb-4">Article Not Found</h1>
           <button 
             onClick={() => navigate('/blog')}
@@ -29,8 +36,14 @@ const BlogArticle = () => {
   const IconComponent = post.icon;
 
   return (
-    <div className="min-h-screen pt-24 pb-16">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+    <div className="min-h-screen pt-24 pb-16 relative">
+      {/* Background */}
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat -z-10" style={{
+        backgroundImage: `url(${blogArticleBackground})`
+      }} />
+      <div className="absolute inset-0 bg-white/80 -z-10" />
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl relative z-10">
         <button 
           onClick={() => navigate('/blog')}
           className="inline-flex items-center text-primary hover:text-primary/80 transition-smooth mb-8 group"
