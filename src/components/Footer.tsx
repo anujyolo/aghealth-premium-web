@@ -27,7 +27,7 @@ const Footer = () => {
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-primary/10 hover:bg-primary flex items-center justify-center transition-smooth group" aria-label="Twitter">
                 <Twitter className="w-4 h-4 text-primary group-hover:text-white transition-smooth" />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-primary/10 hover:bg-primary flex items-center justify-center transition-smooth group" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/company/ag-health-industries-pvt-ltd/?originalSubdomain=np" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-primary/10 hover:bg-primary flex items-center justify-center transition-smooth group" aria-label="LinkedIn">
                 <Linkedin className="w-4 h-4 text-primary group-hover:text-white transition-smooth" />
               </a>
               <a href="https://www.instagram.com/sagun_diapers_/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-primary/10 hover:bg-primary flex items-center justify-center transition-smooth group" aria-label="Instagram">
