@@ -6,6 +6,7 @@ import pregnancyImg from '@/assets/category-pregnancy.jpg';
 import newbornImg from '@/assets/category-newborn.jpg';
 import infantImg from '@/assets/category-infant.jpg';
 import toddlersImg from '@/assets/category-toddlers.webp';
+import heroMotherBaby from '@/assets/hero-mother-baby.jpg';
 
 const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState('All Posts');
@@ -131,17 +132,34 @@ const Blog = () => {
           <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="#f59e0b" strokeWidth="2" fill="none" />
         </svg>
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <div className="inline-flex items-center space-x-2 bg-amber-100 text-amber-700 px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
-            <Heart className="w-4 h-4" />
-            <span>Health & Hygiene Blog</span>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
+            {/* Left Content */}
+            <div className="text-center lg:text-left">
+              <div className="inline-flex items-center space-x-2 bg-amber-100 text-amber-700 px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
+                <Heart className="w-4 h-4" />
+                <span>Health & Hygiene Blog</span>
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-amber-600 mb-6 animate-fade-in-up">
+                Hygiene Tips & Health Insights
+              </h1>
+              <p className="text-lg md:text-xl text-gray-700 max-w-3xl lg:max-w-none animate-fade-in-up">
+                Expert advice on hygiene, health, and wellness to help you and your family stay healthy
+              </p>
+            </div>
+
+            {/* Right Image */}
+            <div className="hidden lg:flex justify-end items-center animate-fade-in">
+              <div className="relative w-full max-w-md">
+                <img
+                  src={heroMotherBaby}
+                  alt="Mother with baby"
+                  className="w-full h-auto transform -scale-x-100 mix-blend-multiply"
+                  style={{ filter: 'contrast(1.1) brightness(1.05)' }}
+                />
+              </div>
+            </div>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-amber-600 mb-6 animate-fade-in-up">
-            Hygiene Tips & Health Insights
-          </h1>
-          <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto animate-fade-in-up">
-            Expert advice on hygiene, health, and wellness to help you and your family stay healthy
-          </p>
         </div>
       </section>
 
