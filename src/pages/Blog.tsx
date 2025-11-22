@@ -96,12 +96,12 @@ const Blog = () => {
     : posts.filter(post => post.category === selectedCategory);
 
   return (
-    <div className="min-h-screen pt-20 md:pt-24 pb-16">
+    <div className="min-h-screen pb-16">
       {/* Header */}
-      <section className="relative bg-gradient-to-br from-amber-50 via-white to-orange-50 py-16 md:py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-amber-50 via-white to-orange-50 pt-24 md:pt-28 pb-16 md:pb-20 overflow-hidden">
         {/* Decorative curved lines */}
-        <svg className="absolute top-0 left-0 w-full h-32 opacity-40" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 0C240 40 480 80 720 80C960 80 1200 40 1440 0V120H0V0Z" fill="url(#gradient1)" />
+        <svg className="absolute top-0 left-0 w-full h-40 opacity-40" viewBox="0 0 1440 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0C240 50 480 100 720 100C960 100 1200 50 1440 0V160H0V0Z" fill="url(#gradient1)" />
           <defs>
             <linearGradient id="gradient1" x1="0" y1="0" x2="1440" y2="0">
               <stop offset="0%" stopColor="#f59e0b" stopOpacity="0.2" />
