@@ -213,7 +213,7 @@ const Career = () => {
               </p>
             </div>
 
-            <Card className="border-0 shadow-large bg-white/10 backdrop-blur-sm">
+            <Card className="border-0 shadow-large bg-white">
               <CardContent className="p-8 space-y-6">
                 <div className="space-y-2">
                   <Label htmlFor="name">Full Name *</Label>
