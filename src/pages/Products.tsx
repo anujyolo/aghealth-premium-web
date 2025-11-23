@@ -269,17 +269,17 @@ const Products = () => {
             ].map((feature, index) => (
               <Card
                 key={feature.title}
-                className="border-0 shadow-soft hover:shadow-medium transition-smooth bg-white text-center animate-fade-in"
+                className="border-0 shadow-soft hover:shadow-medium transition-smooth bg-white/10 backdrop-blur-sm text-center animate-fade-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <CardContent className="p-6 space-y-4">
                   <div className="w-14 h-14 mx-auto bg-gradient-primary rounded-xl flex items-center justify-center">
                     <feature.icon className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground">
+                  <h3 className="text-lg font-semibold text-amber-100">
                     {feature.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm text-white/90">
                     {feature.description}
                   </p>
                 </CardContent>
