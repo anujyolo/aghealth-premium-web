@@ -149,9 +149,10 @@ const Home = () => {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {productCategories.map((category, index) => <Card key={category.title} className="border-0 shadow-soft hover:shadow-large transition-smooth bg-white/10 backdrop-blur-sm group cursor-pointer animate-fade-in" style={{
-            animationDelay: `${index * 100}ms`
-          }}>
+            {productCategories.map((category, index) => <Link key={category.title} to="/our-products">
+                <Card className="border-0 shadow-soft hover:shadow-large transition-smooth bg-white/10 backdrop-blur-sm group cursor-pointer animate-fade-in" style={{
+                animationDelay: `${index * 100}ms`
+              }}>
                 <CardContent className="p-6 text-center space-y-4">
                   {index === 0 ? <div className="w-32 h-32 mx-auto flex items-center justify-center">
                       <img src={sagunBabyPantsLogo} alt="Sagun Baby Pants logo" className="w-full h-full object-contain" />
@@ -169,7 +170,8 @@ const Home = () => {
                     {category.description}
                   </p>
                 </CardContent>
-              </Card>)}
+              </Card>
+              </Link>)}
           </div>
 
           <div className="text-center">
