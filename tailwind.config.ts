@@ -113,6 +113,16 @@ export default {
             transform: "scale(1)"
           }
         },
+        "slide-down": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(-100%)"
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)"
+          }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -120,6 +130,7 @@ export default {
         "fade-in": "fade-in 0.6s ease-out",
         "fade-in-up": "fade-in-up 0.8s ease-out",
         "scale-in": "scale-in 0.4s ease-out",
+        "slide-down": "slide-down 0.3s ease-out",
       },
     },
   },

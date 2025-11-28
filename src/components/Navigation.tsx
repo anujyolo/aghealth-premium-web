@@ -7,13 +7,17 @@ import logo from '@/assets/ag-health-logo.webp';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      const scrollPosition = window.scrollY;
+      setIsScrolled(scrollPosition > 20);
+      // Make navigation sticky after scrolling past initial header (around 300px)
+      setIsSticky(scrollPosition > 300);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -31,9 +35,11 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`relative z-50 transition-all duration-300 overflow-hidden ${
-        isScrolled ? 'shadow-medium' : 'backdrop-blur-sm'
-      }`}
+      className={`z-50 transition-all duration-300 overflow-hidden ${
+        isSticky 
+          ? 'fixed top-0 left-0 right-0 shadow-large animate-slide-down' 
+          : 'relative'
+      } ${isScrolled ? 'shadow-medium' : 'backdrop-blur-sm'}`}
       style={{ backgroundColor: '#a8b6a8' }}
     >
       {/* Decorative Elements */}
