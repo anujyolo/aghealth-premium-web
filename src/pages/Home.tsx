@@ -144,30 +144,87 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {productCategories.map((category, index) => <Link key={category.title} to="/our-products">
-                <div className="relative overflow-hidden rounded-2xl shadow-soft hover:shadow-large transition-smooth group cursor-pointer animate-fade-in h-80" style={{
-                animationDelay: `${index * 100}ms`
-              }}>
-                  {/* Full-bleed background image */}
+          <div className="grid lg:grid-cols-2 gap-6 mb-12">
+            {/* Large left card - Diapers */}
+            <Link to="/our-products">
+              <div className="relative overflow-hidden rounded-3xl shadow-soft hover:shadow-large transition-smooth group cursor-pointer animate-fade-in h-[600px]">
+                <div className="absolute inset-0">
+                  <img src={sagunBabyPantsLogo} alt="Sagun Baby Pants logo" className="w-full h-full object-cover" />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+                  <h3 className="text-5xl font-bold text-white mb-2 group-hover:scale-110 transition-smooth drop-shadow-lg">
+                    {productCategories[0].title}
+                  </h3>
+                  <p className="text-white/90 text-lg drop-shadow-md">
+                    {productCategories[0].description}
+                  </p>
+                </div>
+              </div>
+            </Link>
+
+            {/* Right side grid - 3 smaller cards */}
+            <div className="grid grid-cols-2 gap-6">
+              {/* Face Masks */}
+              <Link to="/our-products">
+                <div className="relative overflow-hidden rounded-3xl shadow-soft hover:shadow-large transition-smooth group cursor-pointer animate-fade-in h-[290px]" style={{
+                  animationDelay: '100ms'
+                }}>
                   <div className="absolute inset-0">
-                    {index === 0 ? <img src={sagunBabyPantsLogo} alt="Sagun Baby Pants logo" className="w-full h-full object-cover" /> : index === 1 ? <img src={sagunFaceMasks} alt="Sagun disposable protective face masks" className="w-full h-full object-cover" /> : index === 2 ? <img src={sagunPadLogo} alt="Sagun sanitary pad logo" className="w-full h-full object-cover" /> : <img src={sagunToiletPaperLogo} alt="Sagun toilet paper logo" className="w-full h-full object-cover" />}
+                    <img src={sagunFaceMasks} alt="Sagun disposable protective face masks" className="w-full h-full object-cover" />
                   </div>
-                  
-                  {/* Gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-                  
-                  {/* Text overlay */}
                   <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-                    <h3 className="text-3xl font-bold text-white mb-2 group-hover:scale-110 transition-smooth drop-shadow-lg">
-                      {category.title}
+                    <h3 className="text-2xl font-bold text-white mb-2 group-hover:scale-110 transition-smooth drop-shadow-lg">
+                      {productCategories[1].title}
                     </h3>
                     <p className="text-white/90 text-sm drop-shadow-md">
-                      {category.description}
+                      {productCategories[1].description}
                     </p>
                   </div>
                 </div>
-              </Link>)}
+              </Link>
+
+              {/* Sanitary Pads */}
+              <Link to="/our-products">
+                <div className="relative overflow-hidden rounded-3xl shadow-soft hover:shadow-large transition-smooth group cursor-pointer animate-fade-in h-[290px]" style={{
+                  animationDelay: '200ms'
+                }}>
+                  <div className="absolute inset-0">
+                    <img src={sagunPadLogo} alt="Sagun sanitary pad logo" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+                    <h3 className="text-2xl font-bold text-white mb-2 group-hover:scale-110 transition-smooth drop-shadow-lg">
+                      {productCategories[2].title}
+                    </h3>
+                    <p className="text-white/90 text-sm drop-shadow-md">
+                      {productCategories[2].description}
+                    </p>
+                  </div>
+                </div>
+              </Link>
+
+              {/* Toilet Paper - spans 2 columns */}
+              <Link to="/our-products" className="col-span-2">
+                <div className="relative overflow-hidden rounded-3xl shadow-soft hover:shadow-large transition-smooth group cursor-pointer animate-fade-in h-[290px]" style={{
+                  animationDelay: '300ms'
+                }}>
+                  <div className="absolute inset-0">
+                    <img src={sagunToiletPaperLogo} alt="Sagun toilet paper logo" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+                    <h3 className="text-2xl font-bold text-white mb-2 group-hover:scale-110 transition-smooth drop-shadow-lg">
+                      {productCategories[3].title}
+                    </h3>
+                    <p className="text-white/90 text-sm drop-shadow-md">
+                      {productCategories[3].description}
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            </div>
           </div>
 
           <div className="text-center">
