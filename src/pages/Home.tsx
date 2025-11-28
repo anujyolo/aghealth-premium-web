@@ -157,7 +157,7 @@ const Home = () => {
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-                  <h3 className="text-5xl font-bold text-white mb-2 group-hover:scale-110 transition-smooth drop-shadow-lg">
+                  <h3 className="text-5xl font-bold text-[#ddc4a6] mb-2 group-hover:scale-110 transition-smooth drop-shadow-lg">
                     {productCategories[0].title}
                   </h3>
                   <p className="text-white/90 text-lg drop-shadow-md">
