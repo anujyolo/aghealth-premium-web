@@ -150,27 +150,27 @@ const Home = () => {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {productCategories.map((category, index) => <Link key={category.title} to="/our-products">
-                <Card className="border-0 shadow-soft hover:shadow-large transition-smooth bg-white/10 backdrop-blur-sm group cursor-pointer animate-fade-in" style={{
+                <div className="relative overflow-hidden rounded-2xl shadow-soft hover:shadow-large transition-smooth group cursor-pointer animate-fade-in h-80" style={{
                 animationDelay: `${index * 100}ms`
               }}>
-                <CardContent className="p-6 text-center space-y-4">
-                  {index === 0 ? <div className="w-48 h-48 mx-auto flex items-center justify-center mb-2">
-                      <img src={sagunBabyPantsLogo} alt="Sagun Baby Pants logo" className="w-full h-full object-contain drop-shadow-lg" />
-                    </div> : index === 1 ? <div className="w-48 h-48 mx-auto flex items-center justify-center mb-2">
-                      <img src={sagunFaceMasks} alt="Sagun disposable protective face masks" className="w-full h-full object-cover rounded-lg drop-shadow-lg" />
-                    </div> : index === 2 ? <div className="w-48 h-48 mx-auto flex items-center justify-center mb-2">
-                      <img src={sagunPadLogo} alt="Sagun sanitary pad logo" className="w-full h-full object-contain drop-shadow-lg" />
-                    </div> : <div className="w-48 h-48 mx-auto flex items-center justify-center mb-2">
-                      <img src={sagunToiletPaperLogo} alt="Sagun toilet paper logo" className="w-full h-full object-contain drop-shadow-lg" />
-                    </div>}
-                  <h3 className="text-xl font-semibold text-amber-100 group-hover:text-primary transition-smooth">
-                    {category.title}
-                  </h3>
-                  <p className="text-white/90">
-                    {category.description}
-                  </p>
-                </CardContent>
-              </Card>
+                  {/* Full-bleed background image */}
+                  <div className="absolute inset-0">
+                    {index === 0 ? <img src={sagunBabyPantsLogo} alt="Sagun Baby Pants logo" className="w-full h-full object-cover" /> : index === 1 ? <img src={sagunFaceMasks} alt="Sagun disposable protective face masks" className="w-full h-full object-cover" /> : index === 2 ? <img src={sagunPadLogo} alt="Sagun sanitary pad logo" className="w-full h-full object-cover" /> : <img src={sagunToiletPaperLogo} alt="Sagun toilet paper logo" className="w-full h-full object-cover" />}
+                  </div>
+                  
+                  {/* Gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                  
+                  {/* Text overlay */}
+                  <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+                    <h3 className="text-3xl font-bold text-white mb-2 group-hover:scale-110 transition-smooth drop-shadow-lg">
+                      {category.title}
+                    </h3>
+                    <p className="text-white/90 text-sm drop-shadow-md">
+                      {category.description}
+                    </p>
+                  </div>
+                </div>
               </Link>)}
           </div>
 
