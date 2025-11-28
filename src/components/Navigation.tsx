@@ -31,7 +31,7 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 relative overflow-hidden ${
+      className={`relative z-50 transition-all duration-300 overflow-hidden ${
         isScrolled ? 'shadow-medium' : 'backdrop-blur-sm'
       }`}
       style={{ backgroundColor: '#a8b6a8' }}
