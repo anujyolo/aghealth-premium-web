@@ -50,10 +50,16 @@ const Home = () => {
   return <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative pt-20 md:pt-24 pb-16 md:pb-24 overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 bg-cover bg-center" style={{
-        backgroundImage: `url(${heroFactoryBg})`
-      }} />
+        {/* Background Video */}
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/20" />
         
         
