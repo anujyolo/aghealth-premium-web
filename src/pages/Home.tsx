@@ -154,14 +154,14 @@ const Home = () => {
                 animationDelay: `${index * 100}ms`
               }}>
                 <CardContent className="p-6 text-center space-y-4">
-                  {index === 0 ? <div className="w-32 h-32 mx-auto flex items-center justify-center">
-                      <img src={sagunBabyPantsLogo} alt="Sagun Baby Pants logo" className="w-full h-full object-contain" />
-                    </div> : index === 1 ? <div className="w-32 h-32 mx-auto flex items-center justify-center">
-                      <img src={sagunFaceMasks} alt="Sagun disposable protective face masks" className="w-full h-full object-contain rounded-lg" />
-                    </div> : index === 2 ? <div className="w-32 h-32 mx-auto flex items-center justify-center">
-                      <img src={sagunPadLogo} alt="Sagun sanitary pad logo" className="w-full h-full object-contain" />
-                    </div> : <div className="w-32 h-32 mx-auto flex items-center justify-center">
-                      <img src={sagunToiletPaperLogo} alt="Sagun toilet paper logo" className="w-full h-full object-contain" />
+                  {index === 0 ? <div className="w-48 h-48 mx-auto flex items-center justify-center mb-2">
+                      <img src={sagunBabyPantsLogo} alt="Sagun Baby Pants logo" className="w-full h-full object-contain drop-shadow-lg" />
+                    </div> : index === 1 ? <div className="w-48 h-48 mx-auto flex items-center justify-center mb-2">
+                      <img src={sagunFaceMasks} alt="Sagun disposable protective face masks" className="w-full h-full object-cover rounded-lg drop-shadow-lg" />
+                    </div> : index === 2 ? <div className="w-48 h-48 mx-auto flex items-center justify-center mb-2">
+                      <img src={sagunPadLogo} alt="Sagun sanitary pad logo" className="w-full h-full object-contain drop-shadow-lg" />
+                    </div> : <div className="w-48 h-48 mx-auto flex items-center justify-center mb-2">
+                      <img src={sagunToiletPaperLogo} alt="Sagun toilet paper logo" className="w-full h-full object-contain drop-shadow-lg" />
                     </div>}
                   <h3 className="text-xl font-semibold text-amber-100 group-hover:text-primary transition-smooth">
                     {category.title}
