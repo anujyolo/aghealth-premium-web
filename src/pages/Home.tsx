@@ -157,7 +157,7 @@ const Home = () => {
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-                  <h3 className="text-5xl font-bold text-[#ddc4a6] mb-2 group-hover:scale-110 transition-smooth drop-shadow-lg">
+                  <h3 className="text-5xl font-bold mb-2 group-hover:scale-110 transition-smooth drop-shadow-lg text-red-50">
                     {productCategories[0].title}
                   </h3>
                   <p className="text-white/90 text-lg drop-shadow-md">
@@ -172,8 +172,8 @@ const Home = () => {
               {/* Face Masks */}
               <Link to="/our-products">
                 <div className="relative overflow-hidden rounded-3xl shadow-soft hover:shadow-large transition-smooth group cursor-pointer animate-fade-in h-[290px]" style={{
-                  animationDelay: '100ms'
-                }}>
+                animationDelay: '100ms'
+              }}>
                   <div className="absolute inset-0">
                     <img src={sagunFaceMasks} alt="Sagun disposable protective face masks" className="w-full h-full object-cover" />
                   </div>
@@ -192,8 +192,8 @@ const Home = () => {
               {/* Sanitary Pads */}
               <Link to="/our-products">
                 <div className="relative overflow-hidden rounded-3xl shadow-soft hover:shadow-large transition-smooth group cursor-pointer animate-fade-in h-[290px]" style={{
-                  animationDelay: '200ms'
-                }}>
+                animationDelay: '200ms'
+              }}>
                   <div className="absolute inset-0">
                     <img src={sagunPadLogo} alt="Sagun sanitary pad logo" className="w-full h-full object-cover" />
                   </div>
@@ -212,8 +212,8 @@ const Home = () => {
               {/* Toilet Paper - spans 2 columns */}
               <Link to="/our-products" className="col-span-2">
                 <div className="relative overflow-hidden rounded-3xl shadow-soft hover:shadow-large transition-smooth group cursor-pointer animate-fade-in h-[290px]" style={{
-                  animationDelay: '300ms'
-                }}>
+                animationDelay: '300ms'
+              }}>
                   <div className="absolute inset-0">
                     <img src={sagunToiletPaperLogo} alt="Sagun toilet paper logo" className="w-full h-full object-cover" />
                   </div>
