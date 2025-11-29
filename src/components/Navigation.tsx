@@ -57,7 +57,9 @@ const Navigation = () => {
           <Link to="/" className="flex items-center space-x-3 group">
             <img 
               src={logo} 
-              alt="A.G. Health Industries Logo" 
+              alt="A.G. Health Industries Logo"
+              width="80"
+              height="80"
               className="h-16 w-16 md:h-20 md:w-20 object-contain transition-transform group-hover:scale-105"
             />
             <div className="hidden sm:block">
