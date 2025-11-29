@@ -92,7 +92,7 @@ const Home = () => {
             {/* Hero Image */}
             <div className="relative animate-fade-in">
               <div className="absolute inset-0 bg-gradient-primary rounded-3xl blur-3xl opacity-20 -z-10" />
-              <img src={heroImage} alt="Baby with Sagun Baby Poko Pants premium diapers showcasing product quality" className="rounded-3xl shadow-large max-w-lg mx-auto h-auto object-cover" />
+              <img src={heroImage} alt="Baby with Sagun Baby Poko Pants premium diapers showcasing product quality" width="512" height="512" className="rounded-3xl shadow-large max-w-lg mx-auto h-auto object-cover" />
             </div>
           </div>
         </div>
@@ -153,7 +153,7 @@ const Home = () => {
             <Link to="/our-products">
               <div className="relative overflow-hidden rounded-3xl shadow-soft hover:shadow-large transition-smooth group cursor-pointer animate-fade-in h-[600px]">
                 <div className="absolute inset-0">
-                  <img src={sagunBabyPantsLogo} alt="Sagun Baby Pants logo" className="w-full h-full object-cover" />
+                  <img src={sagunBabyPantsLogo} alt="Sagun Baby Pants logo" width="624" height="624" loading="lazy" className="w-full h-full object-cover" />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
@@ -175,7 +175,7 @@ const Home = () => {
                 animationDelay: '100ms'
               }}>
                   <div className="absolute inset-0">
-                    <img src={sagunFaceMasks} alt="Sagun disposable protective face masks" className="w-full h-full object-cover" />
+                    <img src={sagunFaceMasks} alt="Sagun disposable protective face masks" width="373" height="290" loading="lazy" className="w-full h-full object-cover" />
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                   <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
@@ -195,7 +195,7 @@ const Home = () => {
                 animationDelay: '200ms'
               }}>
                   <div className="absolute inset-0">
-                    <img src={sagunPadLogo} alt="Sagun sanitary pad logo" className="w-full h-full object-cover" />
+                    <img src={sagunPadLogo} alt="Sagun sanitary pad logo" width="300" height="300" loading="lazy" className="w-full h-full object-cover" />
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                   <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
@@ -215,7 +215,7 @@ const Home = () => {
                 animationDelay: '300ms'
               }}>
                   <div className="absolute inset-0">
-                    <img src={sagunToiletPaperLogo} alt="Sagun toilet paper logo" className="w-full h-full object-cover" />
+                    <img src={sagunToiletPaperLogo} alt="Sagun toilet paper logo" width="624" height="290" loading="lazy" className="w-full h-full object-cover" />
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                   <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
@@ -252,7 +252,7 @@ const Home = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Image */}
             <div className="order-2 lg:order-1 animate-fade-in">
-              <video src={factoryVideo} autoPlay loop muted playsInline className="rounded-3xl shadow-large w-full max-w-7xl ml-8 h-auto object-cover" />
+              <video src={factoryVideo} autoPlay loop muted playsInline preload="metadata" className="rounded-3xl shadow-large w-full max-w-7xl ml-8 h-auto object-cover" />
             </div>
 
             {/* Content */}
