@@ -306,7 +306,7 @@ const Products = () => {
                   size="lg"
                   className="bg-white text-primary hover:bg-white/90 transition-smooth shadow-large"
                 >
-                  <a href="mailto:info@aghealthindustries.com">Email Us</a>
+                  <a href="mailto:kirpa.ad25@gmail.com">Email Us</a>
                 </Button>
               </div>
             </CardContent>
@@ -378,7 +378,7 @@ const Products = () => {
                 Close
               </Button>
               <Button className="flex-1" variant="outline" asChild>
-                <a href="mailto:info@aghealthindustries.com">Contact for Order</a>
+                <a href="mailto:kirpa.ad25@gmail.com">Contact for Order</a>
               </Button>
             </div>
           </div>
