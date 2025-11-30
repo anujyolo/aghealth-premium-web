@@ -50,6 +50,14 @@ const handler = async (req: Request): Promise<Response> => {
       `,
     });
 
+    if ((emailResponse as any).error) {
+      console.error("Resend validation error:", (emailResponse as any).error);
+      return new Response(JSON.stringify({ error: (emailResponse as any).error }), {
+        status: (emailResponse as any).error.statusCode ?? 500,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+
     console.log("Email sent successfully:", emailResponse);
 
     return new Response(JSON.stringify({ success: true }), {
