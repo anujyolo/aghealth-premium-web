@@ -4,8 +4,52 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
+import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
+import { useState } from 'react';
 import careerBackground from '@/assets/career-team-photo.jpg';
 const Career = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+    const application = {
+      fullName: formData.get('name') as string,
+      email: formData.get('email') as string,
+      phone: formData.get('phone') as string,
+      position: formData.get('position') as string,
+      experience: formData.get('experience') as string,
+      coverLetter: formData.get('message') as string,
+    };
+
+    try {
+      const { data, error } = await supabase.functions.invoke('send-application', {
+        body: application,
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Application Submitted!",
+        description: "Thank you for your interest. We'll review your application and get back to you soon.",
+      });
+
+      (e.target as HTMLFormElement).reset();
+    } catch (error) {
+      console.error('Error submitting application:', error);
+      toast({
+        title: "Submission Failed",
+        description: "There was an error submitting your application. Please try again or email us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   const benefits = [{
     icon: Heart,
     title: 'Health & Wellness',
@@ -215,39 +259,45 @@ const Career = () => {
 
             <Card className="border-0 shadow-large bg-white">
               <CardContent className="p-8 space-y-6">
-                <div className="space-y-2">
-                  <Label htmlFor="name">Full Name *</Label>
-                  <Input id="name" placeholder="Your full name" required />
-                </div>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="name">Full Name *</Label>
+                    <Input id="name" name="name" placeholder="Your full name" required />
+                  </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email Address *</Label>
-                  <Input id="email" type="email" placeholder="your@email.com" required />
-                </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="email">Email Address *</Label>
+                    <Input id="email" name="email" type="email" placeholder="your@email.com" required />
+                  </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="phone">Phone Number *</Label>
-                  <Input id="phone" type="tel" placeholder="+977 98X XXX XXXX" required />
-                </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="phone">Phone Number *</Label>
+                    <Input id="phone" name="phone" type="tel" placeholder="+977 98X XXX XXXX" required />
+                  </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="position">Position of Interest</Label>
-                  <Input id="position" placeholder="e.g., Production Supervisor" />
-                </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="position">Position of Interest</Label>
+                    <Input id="position" name="position" placeholder="e.g., Production Supervisor" />
+                  </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="message">Cover Letter / Why Join Us? *</Label>
-                  <Textarea id="message" placeholder="Tell us about yourself and why you'd like to join A.G. Health Industries..." rows={6} required />
-                </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="experience">Years of Experience *</Label>
+                    <Input id="experience" name="experience" placeholder="e.g., 3 years" required />
+                  </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="resume">Resume / CV (PDF)</Label>
-                  <Input id="resume" type="file" accept=".pdf,.doc,.docx" />
-                </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="message">Cover Letter / Why Join Us? *</Label>
+                    <Textarea id="message" name="message" placeholder="Tell us about yourself and why you'd like to join A.G. Health Industries..." rows={6} required />
+                  </div>
 
-                <Button className="w-full bg-gradient-primary hover:opacity-90 transition-smooth shadow-medium text-base py-6">
-                  Submit Application
-                </Button>
+                  <Button 
+                    type="submit" 
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-primary hover:opacity-90 transition-smooth shadow-medium text-base py-6"
+                  >
+                    {isSubmitting ? 'Submitting...' : 'Submit Application'}
+                  </Button>
+                </form>
 
                 <p className="text-sm text-muted-foreground text-center">
                   By submitting this form, you agree to our privacy policy and consent to being 
