@@ -300,14 +300,16 @@ const Products = () => {
               <p className="text-lg text-white/90 max-w-2xl mx-auto">
                 Our team is here to help you find the perfect hygiene products for your needs
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-white text-primary hover:bg-white/90 transition-smooth shadow-large"
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a 
+                  href="mailto:kripa.ad25@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center h-11 px-8 rounded-md bg-white text-primary hover:bg-white/90 transition-smooth shadow-large font-medium"
                 >
-                  <a href="mailto:kripa.ad25@gmail.com">Email Us</a>
-                </Button>
+                  Email Us
+                </a>
+                <span className="text-white/80 text-sm">or copy: kripa.ad25@gmail.com</span>
               </div>
             </CardContent>
           </Card>
