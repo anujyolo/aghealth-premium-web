@@ -318,12 +318,14 @@ const Career = () => {
           <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
             Our HR team is here to help. Reach out to learn more about opportunities at A.G. Health Industries.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pb-12">
-            <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 transition-smooth shadow-large px-8">
-              <a href="mailto:kripa.ad25@gmail.com">Email Us</a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 transition-smooth shadow-large">
+              <a href="mailto:kripa.ad25@gmail.com">Email HR Team</a>
             </Button>
-            <span 
-              className="text-white/90 cursor-pointer hover:text-white transition-smooth"
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-2 border-white text-white hover:bg-white hover:text-primary transition-smooth"
               onClick={() => {
                 navigator.clipboard.writeText('kripa.ad25@gmail.com');
                 toast({
@@ -332,8 +334,11 @@ const Career = () => {
                 });
               }}
             >
-              or copy: <span className="underline">kripa.ad25@gmail.com</span>
-            </span>
+              Copy Email Address
+            </Button>
+            <Button asChild size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary transition-smooth">
+              <a href="tel:+9771234567890">Call Us</a>
+            </Button>
           </div>
         </div>
       </section>
