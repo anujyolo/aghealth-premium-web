@@ -29,7 +29,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     const emailResponse = await resend.emails.send({
       from: "Career Applications <careers@aghealthindustries.com>",
-      to: ["kirpa.ad25@gmail.com"],
+      to: ["kripa.ad25@gmail.com"],
       replyTo: application.email,
       subject: `New Career Application: ${application.position} - ${application.fullName}`,
       html: `
