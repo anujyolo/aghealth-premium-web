@@ -380,7 +380,7 @@ const Products = () => {
                 Close
               </Button>
               <Button className="flex-1" variant="outline" asChild>
-                <a href="mailto:kirpa.ad25@gmail.com">Contact for Order</a>
+                <a href="mailto:kripa.ad25@gmail.com">Contact for Order</a>
               </Button>
             </div>
           </div>

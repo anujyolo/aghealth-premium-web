@@ -320,7 +320,7 @@ const Career = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 transition-smooth shadow-large">
-              <a href="mailto:careers@aghealthindustries.com">Email HR Team</a>
+              <a href="mailto:kripa.ad25@gmail.com">Email HR Team</a>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary transition-smooth">
               <a href="tel:+9771234567890">Call Us</a>
