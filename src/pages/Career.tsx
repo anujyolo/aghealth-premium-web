@@ -320,25 +320,9 @@ const Career = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 transition-smooth shadow-large">
-              <a href="mailto:kripa.ad25@gmail.com">Email HR Team</a>
+              <a href="mailto:kripa.ad25@gmail.com">Email Us</a>
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-2 border-white text-white hover:bg-white hover:text-primary transition-smooth"
-              onClick={() => {
-                navigator.clipboard.writeText('kripa.ad25@gmail.com');
-                toast({
-                  title: "Email Copied!",
-                  description: "kripa.ad25@gmail.com has been copied to your clipboard.",
-                });
-              }}
-            >
-              Copy Email Address
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary transition-smooth">
-              <a href="tel:+9771234567890">Call Us</a>
-            </Button>
+            <span className="text-white/90 text-sm">or copy: kripa.ad25@gmail.com</span>
           </div>
         </div>
       </section>
