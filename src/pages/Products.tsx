@@ -306,7 +306,7 @@ const Products = () => {
                   size="lg"
                   className="bg-white text-primary hover:bg-white/90 transition-smooth shadow-large"
                 >
-                  <a href="mailto:kirpa.ad25@gmail.com">Email Us</a>
+                  <a href="mailto:kripa.ad25@gmail.com">Email Us</a>
                 </Button>
               </div>
             </CardContent>
