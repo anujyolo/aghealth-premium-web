@@ -161,10 +161,10 @@ const Navigation = () => {
                 <div>
                   <p className="font-semibold text-foreground">Email</p>
                   <a 
-                    href="mailto:info@aghealthindustries.com" 
+                    href="mailto:kripa.ad25@gmail.com" 
                     className="text-muted-foreground hover:text-primary transition-smooth"
                   >
-                    info@aghealthindustries.com
+                    kripa.ad25@gmail.com
                   </a>
                 </div>
               </div>
@@ -200,7 +200,7 @@ const Navigation = () => {
               <Button 
                 className="w-full bg-gradient-primary hover:opacity-90"
                 onClick={() => {
-                  window.location.href = 'mailto:info@aghealthindustries.com';
+                  window.location.href = 'mailto:kripa.ad25@gmail.com';
                 }}
               >
                 Send Email
