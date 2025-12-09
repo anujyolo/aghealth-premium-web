@@ -49,48 +49,48 @@ const Home = () => {
   }];
   return <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-20 md:pt-24 pb-16 md:pb-24 overflow-hidden">
+      <section className="relative pt-16 md:pt-24 pb-12 md:pb-24 overflow-hidden min-h-[70vh] md:min-h-0 flex items-center">
         {/* Background Image */}
         <div className="absolute inset-0 bg-cover bg-center" style={{
         backgroundImage: `url(${heroFactoryBg})`
       }} />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/30" />
         
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Text Content */}
-            <div className="space-y-8 animate-fade-in-up">
-              <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
+            <div className="space-y-5 md:space-y-8 animate-fade-in-up text-center lg:text-left">
+              <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium">
                 <Sparkles className="w-4 h-4" />
                 <span>Premium Hygiene Products</span>
               </div>
               
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight lg:text-[l#] text-[#ddc4a6]/75 mx-[2px] my-[2px] px-[9px] py-[9px]">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[#ddc4a6]">
                 Caring for Hygiene,{' '}
-                <span className="text-gradient-primary">Caring for You</span>
+                <span className="text-gradient-primary block sm:inline">Caring for You</span>
               </h1>
               
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
+              <p className="text-base md:text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                 A.G. Health Industries manufactures premium diapers, face masks, sanitary pads, 
                 and toilet paper. Experience international quality hygiene products made in Nepal.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
                 <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 transition-smooth shadow-medium text-base group">
                   <Link to="/products">
                     Explore Products
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-smooth" />
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-white transition-smooth text-base">
+                <Button asChild size="lg" variant="outline" className="border-2 border-white/50 text-white hover:bg-white/20 transition-smooth text-base">
                   <Link to="/about">Learn More</Link>
                 </Button>
               </div>
             </div>
 
-            {/* Hero Image */}
-            <div className="relative animate-fade-in">
+            {/* Hero Image - Hidden on mobile for cleaner look */}
+            <div className="relative animate-fade-in hidden lg:block">
               <div className="absolute inset-0 bg-gradient-primary rounded-3xl blur-3xl opacity-20 -z-10" />
               <img src={heroImage} alt="Baby with Sagun Baby Poko Pants premium diapers showcasing product quality" width="512" height="512" className="rounded-3xl shadow-large max-w-lg mx-auto h-auto object-cover" />
             </div>
@@ -148,19 +148,19 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-6 mb-12">
+          <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-12">
             {/* Large left card - Diapers */}
-            <Link to="/our-products">
-              <div className="relative overflow-hidden rounded-3xl shadow-soft hover:shadow-large transition-smooth group cursor-pointer animate-fade-in h-[600px]">
+            <Link to="/products">
+              <div className="relative overflow-hidden rounded-2xl md:rounded-3xl shadow-soft hover:shadow-large transition-smooth group cursor-pointer animate-fade-in h-[250px] md:h-[600px]">
                 <div className="absolute inset-0">
                   <img src={sagunBabyPantsLogo} alt="Sagun Baby Pants logo" width="624" height="624" loading="lazy" className="w-full h-full object-cover" />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-                  <h3 className="text-5xl font-bold mb-2 group-hover:scale-110 transition-smooth drop-shadow-lg text-red-50">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                <div className="absolute inset-0 flex flex-col items-center justify-end p-4 md:p-6 pb-6 md:pb-8 text-center">
+                  <h3 className="text-2xl md:text-5xl font-bold mb-1 md:mb-2 group-hover:scale-110 transition-smooth drop-shadow-lg text-white">
                     {productCategories[0].title}
                   </h3>
-                  <p className="text-white/90 text-lg drop-shadow-md">
+                  <p className="text-white/90 text-sm md:text-lg drop-shadow-md">
                     {productCategories[0].description}
                   </p>
                 </div>
@@ -168,21 +168,21 @@ const Home = () => {
             </Link>
 
             {/* Right side grid - 3 smaller cards */}
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-4 md:gap-6">
               {/* Face Masks */}
-              <Link to="/our-products">
-                <div className="relative overflow-hidden rounded-3xl shadow-soft hover:shadow-large transition-smooth group cursor-pointer animate-fade-in h-[290px]" style={{
+              <Link to="/products">
+                <div className="relative overflow-hidden rounded-2xl md:rounded-3xl shadow-soft hover:shadow-large transition-smooth group cursor-pointer animate-fade-in h-[150px] md:h-[290px]" style={{
                 animationDelay: '100ms'
               }}>
                   <div className="absolute inset-0">
                     <img src={sagunFaceMasks} alt="Sagun disposable protective face masks" width="373" height="290" loading="lazy" className="w-full h-full object-cover" />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-                  <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-                  <h3 className="text-2xl font-bold mb-2 group-hover:scale-110 transition-smooth drop-shadow-lg text-red-50">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                  <div className="absolute inset-0 flex flex-col items-center justify-end p-3 md:p-6 pb-4 md:pb-6 text-center">
+                  <h3 className="text-lg md:text-2xl font-bold mb-1 group-hover:scale-110 transition-smooth drop-shadow-lg text-white">
                     {productCategories[1].title}
                   </h3>
-                    <p className="text-white/90 text-sm drop-shadow-md">
+                    <p className="text-white/90 text-xs md:text-sm drop-shadow-md hidden sm:block">
                       {productCategories[1].description}
                     </p>
                   </div>
@@ -190,19 +190,19 @@ const Home = () => {
               </Link>
 
               {/* Sanitary Pads */}
-              <Link to="/our-products">
-                <div className="relative overflow-hidden rounded-3xl shadow-soft hover:shadow-large transition-smooth group cursor-pointer animate-fade-in h-[290px]" style={{
+              <Link to="/products">
+                <div className="relative overflow-hidden rounded-2xl md:rounded-3xl shadow-soft hover:shadow-large transition-smooth group cursor-pointer animate-fade-in h-[150px] md:h-[290px]" style={{
                 animationDelay: '200ms'
               }}>
                   <div className="absolute inset-0">
                     <img src={sagunPadLogo} alt="Sagun sanitary pad logo" width="300" height="300" loading="lazy" className="w-full h-full object-cover" />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-                  <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-                  <h3 className="text-2xl font-bold mb-2 group-hover:scale-110 transition-smooth drop-shadow-lg text-red-50">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                  <div className="absolute inset-0 flex flex-col items-center justify-end p-3 md:p-6 pb-4 md:pb-6 text-center">
+                  <h3 className="text-lg md:text-2xl font-bold mb-1 group-hover:scale-110 transition-smooth drop-shadow-lg text-white">
                     {productCategories[2].title}
                   </h3>
-                    <p className="text-white/90 text-sm drop-shadow-md">
+                    <p className="text-white/90 text-xs md:text-sm drop-shadow-md hidden sm:block">
                       {productCategories[2].description}
                     </p>
                   </div>
@@ -210,19 +210,19 @@ const Home = () => {
               </Link>
 
               {/* Toilet Paper - spans 2 columns */}
-              <Link to="/our-products" className="col-span-2">
-                <div className="relative overflow-hidden rounded-3xl shadow-soft hover:shadow-large transition-smooth group cursor-pointer animate-fade-in h-[290px]" style={{
+              <Link to="/products" className="col-span-2">
+                <div className="relative overflow-hidden rounded-2xl md:rounded-3xl shadow-soft hover:shadow-large transition-smooth group cursor-pointer animate-fade-in h-[150px] md:h-[290px]" style={{
                 animationDelay: '300ms'
               }}>
                   <div className="absolute inset-0">
                     <img src={sagunToiletPaperLogo} alt="Sagun toilet paper logo" width="624" height="290" loading="lazy" className="w-full h-full object-cover" />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-                  <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-                  <h3 className="text-2xl font-bold mb-2 group-hover:scale-110 transition-smooth drop-shadow-lg text-red-50">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                  <div className="absolute inset-0 flex flex-col items-center justify-end p-3 md:p-6 pb-4 md:pb-6 text-center">
+                  <h3 className="text-lg md:text-2xl font-bold mb-1 group-hover:scale-110 transition-smooth drop-shadow-lg text-white">
                     {productCategories[3].title}
                   </h3>
-                    <p className="text-white/90 text-sm drop-shadow-md">
+                    <p className="text-white/90 text-xs md:text-sm drop-shadow-md hidden sm:block">
                       {productCategories[3].description}
                     </p>
                   </div>
