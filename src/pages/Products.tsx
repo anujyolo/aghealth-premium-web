@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { Baby, Shield, Heart, Smile, Package, Star, X } from 'lucide-react';
+import { Baby, Shield, Heart, Smile, Package, Star, X, Copy, Check } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { useToast } from '@/hooks/use-toast';
 import sagunBabyPokoPants from '@/assets/sagun-baby-poko-pants.png';
 import sagunBabyPantsLogo from '@/assets/sagun-baby-pants-logo-new.png';
 import sagunPad from '@/assets/sagun-pad.png';
@@ -13,6 +14,18 @@ import sagunPadProduct from '@/assets/sagun-pad-product.png';
 
 const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState<{name: string, size: string, tag: string, category: string} | null>(null);
+  const [copied, setCopied] = useState(false);
+  const { toast } = useToast();
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText('kripa.ad25@gmail.com');
+    setCopied(true);
+    toast({
+      title: "Email Copied!",
+      description: "kripa.ad25@gmail.com has been copied to your clipboard.",
+    });
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   const categories = [
     {
@@ -301,15 +314,29 @@ const Products = () => {
                 Our team is here to help you find the perfect hygiene products for your needs
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a 
-                  href="mailto:kripa.ad25@gmail.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center h-11 px-8 rounded-md bg-white text-primary hover:bg-white/90 transition-smooth shadow-large font-medium"
+                <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 transition-smooth shadow-large">
+                  <a href="mailto:kripa.ad25@gmail.com">Email Us</a>
+                </Button>
+                <Button 
+                  size="lg"
+                  onClick={handleCopyEmail}
+                  className="group relative bg-gradient-to-r from-amber-400 via-amber-500 to-orange-500 hover:from-amber-500 hover:via-amber-600 hover:to-orange-600 text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
                 >
-                  Email Us
-                </a>
-                <span className="text-white/80 text-sm">or copy: kripa.ad25@gmail.com</span>
+                  <span className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+                  <span className="relative flex items-center gap-2">
+                    {copied ? (
+                      <>
+                        <Check className="w-4 h-4" />
+                        Copied!
+                      </>
+                    ) : (
+                      <>
+                        <Copy className="w-4 h-4" />
+                        Copy Email
+                      </>
+                    )}
+                  </span>
+                </Button>
               </div>
             </CardContent>
           </Card>
