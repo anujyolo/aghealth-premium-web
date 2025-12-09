@@ -179,7 +179,7 @@ All colors MUST be HSL.
 
   /* Premium text effects */
   .text-glow {
-    text-shadow: 0 0 20px rgba(221, 196, 166, 0.5);
+    text-shadow: 0 0 10px rgba(221, 196, 166, 0.25);
   }
 
   .text-shadow-lg {
