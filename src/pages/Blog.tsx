@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Calendar, Clock, ArrowRight, Heart } from 'lucide-react';
+import { Calendar, Clock, ArrowRight, Heart, Mail, Copy, Check } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { useToast } from '@/hooks/use-toast';
 import { Badge } from '@/components/ui/badge';
 import pregnancyImg from '@/assets/category-pregnancy.jpg';
 import newbornImg from '@/assets/category-newborn.jpg';
@@ -13,6 +15,18 @@ import { blogPosts } from '@/data/blogData';
 
 const Blog = () => {
   const navigate = useNavigate();
+  const { toast } = useToast();
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText('kripa.ad25@gmail.com');
+    setCopied(true);
+    toast({
+      title: "Email Copied!",
+      description: "kripa.ad25@gmail.com has been copied to your clipboard.",
+    });
+    setTimeout(() => setCopied(false), 2000);
+  };
   const [selectedCategory, setSelectedCategory] = useState('All Posts');
 
   const featuredPost = blogPosts.find(post => post.slug === 'prenatal-vitamins-guide')!;
@@ -238,27 +252,45 @@ const Blog = () => {
         </div>
       </section>
 
-      {/* Newsletter */}
+      {/* Contact for Tips */}
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Card className="border-2 border-amber-500/30 shadow-large bg-white/15 backdrop-blur-md overflow-hidden">
             <CardContent className="p-8 md:p-12 text-center space-y-6">
+              <Mail className="w-12 h-12 text-amber-400 mx-auto" />
               <h2 className="text-3xl md:text-4xl font-bold text-white">
-                Stay Updated with Hygiene Tips
+                Want More Hygiene Tips?
               </h2>
               <p className="text-lg text-white/90 max-w-2xl mx-auto">
-                Subscribe to our newsletter for the latest hygiene insights, health tips, 
-                and product updates delivered to your inbox
+                For personalized hygiene advice and product recommendations, reach out to us!
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400 bg-white/90"
-                />
-                <button className="px-8 py-3 bg-amber-500 text-white font-medium rounded-lg hover:bg-amber-600 transition-smooth shadow-medium">
-                  Subscribe
-                </button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 transition-smooth shadow-large">
+                  <a href="mailto:kripa.ad25@gmail.com">
+                    <Mail className="w-4 h-4 mr-2" />
+                    Email Us
+                  </a>
+                </Button>
+                <Button 
+                  size="lg"
+                  onClick={handleCopyEmail}
+                  className="group relative bg-gradient-to-r from-amber-400 via-amber-500 to-orange-500 hover:from-amber-500 hover:via-amber-600 hover:to-orange-600 text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
+                >
+                  <span className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+                  <span className="relative flex items-center gap-2">
+                    {copied ? (
+                      <>
+                        <Check className="w-4 h-4" />
+                        Copied!
+                      </>
+                    ) : (
+                      <>
+                        <Copy className="w-4 h-4" />
+                        Copy Email
+                      </>
+                    )}
+                  </span>
+                </Button>
               </div>
             </CardContent>
           </Card>
