@@ -142,4 +142,111 @@ All colors MUST be HSL.
   .transition-smooth {
     transition: var(--transition-smooth);
   }
+
+  /* Premium hover effects */
+  .hover-lift {
+    @apply transition-all duration-300 ease-out;
+  }
+  
+  .hover-lift:hover {
+    @apply -translate-y-2 shadow-large;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300;
+  }
+  
+  .hover-glow:hover {
+    box-shadow: 0 0 30px rgba(0, 188, 158, 0.4);
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-300 ease-out;
+  }
+  
+  .hover-scale:hover {
+    @apply scale-105;
+  }
+
+  /* Glass morphism */
+  .glass {
+    @apply bg-white/10 backdrop-blur-xl border border-white/20;
+  }
+
+  .glass-dark {
+    @apply bg-black/20 backdrop-blur-xl border border-white/10;
+  }
+
+  /* Premium text effects */
+  .text-glow {
+    text-shadow: 0 0 20px rgba(221, 196, 166, 0.5);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Gradient text animation */
+  .text-gradient-animated {
+    background: linear-gradient(
+      90deg,
+      hsl(var(--primary)) 0%,
+      hsl(174 62% 60%) 25%,
+      hsl(42 87% 70%) 50%,
+      hsl(174 62% 60%) 75%,
+      hsl(var(--primary)) 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 4s linear infinite;
+  }
+
+  /* Premium borders */
+  .border-gradient {
+    border: 2px solid transparent;
+    background: linear-gradient(var(--background), var(--background)) padding-box,
+                linear-gradient(135deg, hsl(var(--primary)), hsl(42 87% 70%)) border-box;
+  }
+
+  /* Shimmer effect */
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.1) 50%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  /* Image hover zoom */
+  .img-zoom {
+    @apply overflow-hidden;
+  }
+  
+  .img-zoom img {
+    @apply transition-transform duration-500 ease-out;
+  }
+  
+  .img-zoom:hover img {
+    @apply scale-110;
+  }
+
+  /* Button pulse */
+  .btn-pulse {
+    @apply relative;
+  }
+  
+  .btn-pulse::after {
+    content: '';
+    @apply absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300;
+    box-shadow: 0 0 20px rgba(0, 188, 158, 0.6);
+  }
+  
+  .btn-pulse:hover::after {
+    @apply opacity-100;
+  }
 }

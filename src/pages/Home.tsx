@@ -1,7 +1,8 @@
-import { ArrowRight, Sparkles, Shield, Heart, Award, Baby, Smile, Cloud, Sun, Star, Car } from 'lucide-react';
+import { ArrowRight, Sparkles, Shield, Heart, Award, Baby, Smile } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { ScrollReveal } from '@/hooks/use-scroll-reveal';
 import heroImage from '@/assets/hero-baby-product.jpg';
 import factoryVideo from '@/assets/factory-video.mp4';
 import factoryBackground from '@/assets/factory-workers-new.jpg';
@@ -12,6 +13,7 @@ import sagunBabyPantsLogo from '@/assets/sagun-baby-pants-logo.png';
 import sagunFaceMasks from '@/assets/sagun-face-masks.jpg';
 import sagunPadLogo from '@/assets/sagun-pad-logo.png';
 import sagunToiletPaperLogo from '@/assets/sagun-toilet-paper-logo.jpg';
+
 const Home = () => {
   const values = [{
     icon: Sparkles,
@@ -30,6 +32,7 @@ const Home = () => {
     title: 'Trusted Brand',
     description: 'Preferred choice for families across Nepal'
   }];
+
   const productCategories = [{
     icon: Baby,
     title: 'Diapers',
@@ -47,272 +50,381 @@ const Home = () => {
     title: 'Toilet Paper',
     description: 'Gentle, strong & reliable'
   }];
-  return <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative pt-16 md:pt-24 pb-12 md:pb-24 overflow-hidden min-h-[70vh] md:min-h-0 flex items-center">
-        {/* Background Image */}
-        <div className="absolute inset-0 bg-cover bg-center" style={{
-        backgroundImage: `url(${heroFactoryBg})`
-      }} />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/30" />
+
+  return (
+    <div className="min-h-screen overflow-hidden">
+      {/* Hero Section with Parallax */}
+      <section className="relative pt-16 md:pt-24 pb-12 md:pb-24 overflow-hidden min-h-[70vh] md:min-h-[85vh] flex items-center">
+        {/* Background Image with Parallax Effect */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-fixed scale-110" 
+          style={{ backgroundImage: `url(${heroFactoryBg})` }} 
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/50" />
         
+        {/* Animated gradient overlay */}
+        <div className="absolute inset-0 opacity-30 bg-gradient-to-r from-primary/20 via-transparent to-amber-500/20 animate-gradient-shift" style={{ backgroundSize: '200% 200%' }} />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            {/* Text Content */}
-            <div className="space-y-5 md:space-y-8 animate-fade-in-up text-center lg:text-left">
-              <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium">
-                <Sparkles className="w-4 h-4" />
-                <span>Premium Hygiene Products</span>
+            {/* Text Content with Text Reveal Animation */}
+            <div className="space-y-5 md:space-y-8 text-center lg:text-left">
+              <div className="overflow-hidden">
+                <div className="animate-text-reveal inline-flex items-center space-x-2 glass text-white px-5 py-2.5 rounded-full text-sm font-medium">
+                  <Sparkles className="w-4 h-4 animate-pulse" />
+                  <span>Premium Hygiene Products</span>
+                </div>
               </div>
               
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[#ddc4a6]">
-                Caring for Hygiene,{' '}
-                <span className="text-gradient-primary block sm:inline">Caring for You</span>
-              </h1>
+              <div className="overflow-hidden">
+                <h1 className="animate-text-reveal text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-glow" style={{ animationDelay: '0.1s' }}>
+                  <span className="text-[#ddc4a6]">Caring for Hygiene,</span>{' '}
+                  <span className="text-gradient-animated block sm:inline">Caring for You</span>
+                </h1>
+              </div>
               
-              <p className="text-base md:text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                A.G. Health Industries manufactures premium diapers, face masks, sanitary pads, 
-                and toilet paper. Experience international quality hygiene products made in Nepal.
-              </p>
+              <div className="overflow-hidden">
+                <p className="animate-text-reveal text-base md:text-lg lg:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto lg:mx-0 text-shadow-lg" style={{ animationDelay: '0.2s' }}>
+                  A.G. Health Industries manufactures premium diapers, face masks, sanitary pads, 
+                  and toilet paper. Experience international quality hygiene products made in Nepal.
+                </p>
+              </div>
               
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-                <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 transition-smooth shadow-medium text-base group">
-                  <Link to="/products">
-                    Explore Products
-                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-smooth" />
-                  </Link>
-                </Button>
-                <Button asChild size="lg" variant="outline" className="border-2 border-white/50 text-white hover:bg-white/20 transition-smooth text-base">
-                  <Link to="/about">Learn More</Link>
-                </Button>
+              <div className="overflow-hidden">
+                <div className="animate-text-reveal flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start" style={{ animationDelay: '0.3s' }}>
+                  <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 transition-smooth shadow-large text-base group btn-pulse animate-pulse-glow">
+                    <Link to="/products">
+                      Explore Products
+                      <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-all duration-300" />
+                    </Link>
+                  </Button>
+                  <Button asChild size="lg" variant="outline" className="glass border-white/30 text-white hover:bg-white/20 hover:border-white/50 transition-all duration-300 text-base hover-lift">
+                    <Link to="/about">Learn More</Link>
+                  </Button>
+                </div>
               </div>
             </div>
 
-            {/* Hero Image - Hidden on mobile for cleaner look */}
-            <div className="relative animate-fade-in hidden lg:block">
-              <div className="absolute inset-0 bg-gradient-primary rounded-3xl blur-3xl opacity-20 -z-10" />
-              <img src={heroImage} alt="Baby with Sagun Baby Poko Pants premium diapers showcasing product quality" width="512" height="512" className="rounded-3xl shadow-large max-w-lg mx-auto h-auto object-cover" />
+            {/* Hero Image with Float Animation */}
+            <div className="relative hidden lg:block">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-amber-500/30 rounded-3xl blur-3xl opacity-40 animate-pulse-glow -z-10" />
+              <div className="animate-float">
+                <img 
+                  src={heroImage} 
+                  alt="Baby with Sagun Baby Poko Pants premium diapers showcasing product quality" 
+                  width="512" 
+                  height="512" 
+                  className="rounded-3xl shadow-2xl max-w-lg mx-auto h-auto object-cover border-2 border-white/10" 
+                />
+              </div>
+              {/* Decorative elements */}
+              <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-primary/50 to-transparent rounded-full blur-2xl animate-pulse" />
+              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-tr from-amber-500/40 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }} />
             </div>
+          </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:block">
+          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+            <div className="w-1.5 h-3 bg-white/60 rounded-full mt-2 animate-bounce" />
           </div>
         </div>
       </section>
 
       {/* Values Section */}
-      <section className="py-16 md:py-24 relative bg-muted/30">
-        <div className="absolute inset-0 bg-cover bg-center" style={{
-        backgroundImage: `url(${factoryBackground})`
-      }} />
-        <div className="absolute inset-0 bg-black/30" />
+      <section className="py-16 md:py-24 relative">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-fixed" 
+          style={{ backgroundImage: `url(${factoryBackground})` }} 
+        />
+        <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
+        
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-12 md:mb-16 animate-fade-in">
-            <h2 className="text-3xl font-bold mb-4 text-center py-[21px] mx-0 my-[5px] px-[31px] text-[#ddc4a6]/75 md:text-5xl">
-              Why Choose A.G. Health Industries
-            </h2>
-            <p className="max-w-2xl mx-auto font-semibold text-xl text-emerald-50">
-              Trusted by families across Nepal for our commitment to quality and hygiene
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="text-3xl font-bold mb-4 text-center py-4 text-[#ddc4a6] text-glow md:text-5xl">
+                Why Choose A.G. Health Industries
+              </h2>
+              <p className="max-w-2xl mx-auto font-semibold text-xl text-emerald-50/90">
+                Trusted by families across Nepal for our commitment to quality and hygiene
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-            {values.map((value, index) => <Card key={value.title} className="border-0 shadow-soft hover:shadow-medium transition-smooth bg-white/10 backdrop-blur-sm group animate-fade-in" style={{
-            animationDelay: `${index * 100}ms`
-          }}>
-                <CardContent className="p-6 text-center space-y-4">
-                  <div className="w-16 h-16 mx-auto bg-gradient-primary rounded-2xl flex items-center justify-center group-hover:scale-110 transition-smooth">
-                    <value.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-amber-100">
-                    {value.title}
-                  </h3>
-                  <p className="text-white/90 leading-relaxed">
-                    {value.description}
-                  </p>
-                </CardContent>
-              </Card>)}
+            {values.map((value, index) => (
+              <ScrollReveal key={value.title} delay={index * 100}>
+                <Card className="border-0 glass hover-lift group h-full cursor-default">
+                  <CardContent className="p-6 text-center space-y-4">
+                    <div className="w-16 h-16 mx-auto bg-gradient-primary rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg group-hover:shadow-primary/50">
+                      <value.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-amber-100 group-hover:text-white transition-colors">
+                      {value.title}
+                    </h3>
+                    <p className="text-white/80 leading-relaxed group-hover:text-white/95 transition-colors">
+                      {value.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Product Categories Preview */}
       <section className="py-16 md:py-24 relative">
-        <div className="absolute inset-0 bg-cover bg-center" style={{
-        backgroundImage: `url(${herooBackground})`
-      }} />
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-fixed" 
+          style={{ backgroundImage: `url(${herooBackground})` }} 
+        />
         <div className="absolute inset-0 bg-black/50" />
+        
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-4xl mb-4 text-[#ddc4a6]/75 font-extrabold md:text-6xl">Our Hygiene products</h2>
-            <p className="max-w-2xl mx-auto text-[#16a69d] text-xl font-bold">
-              Complete range of premium hygiene solutions for everyday needs
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <h2 className="text-4xl mb-4 text-[#ddc4a6] text-glow font-extrabold md:text-6xl">
+                Our Hygiene Products
+              </h2>
+              <p className="max-w-2xl mx-auto text-primary text-xl font-bold">
+                Complete range of premium hygiene solutions for everyday needs
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-12">
             {/* Large left card - Diapers */}
-            <Link to="/products">
-              <div className="relative overflow-hidden rounded-2xl md:rounded-3xl shadow-soft hover:shadow-large transition-smooth group cursor-pointer animate-fade-in h-[250px] md:h-[600px]">
-                <div className="absolute inset-0">
-                  <img src={sagunBabyPantsLogo} alt="Sagun Baby Pants logo" width="624" height="624" loading="lazy" className="w-full h-full object-cover" />
+            <ScrollReveal direction="left">
+              <Link to="/products" className="block">
+                <div className="relative overflow-hidden rounded-2xl md:rounded-3xl shadow-large group cursor-pointer h-[250px] md:h-[600px] img-zoom border border-white/10">
+                  <div className="absolute inset-0">
+                    <img 
+                      src={sagunBabyPantsLogo} 
+                      alt="Sagun Baby Pants logo" 
+                      width="624" 
+                      height="624" 
+                      loading="lazy" 
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent group-hover:from-black/70 transition-all duration-500" />
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-primary/20 to-amber-500/20" />
+                  <div className="absolute inset-0 flex flex-col items-center justify-end p-4 md:p-6 pb-6 md:pb-8 text-center">
+                    <h3 className="text-2xl md:text-5xl font-bold mb-1 md:mb-2 group-hover:scale-110 group-hover:-translate-y-2 transition-all duration-500 drop-shadow-lg text-white text-shadow-lg">
+                      {productCategories[0].title}
+                    </h3>
+                    <p className="text-white/90 text-sm md:text-lg drop-shadow-md opacity-80 group-hover:opacity-100 transition-opacity">
+                      {productCategories[0].description}
+                    </p>
+                  </div>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-                <div className="absolute inset-0 flex flex-col items-center justify-end p-4 md:p-6 pb-6 md:pb-8 text-center">
-                  <h3 className="text-2xl md:text-5xl font-bold mb-1 md:mb-2 group-hover:scale-110 transition-smooth drop-shadow-lg text-white">
-                    {productCategories[0].title}
-                  </h3>
-                  <p className="text-white/90 text-sm md:text-lg drop-shadow-md">
-                    {productCategories[0].description}
-                  </p>
-                </div>
-              </div>
-            </Link>
+              </Link>
+            </ScrollReveal>
 
             {/* Right side grid - 3 smaller cards */}
             <div className="grid grid-cols-2 gap-4 md:gap-6">
               {/* Face Masks */}
-              <Link to="/products">
-                <div className="relative overflow-hidden rounded-2xl md:rounded-3xl shadow-soft hover:shadow-large transition-smooth group cursor-pointer animate-fade-in h-[150px] md:h-[290px]" style={{
-                animationDelay: '100ms'
-              }}>
-                  <div className="absolute inset-0">
-                    <img src={sagunFaceMasks} alt="Sagun disposable protective face masks" width="373" height="290" loading="lazy" className="w-full h-full object-cover" />
+              <ScrollReveal delay={100} direction="right">
+                <Link to="/products" className="block h-full">
+                  <div className="relative overflow-hidden rounded-2xl md:rounded-3xl shadow-large group cursor-pointer h-[150px] md:h-[290px] img-zoom border border-white/10">
+                    <div className="absolute inset-0">
+                      <img 
+                        src={sagunFaceMasks} 
+                        alt="Sagun disposable protective face masks" 
+                        width="373" 
+                        height="290" 
+                        loading="lazy" 
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                      />
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent group-hover:from-black/70 transition-all duration-500" />
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-primary/20 to-amber-500/20" />
+                    <div className="absolute inset-0 flex flex-col items-center justify-end p-3 md:p-6 pb-4 md:pb-6 text-center">
+                      <h3 className="text-lg md:text-2xl font-bold mb-1 group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-500 drop-shadow-lg text-white text-shadow-lg">
+                        {productCategories[1].title}
+                      </h3>
+                      <p className="text-white/90 text-xs md:text-sm drop-shadow-md hidden sm:block">
+                        {productCategories[1].description}
+                      </p>
+                    </div>
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-                  <div className="absolute inset-0 flex flex-col items-center justify-end p-3 md:p-6 pb-4 md:pb-6 text-center">
-                  <h3 className="text-lg md:text-2xl font-bold mb-1 group-hover:scale-110 transition-smooth drop-shadow-lg text-white">
-                    {productCategories[1].title}
-                  </h3>
-                    <p className="text-white/90 text-xs md:text-sm drop-shadow-md hidden sm:block">
-                      {productCategories[1].description}
-                    </p>
-                  </div>
-                </div>
-              </Link>
+                </Link>
+              </ScrollReveal>
 
               {/* Sanitary Pads */}
-              <Link to="/products">
-                <div className="relative overflow-hidden rounded-2xl md:rounded-3xl shadow-soft hover:shadow-large transition-smooth group cursor-pointer animate-fade-in h-[150px] md:h-[290px]" style={{
-                animationDelay: '200ms'
-              }}>
-                  <div className="absolute inset-0">
-                    <img src={sagunPadLogo} alt="Sagun sanitary pad logo" width="300" height="300" loading="lazy" className="w-full h-full object-cover" />
+              <ScrollReveal delay={200} direction="right">
+                <Link to="/products" className="block h-full">
+                  <div className="relative overflow-hidden rounded-2xl md:rounded-3xl shadow-large group cursor-pointer h-[150px] md:h-[290px] img-zoom border border-white/10">
+                    <div className="absolute inset-0">
+                      <img 
+                        src={sagunPadLogo} 
+                        alt="Sagun sanitary pad logo" 
+                        width="300" 
+                        height="300" 
+                        loading="lazy" 
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                      />
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent group-hover:from-black/70 transition-all duration-500" />
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-primary/20 to-amber-500/20" />
+                    <div className="absolute inset-0 flex flex-col items-center justify-end p-3 md:p-6 pb-4 md:pb-6 text-center">
+                      <h3 className="text-lg md:text-2xl font-bold mb-1 group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-500 drop-shadow-lg text-white text-shadow-lg">
+                        {productCategories[2].title}
+                      </h3>
+                      <p className="text-white/90 text-xs md:text-sm drop-shadow-md hidden sm:block">
+                        {productCategories[2].description}
+                      </p>
+                    </div>
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-                  <div className="absolute inset-0 flex flex-col items-center justify-end p-3 md:p-6 pb-4 md:pb-6 text-center">
-                  <h3 className="text-lg md:text-2xl font-bold mb-1 group-hover:scale-110 transition-smooth drop-shadow-lg text-white">
-                    {productCategories[2].title}
-                  </h3>
-                    <p className="text-white/90 text-xs md:text-sm drop-shadow-md hidden sm:block">
-                      {productCategories[2].description}
-                    </p>
-                  </div>
-                </div>
-              </Link>
+                </Link>
+              </ScrollReveal>
 
               {/* Toilet Paper - spans 2 columns */}
-              <Link to="/products" className="col-span-2">
-                <div className="relative overflow-hidden rounded-2xl md:rounded-3xl shadow-soft hover:shadow-large transition-smooth group cursor-pointer animate-fade-in h-[150px] md:h-[290px]" style={{
-                animationDelay: '300ms'
-              }}>
-                  <div className="absolute inset-0">
-                    <img src={sagunToiletPaperLogo} alt="Sagun toilet paper logo" width="624" height="290" loading="lazy" className="w-full h-full object-cover" />
+              <ScrollReveal delay={300} direction="up" className="col-span-2">
+                <Link to="/products" className="block">
+                  <div className="relative overflow-hidden rounded-2xl md:rounded-3xl shadow-large group cursor-pointer h-[150px] md:h-[290px] img-zoom border border-white/10">
+                    <div className="absolute inset-0">
+                      <img 
+                        src={sagunToiletPaperLogo} 
+                        alt="Sagun toilet paper logo" 
+                        width="624" 
+                        height="290" 
+                        loading="lazy" 
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                      />
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent group-hover:from-black/70 transition-all duration-500" />
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-primary/20 to-amber-500/20" />
+                    <div className="absolute inset-0 flex flex-col items-center justify-end p-3 md:p-6 pb-4 md:pb-6 text-center">
+                      <h3 className="text-lg md:text-2xl font-bold mb-1 group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-500 drop-shadow-lg text-white text-shadow-lg">
+                        {productCategories[3].title}
+                      </h3>
+                      <p className="text-white/90 text-xs md:text-sm drop-shadow-md hidden sm:block">
+                        {productCategories[3].description}
+                      </p>
+                    </div>
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-                  <div className="absolute inset-0 flex flex-col items-center justify-end p-3 md:p-6 pb-4 md:pb-6 text-center">
-                  <h3 className="text-lg md:text-2xl font-bold mb-1 group-hover:scale-110 transition-smooth drop-shadow-lg text-white">
-                    {productCategories[3].title}
-                  </h3>
-                    <p className="text-white/90 text-xs md:text-sm drop-shadow-md hidden sm:block">
-                      {productCategories[3].description}
-                    </p>
-                  </div>
-                </div>
-              </Link>
+                </Link>
+              </ScrollReveal>
             </div>
           </div>
 
-          <div className="text-center">
-            <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 transition-smooth shadow-medium group">
-              <Link to="/products">
-                View All Products
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-smooth" />
-              </Link>
-            </Button>
-          </div>
+          <ScrollReveal delay={400}>
+            <div className="text-center">
+              <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 transition-all duration-300 shadow-large group btn-pulse hover-lift">
+                <Link to="/products">
+                  View All Products
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
+                </Link>
+              </Button>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Featured Products Section */}
       <section className="py-16 md:py-24 relative">
-        <div className="absolute inset-0 bg-cover bg-center" style={{
-        backgroundImage: `url(${factoryTeam})`
-      }} />
-        <div className="absolute inset-0 bg-black/50" />
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-fixed" 
+          style={{ backgroundImage: `url(${factoryTeam})` }} 
+        />
+        <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px]" />
+        
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Image */}
-            <div className="order-2 lg:order-1 animate-fade-in">
-              <video src={factoryVideo} autoPlay loop muted playsInline preload="metadata" className="rounded-3xl shadow-large w-full max-w-7xl ml-8 h-auto object-cover" />
-            </div>
+            {/* Video */}
+            <ScrollReveal direction="left" className="order-2 lg:order-1">
+              <div className="relative group">
+                <div className="absolute -inset-4 bg-gradient-to-r from-primary/30 to-amber-500/30 rounded-3xl blur-2xl opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
+                <video 
+                  src={factoryVideo} 
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline 
+                  preload="metadata" 
+                  className="relative rounded-3xl shadow-2xl w-full max-w-7xl h-auto object-cover border border-white/10" 
+                />
+              </div>
+            </ScrollReveal>
 
             {/* Content */}
-            <div className="order-1 lg:order-2 space-y-6 animate-fade-in-up flex flex-col items-center text-center ml-8">
-              <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
-                <span className="font-black text-2xl text-[#16a69d]">Quality You Can Trust</span>
+            <ScrollReveal direction="right" className="order-1 lg:order-2">
+              <div className="space-y-6 flex flex-col items-center text-center lg:items-start lg:text-left">
+                <div className="inline-flex items-center space-x-2 glass px-5 py-2.5 rounded-full text-sm font-medium">
+                  <span className="font-black text-xl md:text-2xl text-primary">Quality You Can Trust</span>
+                </div>
+                
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#ddc4a6] text-glow">
+                  Made in Nepal, Trusted Worldwide
+                </h2>
+                
+                <p className="font-medium leading-relaxed text-white/90 text-base md:text-lg max-w-xl">
+                  Our state-of-the-art manufacturing facility in Nepal produces hygiene products 
+                  that meet international quality standards. Each product undergoes rigorous testing 
+                  to ensure safety, comfort, and reliability.
+                </p>
+
+                <ul className="space-y-4 w-full max-w-md">
+                  {['ISO and NS Certified Manufacturing', 'Dermatologically Tested', 'Eco-Friendly Materials', 'Affordable Premium Quality'].map((item, index) => (
+                    <li 
+                      key={item} 
+                      className="flex items-center space-x-3 group/item"
+                      style={{ animationDelay: `${index * 100}ms` }}
+                    >
+                      <div className="w-8 h-8 bg-gradient-primary rounded-full flex items-center justify-center flex-shrink-0 group-hover/item:scale-110 transition-transform duration-300 shadow-lg">
+                        <div className="w-2 h-2 bg-white rounded-full" />
+                      </div>
+                      <span className="text-white text-base md:text-lg font-semibold group-hover/item:text-[#ddc4a6] transition-colors duration-300">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 transition-all duration-300 shadow-large group btn-pulse hover-lift mt-4">
+                  <Link to="/about">
+                    About Our Company
+                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
+                  </Link>
+                </Button>
               </div>
-              
-              <h2 className="text-3xl md:text-4xl font-bold text-[#ddc4a6bf]">
-                Made in Nepal, Trusted Worldwide
-              </h2>
-              
-              <p className="font-bold leading-relaxed text-neutral-100 text-base">
-                Our state-of-the-art manufacturing facility in Nepal produces hygiene products 
-                that meet international quality standards. Each product undergoes rigorous testing 
-                to ensure safety, comfort, and reliability.
-              </p>
-
-              <ul className="space-y-3">
-                {['ISO and NS Certified Manufacturing', 'Dermatologically Tested', 'Eco-Friendly Materials', 'Affordable Premium Quality'].map(item => <li key={item} className="flex items-center space-x-3">
-                    <div className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <div className="w-2 h-2 bg-primary rounded-full" />
-                    </div>
-                    <span className="text-white text-lg font-bold">{item}</span>
-                  </li>)}
-              </ul>
-
-              <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 transition-smooth shadow-medium group">
-                <Link to="/about">
-                  About Our Company
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-smooth" />
-                </Link>
-              </Button>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 relative overflow-hidden" style={{
-      backgroundColor: '#295c61'
-    }}>
+      <section className="py-16 md:py-24 relative overflow-hidden bg-gradient-to-br from-[#1a4a4f] via-[#295c61] to-[#1a4a4f]">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-40" />
         
+        {/* Animated gradient orbs */}
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="max-w-3xl mx-auto text-center space-y-8 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
-              Experience Premium Hygiene
-            </h2>
-            <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-              Join thousands of satisfied customers who trust A.G. Health Industries for their daily hygiene needs
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 transition-smooth shadow-large text-base">
-                <Link to="/products">Shop Now</Link>
-              </Button>
+          <ScrollReveal direction="scale">
+            <div className="max-w-3xl mx-auto text-center space-y-8">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white text-shadow-lg">
+                Experience Premium Hygiene
+              </h2>
+              <p className="text-lg md:text-xl text-white/90 leading-relaxed">
+                Join thousands of satisfied customers who trust A.G. Health Industries for their daily hygiene needs
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 transition-all duration-300 shadow-2xl text-base hover-lift group">
+                  <Link to="/products">
+                    Shop Now
+                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
+                  </Link>
+                </Button>
+              </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default Home;

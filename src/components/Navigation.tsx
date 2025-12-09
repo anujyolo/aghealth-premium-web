@@ -79,13 +79,16 @@ const Navigation = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`px-2 md:px-4 py-1.5 md:py-2 rounded-lg text-xs md:text-base font-medium transition-smooth whitespace-nowrap ${
+                  className={`relative px-2 md:px-4 py-1.5 md:py-2 rounded-lg text-xs md:text-base font-medium transition-all duration-300 whitespace-nowrap group ${
                     isActive(link.path)
                       ? 'text-primary bg-primary/10'
-                      : 'text-muted-foreground hover:text-primary hover:bg-muted'
+                      : 'text-muted-foreground hover:text-primary'
                   }`}
                 >
                   {link.name}
+                  <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-primary rounded-full transition-all duration-300 ${
+                    isActive(link.path) ? 'w-1/2' : 'w-0 group-hover:w-1/2'
+                  }`} />
                 </Link>
               ))}
             </div>
