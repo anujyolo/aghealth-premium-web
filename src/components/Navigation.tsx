@@ -42,14 +42,16 @@ const Navigation = () => {
       } ${isScrolled ? 'shadow-medium' : 'backdrop-blur-sm'}`}
       style={{ backgroundColor: '#a8b6a8' }}
     >
-      {/* Decorative Elements */}
-      <Cloud className="absolute top-2 left-10 w-8 h-8 text-white/30 animate-fade-in" />
-      <Sun className="absolute top-1 right-1/4 w-10 h-10 text-yellow-300/40 animate-fade-in" style={{ animationDelay: '200ms' }} />
-      <Star className="absolute top-3 left-1/3 w-4 h-4 text-yellow-200/50 animate-fade-in" style={{ animationDelay: '400ms' }} />
-      <Baby className="absolute top-2 right-1/3 w-8 h-8 text-white/40 animate-fade-in" style={{ animationDelay: '600ms' }} />
-      <Car className="absolute top-1 right-20 w-9 h-9 text-white/35 animate-fade-in" style={{ animationDelay: '800ms' }} />
-      <Heart className="absolute top-3 left-1/2 w-5 h-5 text-red-300/40 animate-fade-in" style={{ animationDelay: '1000ms' }} />
-      <Sparkles className="absolute top-2 right-1/2 w-6 h-6 text-yellow-200/50 animate-fade-in" style={{ animationDelay: '1200ms' }} />
+      {/* Decorative Elements - Hidden on mobile */}
+      <div className="hidden md:block">
+        <Cloud className="absolute top-2 left-10 w-8 h-8 text-white/30 animate-fade-in" />
+        <Sun className="absolute top-1 right-1/4 w-10 h-10 text-yellow-300/40 animate-fade-in" style={{ animationDelay: '200ms' }} />
+        <Star className="absolute top-3 left-1/3 w-4 h-4 text-yellow-200/50 animate-fade-in" style={{ animationDelay: '400ms' }} />
+        <Baby className="absolute top-2 right-1/3 w-8 h-8 text-white/40 animate-fade-in" style={{ animationDelay: '600ms' }} />
+        <Car className="absolute top-1 right-20 w-9 h-9 text-white/35 animate-fade-in" style={{ animationDelay: '800ms' }} />
+        <Heart className="absolute top-3 left-1/2 w-5 h-5 text-red-300/40 animate-fade-in" style={{ animationDelay: '1000ms' }} />
+        <Sparkles className="absolute top-2 right-1/2 w-6 h-6 text-yellow-200/50 animate-fade-in" style={{ animationDelay: '1200ms' }} />
+      </div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex items-center justify-between h-16 md:h-20">
