@@ -77,9 +77,9 @@ const Home = () => {
               </div>
               
               <div className="overflow-hidden">
-                <h1 className="animate-text-reveal text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-glow" style={{ animationDelay: '0.1s' }}>
+                <h1 className="animate-text-reveal text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight" style={{ animationDelay: '0.1s' }}>
                   <span className="text-[#ddc4a6]">Caring for Hygiene,</span>{' '}
-                  <span className="text-gradient-animated block sm:inline">Caring for You</span>
+                  <span className="text-gradient-primary block sm:inline">Caring for You</span>
                 </h1>
               </div>
               
