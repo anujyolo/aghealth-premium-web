@@ -62,9 +62,9 @@ const Navigation = () => {
               alt="A.G. Health Industries Logo"
               width="80"
               height="80"
-              className="h-16 w-16 md:h-20 md:w-20 object-contain transition-transform group-hover:scale-105"
+              className="h-16 w-16 sm:h-18 md:h-20 md:w-20 object-contain transition-transform group-hover:scale-105"
             />
-            <div className="hidden sm:block">
+            <div className="hidden md:block">
               <div className="text-lg md:text-xl font-bold text-foreground leading-tight">
                 A.G. Health Industries
               </div>
