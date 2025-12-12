@@ -1,4 +1,4 @@
-import { Briefcase, Users, TrendingUp, Heart, Award, Globe } from 'lucide-react';
+import { Briefcase, Users, TrendingUp, Heart, Award, Globe, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -347,6 +347,42 @@ const Career = () => {
             <Button asChild size="lg" className="bg-amber-100/20 border-2 border-amber-100 text-amber-100 hover:bg-amber-100 hover:text-primary transition-smooth">
               <a href="tel:+9771234567890">Call Us</a>
             </Button>
+          </div>
+          
+          {/* Social Media Links */}
+          <div className="flex gap-4 justify-center">
+            <a 
+              href="https://www.facebook.com/profile.php?id=61556698594648" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary hover:text-white transition-smooth border border-white/20"
+            >
+              <Facebook className="w-5 h-5" />
+            </a>
+            <a 
+              href="https://www.instagram.com/sagun_diapers_/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary hover:text-white transition-smooth border border-white/20"
+            >
+              <Instagram className="w-5 h-5" />
+            </a>
+            <a 
+              href="https://www.linkedin.com/company/ag-health-industries-pvt-ltd/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary hover:text-white transition-smooth border border-white/20"
+            >
+              <Linkedin className="w-5 h-5" />
+            </a>
+            <a 
+              href="https://twitter.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary hover:text-white transition-smooth border border-white/20"
+            >
+              <Twitter className="w-5 h-5" />
+            </a>
           </div>
         </div>
       </section>
