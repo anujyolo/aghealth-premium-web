@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Cloud, Sun, Star, Baby, Car, Heart, Sparkles, Mail, Phone, MapPin } from 'lucide-react';
+import { Menu, X, Cloud, Sun, Star, Baby, Car, Heart, Sparkles, Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import logo from '@/assets/ag-health-logo.webp';
@@ -151,6 +151,45 @@ const Navigation = () => {
                     Tilottama-16, Rupandehi, Nepal
                   </p>
                 </div>
+              </div>
+            </div>
+
+            {/* Social Media Links */}
+            <div className="pt-4 border-t">
+              <p className="font-semibold text-foreground mb-3">Follow Us</p>
+              <div className="flex gap-3">
+                <a 
+                  href="https://www.facebook.com/profile.php?id=61556698594648" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-smooth"
+                >
+                  <Facebook className="w-5 h-5" />
+                </a>
+                <a 
+                  href="https://www.instagram.com/sagun_diapers_/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-smooth"
+                >
+                  <Instagram className="w-5 h-5" />
+                </a>
+                <a 
+                  href="https://www.linkedin.com/company/ag-health-industries-pvt-ltd/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-smooth"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a 
+                  href="https://twitter.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-smooth"
+                >
+                  <Twitter className="w-5 h-5" />
+                </a>
               </div>
             </div>
 
