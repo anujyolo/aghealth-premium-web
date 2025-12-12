@@ -5,6 +5,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
 import { Badge } from '@/components/ui/badge';
+import SEO from '@/components/SEO';
+import { blogSchema } from '@/data/structuredData';
 import pregnancyImg from '@/assets/category-pregnancy.jpg';
 import newbornImg from '@/assets/category-newborn.jpg';
 import infantImg from '@/assets/category-infant.jpg';
@@ -45,6 +47,13 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen pb-16">
+      <SEO 
+        title="Blog - Health Tips & Parenting Advice"
+        description="Expert health tips and parenting advice for pregnancy, newborn care, infant development, and toddler growth. Trusted insights from A.G. Health Industries."
+        canonical="/blog"
+        keywords="parenting tips, pregnancy advice, newborn care, infant health, toddler nutrition, baby care tips Nepal"
+        structuredData={blogSchema}
+      />
       {/* Header */}
       <section className="relative bg-gradient-to-br from-amber-50 via-white to-orange-50 pt-24 md:pt-28 pb-16 md:pb-20 overflow-hidden">
         {/* Decorative curved lines */}
