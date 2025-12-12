@@ -5,6 +5,8 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { useToast } from '@/hooks/use-toast';
+import SEO from '@/components/SEO';
+import { productsSchema } from '@/data/structuredData';
 import sagunBabyPokoPants from '@/assets/sagun-baby-poko-pants.png';
 import sagunBabyPantsLogo from '@/assets/sagun-baby-pants-logo-new.png';
 import sagunPad from '@/assets/sagun-pad.png';
@@ -99,6 +101,13 @@ const Products = () => {
 
   return (
     <div className="min-h-screen pt-20 md:pt-24 pb-16 relative">
+      <SEO 
+        title="Products - Premium Hygiene Products"
+        description="Explore our range of premium hygiene products including Sagun baby diapers, face masks, sanitary pads, and toilet paper. Quality hygiene solutions made in Nepal."
+        canonical="/products"
+        keywords="Sagun diapers, baby diapers Nepal, face masks, sanitary pads, toilet paper, hygiene products Nepal"
+        structuredData={productsSchema}
+      />
       <div 
         className="fixed inset-0 bg-cover bg-center bg-no-repeat -z-10"
         style={{ backgroundImage: `url(${productsBackground})` }}

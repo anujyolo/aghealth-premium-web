@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ScrollReveal } from '@/hooks/use-scroll-reveal';
+import SEO from '@/components/SEO';
+import { organizationSchema, localBusinessSchema } from '@/data/structuredData';
 import heroImage from '@/assets/hero-baby-product.jpg';
 import factoryVideo from '@/assets/factory-video.mp4';
 import factoryBackground from '@/assets/factory-workers-new.jpg';
@@ -53,6 +55,10 @@ const Home = () => {
 
   return (
     <div className="min-h-screen overflow-hidden">
+      <SEO 
+        canonical="/"
+        structuredData={{ ...organizationSchema, ...localBusinessSchema }}
+      />
       {/* Hero Section with Parallax */}
       <section className="relative pt-16 md:pt-24 pb-12 md:pb-24 overflow-hidden min-h-[70vh] md:min-h-[85vh] flex items-center">
         {/* Background Image with Parallax Effect */}

@@ -7,6 +7,8 @@ import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 import { useState } from 'react';
+import SEO from '@/components/SEO';
+import { careerSchema } from '@/data/structuredData';
 import careerBackground from '@/assets/career-team-photo.jpg';
 const Career = () => {
   const { toast } = useToast();
@@ -132,6 +134,13 @@ const Career = () => {
     type: 'Full-time'
   }];
   return <div className="min-h-screen pt-20 md:pt-24 pb-0 relative">
+      <SEO 
+        title="Careers - Join Our Team"
+        description="Join A.G. Health Industries and build your career in Nepal's leading hygiene products company. Explore job opportunities in manufacturing, sales, marketing, and more."
+        canonical="/career"
+        keywords="jobs Nepal, career opportunities, hygiene industry jobs, manufacturing jobs Kathmandu, AG Health careers"
+        structuredData={careerSchema}
+      />
       <div className="fixed inset-0 bg-cover bg-center bg-no-repeat -z-10" style={{
       backgroundImage: `url(${careerBackground})`
     }} />

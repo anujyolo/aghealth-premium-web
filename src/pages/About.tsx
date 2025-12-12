@@ -1,5 +1,7 @@
 import { Target, Eye, Award, Users, Globe, TrendingUp, Factory, Heart, BookOpen, Building, ShieldCheck } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import SEO from '@/components/SEO';
+import { organizationSchema } from '@/data/structuredData';
 import teamMember1 from '@/assets/team-member-1-updated.jpg';
 import teamMember2 from '@/assets/team-member-2.jpg';
 import teamMember3 from '@/assets/team-member-3.jpg';
@@ -75,6 +77,13 @@ const About = () => {
     description: 'Supporting local communities and creating employment opportunities'
   }];
   return <div className="min-h-screen pt-20 md:pt-24 pb-16 relative">
+      <SEO 
+        title="About Us - Our Story & Mission"
+        description="Learn about A.G. Health Industries Pvt. Ltd., Nepal's leading hygiene products manufacturer. Our mission, vision, history, and commitment to quality."
+        canonical="/about"
+        keywords="AG Health Industries, Nepal manufacturer, hygiene company, ISO certified, NS mark, Sagun brand"
+        structuredData={organizationSchema}
+      />
       <div className="fixed inset-0 bg-cover bg-center bg-no-repeat -z-10" style={{
       backgroundImage: `url(${factoryBuilding})`
     }} />

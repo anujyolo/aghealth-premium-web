@@ -2,6 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { Calendar, Clock, ArrowLeft, Heart, Activity, Baby, Shield } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import SEO from '@/components/SEO';
 import { blogPosts } from '@/data/blogData';
 import blogArticleBackground from '@/assets/blog-article-background.png';
 
@@ -35,8 +36,33 @@ const BlogArticle = () => {
 
   const IconComponent = post.icon;
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "description": post.excerpt,
+    "datePublished": post.date,
+    "image": post.image,
+    "author": {
+      "@type": "Organization",
+      "name": "A.G. Health Industries"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "A.G. Health Industries",
+      "logo": "https://storage.googleapis.com/gpt-engineer-file-uploads/6SzKisa3IgOyBtKsbOOaAaAvbLo1/uploads/1764399405894-untitled-design-1.png"
+    }
+  };
+
   return (
     <div className="min-h-screen pt-24 pb-16 relative">
+      <SEO 
+        title={post.title}
+        description={post.excerpt}
+        canonical={`/blog/${post.slug}`}
+        keywords={`${post.category}, parenting, health tips, ${post.title.toLowerCase()}`}
+        structuredData={articleSchema}
+      />
       {/* Background */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat -z-10" style={{
         backgroundImage: `url(${blogArticleBackground})`
