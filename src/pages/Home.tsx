@@ -120,6 +120,7 @@ const Home = () => {
                   alt="Baby with Sagun Baby Poko Pants premium diapers showcasing product quality" 
                   width="512" 
                   height="512" 
+                  loading="eager"
                   className="rounded-3xl shadow-2xl max-w-lg mx-auto h-auto object-cover border-2 border-white/10" 
                 />
               </div>

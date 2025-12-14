@@ -119,11 +119,11 @@ const About = () => {
           }} className="border-0 shadow-soft hover:shadow-medium transition-smooth bg-transparent text-center animate-fade-in my-[6px] py-0 mx-[27px] px-[9px]">
                 <CardContent className="p-8 pt-12 space-y-4 relative px-0 py-0 bg-transparent">
                   {stat.value === 'ISO' ? <div className="w-24 h-24 mx-auto flex items-center justify-center">
-                      <img src={isoLogoNew} alt="ISO Certified" className="w-full h-full object-contain" />
+                      <img src={isoLogoNew} alt="ISO Certified" loading="lazy" className="w-full h-full object-contain" />
                     </div> : stat.value === '5+' ? <div className="w-24 h-24 mx-auto flex items-center justify-center">
-                      <img src={agHealthLogoNew} alt="A.G. Health Industries" className="w-full h-full object-contain" />
+                      <img src={agHealthLogoNew} alt="A.G. Health Industries" loading="lazy" className="w-full h-full object-contain" />
                     </div> : stat.value === 'NS' ? <div className="w-24 h-24 mx-auto flex items-center justify-center">
-                      <img src={sagunNsMarkNew} alt="Nepal Standard Mark" className="w-full h-full object-contain" />
+                      <img src={sagunNsMarkNew} alt="Nepal Standard Mark" loading="lazy" className="w-full h-full object-contain" />
                     </div> : <div className="w-16 h-16 mx-auto bg-gradient-primary rounded-2xl flex items-center justify-center">
                       <stat.icon className="w-8 h-8 text-white" />
                     </div>}
@@ -142,7 +142,7 @@ const About = () => {
             <CardContent className="p-8 md:p-12 space-y-8">
               <div className="flex items-center space-x-4">
                 <div className="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 overflow-hidden">
-                  <img src={historyIcon} alt="History" className="w-full h-full object-cover" />
+                  <img src={historyIcon} alt="History" loading="lazy" className="w-full h-full object-cover" />
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-amber-100">Our History</h2>
               </div>
@@ -222,7 +222,7 @@ const About = () => {
             {/* First Team Member */}
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="animate-fade-in">
-                <img src={teamMember1} alt="Leadership team member" className="rounded-3xl shadow-large w-full h-auto object-cover" />
+                <img src={teamMember1} alt="Leadership team member" loading="lazy" className="rounded-3xl shadow-large w-full h-auto object-cover" />
               </div>
               <div className="space-y-6 animate-fade-in-up">
                 <h3 className="text-2xl md:text-3xl font-bold" style={{
@@ -241,14 +241,14 @@ const About = () => {
                 <p className="text-xl text-muted-foreground font-medium">Founder, CEO</p>
               </div>
               <div className="animate-fade-in lg:order-2">
-                <img src={teamMember2} alt="Leadership team member" className="rounded-3xl shadow-large w-full h-auto object-cover" />
+                <img src={teamMember2} alt="Leadership team member" loading="lazy" className="rounded-3xl shadow-large w-full h-auto object-cover" />
               </div>
             </div>
 
             {/* Third Team Member */}
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="animate-fade-in">
-                <img src={teamMember3} alt="Leadership team member" className="rounded-3xl shadow-large w-full max-w-md mx-auto h-auto object-cover" />
+                <img src={teamMember3} alt="Leadership team member" loading="lazy" className="rounded-3xl shadow-large w-full max-w-md mx-auto h-auto object-cover" />
               </div>
               <div className="space-y-6 animate-fade-in-up">
                 <h3 className="text-2xl md:text-3xl font-bold" style={{
