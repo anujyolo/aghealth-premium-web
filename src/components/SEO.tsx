@@ -14,12 +14,12 @@ const BASE_URL = 'https://aghealthindustries.com';
 const DEFAULT_OG_IMAGE = 'https://storage.googleapis.com/gpt-engineer-file-uploads/6SzKisa3IgOyBtKsbOOaAaAvbLo1/uploads/1764399405894-untitled-design-1.png';
 
 const SEO = ({
-  title = 'A.G. Health Industries - Caring for Hygiene, Caring for You',
-  description = 'A.G. Health Industries manufactures premium hygiene products including diapers, face masks, sanitary pads, and toilet paper. Quality hygiene solutions for Nepal and beyond.',
+  title = 'A.G. Health Industries - Premium Hygiene Products Nepal',
+  description = 'Nepal\'s trusted manufacturer of baby diapers, face masks, sanitary pads & toilet paper. Quality hygiene for families.',
   canonical,
   ogImage = DEFAULT_OG_IMAGE,
   ogType = 'website',
-  keywords = 'hygiene products, diapers, face masks, sanitary pads, toilet paper, Nepal, health products, baby diapers, Sagun',
+  keywords = 'hygiene products, diapers, face masks, sanitary pads, toilet paper, Nepal, baby diapers, Sagun',
   structuredData,
 }: SEOProps) => {
   const fullTitle = title.includes('A.G. Health') ? title : `${title} | A.G. Health Industries`;
