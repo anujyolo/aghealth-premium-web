@@ -133,6 +133,7 @@ const Blog = () => {
                       <img
                         src={category.image}
                         alt={category.name}
+                        loading="lazy"
                         className="w-full h-full object-cover"
                       />
                     </div>
@@ -162,6 +163,7 @@ const Blog = () => {
                 <img
                   src={featuredPost.image}
                   alt={featuredPost.title}
+                  loading="lazy"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -217,6 +219,7 @@ const Blog = () => {
                     <img
                       src={post.image}
                       alt={post.title}
+                      loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-110 transition-smooth duration-500"
                     />
                   </div>
