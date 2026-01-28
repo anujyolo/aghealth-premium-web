@@ -61,72 +61,63 @@ const Home = () => {
       />
       {/* Hero Section with Parallax */}
       <section className="relative pt-16 md:pt-24 pb-12 md:pb-24 overflow-hidden min-h-[70vh] md:min-h-[85vh] flex items-center">
-        {/* Background Image with Parallax Effect */}
+        {/* Background Image */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-fixed scale-110" 
+          className="absolute inset-0 bg-cover bg-center" 
           style={{ backgroundImage: `url(${heroFactoryBg})` }} 
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/50" />
-        
-        {/* Animated gradient overlay */}
-        <div className="absolute inset-0 opacity-30 bg-gradient-to-r from-primary/20 via-transparent to-amber-500/20 animate-gradient-shift" style={{ backgroundSize: '200% 200%' }} />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Text Content with Text Reveal Animation */}
             <div className="space-y-5 md:space-y-8 text-center lg:text-left">
               <div className="overflow-hidden">
-                <div className="animate-text-reveal inline-flex items-center space-x-2 glass text-white px-5 py-2.5 rounded-full text-sm font-medium">
+                <div className="inline-flex items-center space-x-2 bg-white/10 text-white px-5 py-2.5 rounded-full text-sm font-medium border border-white/20">
                   <Sparkles className="w-4 h-4" />
                   <span>Premium Hygiene Products</span>
                 </div>
               </div>
               
-              <div className="overflow-hidden">
-                <h1 className="animate-text-reveal text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight" style={{ animationDelay: '0.1s' }}>
+              <div>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
                   <span className="text-[#ddc4a6]">Caring for Hygiene,</span>{' '}
                   <span className="text-gradient-primary block sm:inline">Caring for You</span>
                 </h1>
               </div>
               
-              <div className="overflow-hidden">
-                <p className="animate-text-reveal text-base md:text-lg lg:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto lg:mx-0 text-shadow-lg" style={{ animationDelay: '0.2s' }}>
+              <div>
+                <p className="text-base md:text-lg lg:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                   A.G. Health Industries manufactures premium diapers, face masks, sanitary pads, 
                   and toilet paper. Experience international quality hygiene products made in Nepal.
                 </p>
               </div>
               
-              <div className="overflow-hidden">
-                <div className="animate-text-reveal flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start" style={{ animationDelay: '0.3s' }}>
-                  <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 transition-smooth shadow-large text-base group">
+              <div>
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+                  <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 shadow-large text-base group">
                     <Link to="/products">
                       Explore Products
-                      <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-all duration-300" />
+                      <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </Button>
-                  <Button asChild size="lg" variant="outline" className="glass border-white/30 text-white hover:bg-white/20 hover:border-white/50 transition-all duration-300 text-base hover-lift">
+                  <Button asChild size="lg" variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20 text-base">
                     <Link to="/about">Learn More</Link>
                   </Button>
                 </div>
               </div>
             </div>
 
-            {/* Hero Image with Float Animation */}
+            {/* Hero Image */}
             <div className="relative hidden lg:block">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-amber-500/30 rounded-3xl blur-3xl opacity-40 -z-10" />
-              <div>
-                <img 
-                  src={heroImage} 
-                  alt="Baby with Sagun Baby Poko Pants premium diapers showcasing product quality" 
-                  width="512" 
-                  height="512" 
-                  loading="eager"
-                  className="rounded-3xl shadow-2xl max-w-lg mx-auto h-auto object-cover border-2 border-white/10" 
-                />
-              </div>
-              {/* Decorative elements */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-primary/50 to-transparent rounded-full blur-2xl" />
-              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-tr from-amber-500/40 to-transparent rounded-full blur-2xl" />
+              <img 
+                src={heroImage} 
+                alt="Baby with Sagun Baby Poko Pants premium diapers showcasing product quality" 
+                width="512" 
+                height="512" 
+                loading="eager"
+                className="rounded-3xl shadow-2xl max-w-lg mx-auto h-auto object-cover border-2 border-white/10" 
+              />
             </div>
           </div>
         </div>
@@ -134,7 +125,7 @@ const Home = () => {
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:block">
           <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-            <div className="w-1.5 h-3 bg-white/60 rounded-full mt-2 animate-bounce" />
+            <div className="w-1.5 h-3 bg-white/60 rounded-full mt-2" />
           </div>
         </div>
       </section>
@@ -142,10 +133,10 @@ const Home = () => {
       {/* Values Section */}
       <section className="py-16 md:py-24 relative">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-fixed" 
+          className="absolute inset-0 bg-cover bg-center" 
           style={{ backgroundImage: `url(${factoryBackground})` }} 
         />
-        <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
+        <div className="absolute inset-0 bg-black/50" />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <ScrollReveal>
@@ -162,9 +153,9 @@ const Home = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {values.map((value, index) => (
               <ScrollReveal key={value.title} delay={index * 100}>
-                <Card className="border-0 glass hover-lift group h-full cursor-default">
+                <Card className="border-0 bg-white/10 border border-white/20 group h-full cursor-default">
                   <CardContent className="p-6 text-center space-y-4">
-                    <div className="w-16 h-16 mx-auto bg-gradient-primary rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg group-hover:shadow-primary/50">
+                    <div className="w-16 h-16 mx-auto bg-gradient-primary rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform shadow-lg">
                       <value.icon className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-xl font-semibold text-amber-100 group-hover:text-white transition-colors">
@@ -184,7 +175,7 @@ const Home = () => {
       {/* Product Categories Preview */}
       <section className="py-16 md:py-24 relative">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-fixed" 
+          className="absolute inset-0 bg-cover bg-center" 
           style={{ backgroundImage: `url(${herooBackground})` }} 
         />
         <div className="absolute inset-0 bg-black/50" />
@@ -330,33 +321,30 @@ const Home = () => {
       {/* Featured Products Section */}
       <section className="py-16 md:py-24 relative">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-fixed" 
+          className="absolute inset-0 bg-cover bg-center" 
           style={{ backgroundImage: `url(${factoryTeam})` }} 
         />
-        <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-black/60" />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Video */}
             <ScrollReveal direction="left" className="order-2 lg:order-1">
-              <div className="relative group">
-                <div className="absolute -inset-4 bg-gradient-to-r from-primary/30 to-amber-500/30 rounded-3xl blur-2xl opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
-                <video 
-                  src={factoryVideo} 
-                  autoPlay 
-                  loop 
-                  muted 
-                  playsInline 
-                  preload="none"
-                  className="relative rounded-3xl shadow-2xl w-full max-w-7xl h-auto object-cover border border-white/10" 
-                />
-              </div>
+              <video 
+                src={factoryVideo} 
+                autoPlay 
+                loop 
+                muted 
+                playsInline 
+                preload="none"
+                className="rounded-3xl shadow-2xl w-full max-w-7xl h-auto object-cover border border-white/10" 
+              />
             </ScrollReveal>
 
             {/* Content */}
             <ScrollReveal direction="right" className="order-1 lg:order-2">
               <div className="space-y-6 flex flex-col items-center text-center lg:items-start lg:text-left">
-                <div className="inline-flex items-center space-x-2 glass px-5 py-2.5 rounded-full text-sm font-medium">
+                <div className="inline-flex items-center space-x-2 bg-white/10 border border-white/20 px-5 py-2.5 rounded-full text-sm font-medium">
                   <span className="font-black text-xl md:text-2xl text-primary">Quality You Can Trust</span>
                 </div>
                 
@@ -385,10 +373,10 @@ const Home = () => {
                   ))}
                 </ul>
 
-                <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 transition-all duration-300 shadow-large group hover-lift mt-4">
+                <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 shadow-large group mt-4">
                   <Link to="/about">
                     About Our Company
-                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
+                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </Button>
               </div>
@@ -399,26 +387,20 @@ const Home = () => {
 
       {/* CTA Section */}
       <section className="py-16 md:py-24 relative overflow-hidden bg-gradient-to-br from-[#1a4a4f] via-[#295c61] to-[#1a4a4f]">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-40" />
-        
-        {/* Gradient orbs */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl" />
-        
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <ScrollReveal direction="scale">
             <div className="max-w-3xl mx-auto text-center space-y-8">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white text-shadow-lg">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white">
                 Experience Premium Hygiene
               </h2>
               <p className="text-lg md:text-xl text-white/90 leading-relaxed">
                 Join thousands of satisfied customers who trust A.G. Health Industries for their daily hygiene needs
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 transition-all duration-300 shadow-2xl text-base hover-lift group">
+                <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 shadow-2xl text-base group">
                   <Link to="/products">
                     Shop Now
-                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
+                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </Button>
               </div>
