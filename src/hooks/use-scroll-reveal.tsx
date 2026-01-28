@@ -67,7 +67,7 @@ export const ScrollReveal = ({
   return (
     <div
       ref={ref}
-      className={`transition-all duration-700 ease-out ${className} ${
+      className={`transition-all duration-300 ease-out ${className} ${
         isVisible 
           ? 'opacity-100 translate-y-0 translate-x-0 scale-100' 
           : `opacity-0 ${getTransformClass()}`
