@@ -77,7 +77,7 @@ const Home = () => {
             <div className="space-y-5 md:space-y-8 text-center lg:text-left">
               <div className="overflow-hidden">
                 <div className="animate-text-reveal inline-flex items-center space-x-2 glass text-white px-5 py-2.5 rounded-full text-sm font-medium">
-                  <Sparkles className="w-4 h-4 animate-pulse" />
+                  <Sparkles className="w-4 h-4" />
                   <span>Premium Hygiene Products</span>
                 </div>
               </div>
@@ -98,7 +98,7 @@ const Home = () => {
               
               <div className="overflow-hidden">
                 <div className="animate-text-reveal flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start" style={{ animationDelay: '0.3s' }}>
-                  <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 transition-smooth shadow-large text-base group btn-pulse animate-pulse-glow">
+                  <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 transition-smooth shadow-large text-base group">
                     <Link to="/products">
                       Explore Products
                       <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-all duration-300" />
@@ -113,8 +113,8 @@ const Home = () => {
 
             {/* Hero Image with Float Animation */}
             <div className="relative hidden lg:block">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-amber-500/30 rounded-3xl blur-3xl opacity-40 animate-pulse-glow -z-10" />
-              <div className="animate-float">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-amber-500/30 rounded-3xl blur-3xl opacity-40 -z-10" />
+              <div>
                 <img 
                   src={heroImage} 
                   alt="Baby with Sagun Baby Poko Pants premium diapers showcasing product quality" 
@@ -125,8 +125,8 @@ const Home = () => {
                 />
               </div>
               {/* Decorative elements */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-primary/50 to-transparent rounded-full blur-2xl animate-pulse" />
-              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-tr from-amber-500/40 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }} />
+              <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-primary/50 to-transparent rounded-full blur-2xl" />
+              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-tr from-amber-500/40 to-transparent rounded-full blur-2xl" />
             </div>
           </div>
         </div>
@@ -320,7 +320,7 @@ const Home = () => {
 
           <ScrollReveal delay={400}>
             <div className="text-center">
-              <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 transition-all duration-300 shadow-large group btn-pulse hover-lift">
+              <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 transition-all duration-300 shadow-large group hover-lift">
                 <Link to="/products">
                   View All Products
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
@@ -351,7 +351,7 @@ const Home = () => {
                   loop 
                   muted 
                   playsInline 
-                  preload="metadata" 
+                  preload="none"
                   className="relative rounded-3xl shadow-2xl w-full max-w-7xl h-auto object-cover border border-white/10" 
                 />
               </div>
@@ -389,7 +389,7 @@ const Home = () => {
                   ))}
                 </ul>
 
-                <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 transition-all duration-300 shadow-large group btn-pulse hover-lift mt-4">
+                <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 transition-all duration-300 shadow-large group hover-lift mt-4">
                   <Link to="/about">
                     About Our Company
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
@@ -405,9 +405,9 @@ const Home = () => {
       <section className="py-16 md:py-24 relative overflow-hidden bg-gradient-to-br from-[#1a4a4f] via-[#295c61] to-[#1a4a4f]">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-40" />
         
-        {/* Animated gradient orbs */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        {/* Gradient orbs */}
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl" />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <ScrollReveal direction="scale">
