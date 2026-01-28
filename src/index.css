@@ -168,13 +168,13 @@ All colors MUST be HSL.
     @apply scale-105;
   }
 
-  /* Glass morphism */
+  /* Glass morphism - simplified for performance */
   .glass {
-    @apply bg-white/10 backdrop-blur-xl border border-white/20;
+    @apply bg-white/10 border border-white/20;
   }
 
   .glass-dark {
-    @apply bg-black/20 backdrop-blur-xl border border-white/10;
+    @apply bg-black/20 border border-white/10;
   }
 
   /* Premium text effects */
