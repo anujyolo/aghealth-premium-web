@@ -119,11 +119,11 @@ const About = () => {
           }} className="border-0 shadow-soft hover:shadow-medium transition-smooth bg-transparent text-center animate-fade-in my-[6px] py-0 mx-[27px] px-[9px]">
                 <CardContent className="p-8 pt-12 space-y-4 relative px-0 py-0 bg-transparent">
                   {stat.value === 'ISO' ? <div className="w-24 h-24 mx-auto flex items-center justify-center">
-                      <img src={isoLogoNew} alt="ISO Certified" loading="lazy" className="w-full h-full object-contain" />
+                      <img src={isoLogoNew} alt="ISO Certified" className="w-full h-full object-contain" />
                     </div> : stat.value === '5+' ? <div className="w-24 h-24 mx-auto flex items-center justify-center">
-                      <img src={agHealthLogoNew} alt="A.G. Health Industries" loading="lazy" className="w-full h-full object-contain" />
+                      <img src={agHealthLogoNew} alt="A.G. Health Industries" className="w-full h-full object-contain" />
                     </div> : stat.value === 'NS' ? <div className="w-24 h-24 mx-auto flex items-center justify-center">
-                      <img src={sagunNsMarkNew} alt="Nepal Standard Mark" loading="lazy" className="w-full h-full object-contain" />
+                      <img src={sagunNsMarkNew} alt="Nepal Standard Mark" className="w-full h-full object-contain" />
                     </div> : <div className="w-16 h-16 mx-auto bg-gradient-primary rounded-2xl flex items-center justify-center">
                       <stat.icon className="w-8 h-8 text-white" />
                     </div>}

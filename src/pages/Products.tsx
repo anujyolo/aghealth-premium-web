@@ -169,7 +169,6 @@ const Products = () => {
                         <img 
                           src={sagunBabyPokoPants} 
                           alt="Sagun Baby Poko Pants" 
-                          loading="lazy"
                           className="w-full h-32 object-contain"
                         />
                       </div>
@@ -177,7 +176,6 @@ const Products = () => {
                         <img 
                           src={sagunBabyPantsLogo} 
                           alt="Sagun Baby Pants" 
-                          loading="lazy"
                           className="w-full h-32 object-contain"
                         />
                       </div>
@@ -191,7 +189,6 @@ const Products = () => {
                       <img 
                         src={sagunFaceMaskBox} 
                         alt="Sagun Disposable Protective Face Masks" 
-                        loading="lazy"
                         className="w-full h-32 object-contain"
                       />
                     </div>
@@ -204,7 +201,6 @@ const Products = () => {
                       <img 
                         src={sagunPad} 
                         alt="Sagun Cotton Comfort Pad" 
-                        loading="lazy"
                         className="w-full h-32 object-contain"
                       />
                     </div>
@@ -372,7 +368,6 @@ const Products = () => {
                 <img 
                   src={sagunPadProduct} 
                   alt={selectedProduct?.name} 
-                  loading="lazy"
                   className="w-full h-full object-contain"
                 />
               ) : (
