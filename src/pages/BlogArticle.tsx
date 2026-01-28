@@ -107,7 +107,6 @@ const BlogArticle = () => {
               <img
                 src={post.image}
                 alt={post.title}
-                loading="lazy"
                 className="w-full h-auto object-cover"
               />
             </div>

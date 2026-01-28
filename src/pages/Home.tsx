@@ -210,10 +210,9 @@ const Home = () => {
                     <img 
                       src={sagunBabyPantsLogo} 
                       alt="Sagun Baby Pants logo" 
-                      width="624" 
-                      height="624" 
-                      loading="lazy" 
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                        width="624" 
+                        height="624" 
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent group-hover:from-black/70 transition-all duration-500" />
@@ -240,10 +239,9 @@ const Home = () => {
                       <img 
                         src={sagunFaceMasks} 
                         alt="Sagun disposable protective face masks" 
-                        width="373" 
-                        height="290" 
-                        loading="lazy" 
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                          width="373" 
+                          height="290" 
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent group-hover:from-black/70 transition-all duration-500" />
@@ -268,10 +266,9 @@ const Home = () => {
                       <img 
                         src={sagunPadLogo} 
                         alt="Sagun sanitary pad logo" 
-                        width="300" 
-                        height="300" 
-                        loading="lazy" 
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                          width="300" 
+                          height="300" 
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent group-hover:from-black/70 transition-all duration-500" />
@@ -296,10 +293,9 @@ const Home = () => {
                       <img 
                         src={sagunToiletPaperLogo} 
                         alt="Sagun toilet paper logo" 
-                        width="624" 
-                        height="290" 
-                        loading="lazy" 
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                          width="624" 
+                          height="290" 
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent group-hover:from-black/70 transition-all duration-500" />

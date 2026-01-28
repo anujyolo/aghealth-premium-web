@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <img src={agHealthLogo} alt="A.G. Health Industries logo" loading="lazy" className="w-12 h-12 object-contain" />
+              <img src={agHealthLogo} alt="A.G. Health Industries logo" className="w-12 h-12 object-contain" />
               <div>
                 <div className="text-lg font-bold text-foreground">A.G. Health Industries</div>
                 <div className="text-xs text-muted-foreground">Pvt. Ltd.</div>
