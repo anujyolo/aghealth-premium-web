@@ -345,7 +345,7 @@ const Career = () => {
               Copy Email Address
             </Button>
             <Button asChild size="lg" className="bg-amber-100/20 border-2 border-amber-100 text-amber-100 hover:bg-amber-100 hover:text-primary transition-smooth">
-              <a href="tel:+9771234567890">Call Us</a>
+              <a href="tel:+9779801116956">Call Us</a>
             </Button>
           </div>
           
