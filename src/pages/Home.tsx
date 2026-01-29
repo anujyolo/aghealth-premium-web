@@ -109,7 +109,7 @@ const Home = () => {
             </div>
 
             {/* Hero Image */}
-            <div className="relative hidden lg:block animate-fade-in" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
+            <div className="relative hidden lg:block animate-fade-in" style={{ animationDelay: '0.1s', animationFillMode: 'both' }}>
               <img 
                 src={heroImage} 
                 alt="Baby with Sagun Baby Poko Pants premium diapers showcasing product quality" 
