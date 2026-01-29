@@ -72,28 +72,28 @@ const Home = () => {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Text Content with Text Reveal Animation */}
             <div className="space-y-5 md:space-y-8 text-center lg:text-left">
-              <div>
+              <div className="animate-fade-in">
                 <div className="inline-flex items-center space-x-2 bg-white/10 text-white px-5 py-2.5 rounded-full text-sm font-medium border border-white/20">
                   <Sparkles className="w-4 h-4" />
                   <span>Premium Hygiene Products</span>
                 </div>
               </div>
               
-              <div>
+              <div className="animate-fade-in">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
                   <span className="text-[#ddc4a6]">Caring for Hygiene,</span>{' '}
                   <span className="text-gradient-primary block sm:inline">Caring for You</span>
                 </h1>
               </div>
               
-              <div>
+              <div className="animate-fade-in">
                 <p className="text-base md:text-lg lg:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                   A.G. Health Industries manufactures premium diapers, face masks, sanitary pads, 
                   and toilet paper. Experience international quality hygiene products made in Nepal.
                 </p>
               </div>
               
-              <div>
+              <div className="animate-fade-in">
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
                   <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 shadow-large text-base group">
                     <Link to="/products">
@@ -109,7 +109,7 @@ const Home = () => {
             </div>
 
             {/* Hero Image */}
-            <div className="relative hidden lg:block">
+            <div className="relative hidden lg:block animate-fade-in">
               <img 
                 src={heroImage} 
                 alt="Baby with Sagun Baby Poko Pants premium diapers showcasing product quality" 

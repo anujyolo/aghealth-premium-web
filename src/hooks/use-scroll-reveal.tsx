@@ -52,14 +52,14 @@ export const ScrollReveal = ({
 }: ScrollRevealProps) => {
   const { ref, isVisible } = useScrollReveal();
 
-  // Simplified: only use opacity for performance
+  // Lightweight animation - opacity only with fast duration
   return (
     <div
       ref={ref}
-      className={`transition-opacity duration-150 ease-out ${className} ${
+      className={`transition-opacity duration-200 ${className} ${
         isVisible ? 'opacity-100' : 'opacity-0'
       }`}
-      style={delay > 0 ? { transitionDelay: `${delay}ms` } : undefined}
+      style={delay > 0 ? { transitionDelay: `${Math.min(delay, 100)}ms` } : undefined}
     >
       {children}
     </div>

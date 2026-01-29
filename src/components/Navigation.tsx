@@ -135,10 +135,10 @@ const Navigation = () => {
                 <div>
                   <p className="font-semibold text-foreground">Phone</p>
                   <a 
-                    href="tel:+977-71-590123" 
+                    href="tel:+9779801116956" 
                     className="text-muted-foreground hover:text-primary transition-smooth"
                   >
-                    +977-71-590123
+                    +977 9801116956
                   </a>
                 </div>
               </div>
