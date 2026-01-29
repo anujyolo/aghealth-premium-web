@@ -52,27 +52,14 @@ export const ScrollReveal = ({
 }: ScrollRevealProps) => {
   const { ref, isVisible } = useScrollReveal();
 
-  const getTransformClass = () => {
-    switch (direction) {
-      case 'up': return 'translate-y-8';
-      case 'down': return '-translate-y-8';
-      case 'left': return 'translate-x-8';
-      case 'right': return '-translate-x-8';
-      case 'scale': return 'scale-95';
-      case 'fade': return '';
-      default: return 'translate-y-8';
-    }
-  };
-
+  // Simplified: only use opacity for performance
   return (
     <div
       ref={ref}
-      className={`transition-all duration-300 ease-out ${className} ${
-        isVisible 
-          ? 'opacity-100 translate-y-0 translate-x-0 scale-100' 
-          : `opacity-0 ${getTransformClass()}`
+      className={`transition-opacity duration-150 ease-out ${className} ${
+        isVisible ? 'opacity-100' : 'opacity-0'
       }`}
-      style={{ transitionDelay: `${delay}ms` }}
+      style={delay > 0 ? { transitionDelay: `${delay}ms` } : undefined}
     >
       {children}
     </div>
