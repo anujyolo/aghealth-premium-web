@@ -328,8 +328,8 @@ const Home = () => {
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Video - hidden on mobile, shown on desktop left */}
-            <div className="hidden lg:block">
+            {/* Video */}
+            <div className="order-2 lg:order-1">
               <video 
                 src={factoryVideo} 
                 autoPlay 
@@ -342,7 +342,7 @@ const Home = () => {
             </div>
 
             {/* Content */}
-            <ScrollReveal direction="right">
+            <ScrollReveal direction="right" className="order-1 lg:order-2">
               <div className="space-y-6 flex flex-col items-center text-center lg:items-start lg:text-left">
                 <div className="inline-flex items-center space-x-2 bg-white/10 border border-white/20 px-5 py-2.5 rounded-full text-sm font-medium">
                   <span className="font-black text-xl md:text-2xl text-primary">Quality You Can Trust</span>
@@ -381,19 +381,6 @@ const Home = () => {
                 </Button>
               </div>
             </ScrollReveal>
-
-            {/* Video - shown on mobile below content */}
-            <div className="lg:hidden">
-              <video 
-                src={factoryVideo} 
-                autoPlay 
-                loop 
-                muted 
-                playsInline 
-                preload="none"
-                className="rounded-3xl shadow-2xl w-full h-auto object-cover border border-white/10" 
-              />
-            </div>
           </div>
         </div>
       </section>
