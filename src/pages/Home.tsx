@@ -327,23 +327,10 @@ const Home = () => {
         <div className="absolute inset-0 bg-black/60" />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Video */}
-            <div className="order-2 lg:order-1">
-              <video 
-                src={factoryVideo} 
-                autoPlay 
-                loop 
-                muted 
-                playsInline 
-                preload="none"
-                className="rounded-3xl shadow-2xl w-full max-w-7xl h-auto object-cover border border-white/10" 
-              />
-            </div>
-
+        <div className="flex flex-col gap-12 items-center">
             {/* Content */}
-            <ScrollReveal direction="right" className="order-1 lg:order-2">
-              <div className="space-y-6 flex flex-col items-center text-center lg:items-start lg:text-left">
+            <ScrollReveal direction="up" className="w-full">
+              <div className="space-y-6 flex flex-col items-center text-center">
                 <div className="inline-flex items-center space-x-2 bg-white/10 border border-white/20 px-5 py-2.5 rounded-full text-sm font-medium">
                   <span className="font-black text-xl md:text-2xl text-primary">Quality You Can Trust</span>
                 </div>
@@ -352,18 +339,17 @@ const Home = () => {
                   Made in Nepal, Trusted Worldwide
                 </h2>
                 
-                <p className="font-medium leading-relaxed text-white/90 text-base md:text-lg max-w-xl">
+                <p className="font-medium leading-relaxed text-white/90 text-base md:text-lg max-w-2xl">
                   Our state-of-the-art manufacturing facility in Nepal produces hygiene products 
                   that meet international quality standards. Each product undergoes rigorous testing 
                   to ensure safety, comfort, and reliability.
                 </p>
 
-                <ul className="space-y-4 w-full max-w-md">
+                <ul className="grid sm:grid-cols-2 gap-4 w-full max-w-2xl">
                   {['ISO and NS Certified Manufacturing', 'Dermatologically Tested', 'Eco-Friendly Materials', 'Affordable Premium Quality'].map((item, index) => (
                     <li 
                       key={item} 
                       className="flex items-center space-x-3 group/item"
-                      style={{ animationDelay: `${index * 100}ms` }}
                     >
                       <div className="w-8 h-8 bg-gradient-primary rounded-full flex items-center justify-center flex-shrink-0 group-hover/item:scale-110 transition-transform duration-300 shadow-lg">
                         <div className="w-2 h-2 bg-white rounded-full" />
@@ -381,6 +367,19 @@ const Home = () => {
                 </Button>
               </div>
             </ScrollReveal>
+
+            {/* Video */}
+            <div className="w-full max-w-4xl">
+              <video 
+                src={factoryVideo} 
+                autoPlay 
+                loop 
+                muted 
+                playsInline 
+                preload="none"
+                className="rounded-3xl shadow-2xl w-full h-auto object-cover border border-white/10" 
+              />
+            </div>
           </div>
         </div>
       </section>
