@@ -330,7 +330,7 @@ const Home = () => {
         <div className="flex flex-col gap-12 items-center">
             {/* Content */}
             <ScrollReveal direction="up" className="w-full">
-              <div className="space-y-6 flex flex-col items-start text-left">
+              <div className="space-y-6 flex flex-col items-end text-right">
                 <div className="inline-flex items-center space-x-2 bg-white/10 border border-white/20 px-5 py-2.5 rounded-full text-sm font-medium">
                   <span className="font-black text-xl md:text-2xl text-primary">Quality You Can Trust</span>
                 </div>
