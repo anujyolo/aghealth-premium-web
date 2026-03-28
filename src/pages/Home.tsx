@@ -369,7 +369,7 @@ const Home = () => {
             </ScrollReveal>
 
             {/* Video */}
-            <div className="w-full max-w-4xl">
+            <div className="w-full flex justify-start">
               <video 
                 src={factoryVideo} 
                 autoPlay 
@@ -377,7 +377,7 @@ const Home = () => {
                 muted 
                 playsInline 
                 preload="none"
-                className="rounded-3xl shadow-2xl w-full h-auto object-cover border border-white/10" 
+                className="rounded-2xl shadow-2xl w-full max-w-xl h-auto object-cover border border-white/10" 
               />
             </div>
           </div>
