@@ -343,7 +343,7 @@ const Home = () => {
 
             {/* Content - Right side */}
             <ScrollReveal direction="up" className="order-1 lg:order-2">
-              <div className="space-y-6 flex flex-col items-end text-right">
+              <div className="space-y-6 flex flex-col items-center text-center">
                 <div className="inline-flex items-center space-x-2 bg-white/10 border border-white/20 px-5 py-2.5 rounded-full text-sm font-medium">
                   <span className="font-black text-xl md:text-2xl text-primary">Quality You Can Trust</span>
                 </div>
