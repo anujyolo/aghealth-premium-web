@@ -358,7 +358,7 @@ const Home = () => {
                   to ensure safety, comfort, and reliability.
                 </p>
 
-                <ul className="grid sm:grid-cols-2 gap-4 w-full max-w-2xl">
+                <ul className="grid grid-cols-1 gap-4 w-full max-w-2xl">
                   {['ISO and NS Certified Manufacturing', 'Dermatologically Tested', 'Eco-Friendly Materials', 'Affordable Premium Quality'].map((item, index) => (
                     <li 
                       key={item} 
