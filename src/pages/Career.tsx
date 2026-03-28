@@ -38,7 +38,7 @@ const Career = () => {
         if (error.message?.includes('LIMIT_REACHED') || error.message?.includes('maximum number of applications')) {
           toast({
             title: "Application Limit Reached",
-            description: "You have already submitted 2 applications with this email address. Please use a different email or contact us directly.",
+            description: "You have already submitted 2 applications this month. Please wait 30 days before applying again.",
             variant: "destructive",
           });
           return;
