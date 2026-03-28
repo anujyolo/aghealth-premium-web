@@ -78,10 +78,15 @@ const handler = async (req: Request): Promise<Response> => {
 
     const normalizedEmail = application.email.trim().toLowerCase();
 
+    // Check submissions in the last 30 days
+    const oneMonthAgo = new Date();
+    oneMonthAgo.setDate(oneMonthAgo.getDate() - 30);
+
     const { count, error: countError } = await supabaseAdmin
       .from("career_submissions")
       .select("*", { count: "exact", head: true })
-      .eq("email", normalizedEmail);
+      .eq("email", normalizedEmail)
+      .gte("submitted_at", oneMonthAgo.toISOString());
 
     if (countError) {
       console.error("Error checking submission count:", countError);
@@ -93,7 +98,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     if ((count ?? 0) >= MAX_SUBMISSIONS_PER_EMAIL) {
       return new Response(
-        JSON.stringify({ error: "LIMIT_REACHED", message: "You have already submitted the maximum number of applications (2) with this email address." }),
+        JSON.stringify({ error: "LIMIT_REACHED", message: "You have already submitted 2 applications this month. Please wait 30 days before applying again." }),
         { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
