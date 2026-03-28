@@ -33,7 +33,28 @@ const Career = () => {
         body: application,
       });
 
-      if (error) throw error;
+      if (error) {
+        // Check if the response contains limit reached error
+        if (error.message?.includes('LIMIT_REACHED') || error.message?.includes('maximum number of applications')) {
+          toast({
+            title: "Application Limit Reached",
+            description: "You have already submitted 2 applications with this email address. Please use a different email or contact us directly.",
+            variant: "destructive",
+          });
+          return;
+        }
+        throw error;
+      }
+
+      // Also check data for limit error (edge function may return 429)
+      if (data?.error === 'LIMIT_REACHED') {
+        toast({
+          title: "Application Limit Reached",
+          description: data.message || "You have already submitted 2 applications with this email address.",
+          variant: "destructive",
+        });
+        return;
+      }
 
       toast({
         title: "Application Submitted!",
