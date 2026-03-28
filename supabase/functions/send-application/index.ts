@@ -1,5 +1,6 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { Resend } from "https://esm.sh/resend@4.0.0";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.1";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
@@ -17,7 +18,8 @@ interface ApplicationRequest {
   coverLetter: string;
 }
 
-// Input validation helper
+const MAX_SUBMISSIONS_PER_EMAIL = 2;
+
 const validateInput = (application: ApplicationRequest): string | null => {
   if (!application.fullName || application.fullName.length > 100) {
     return "Invalid name provided";
@@ -40,7 +42,6 @@ const validateInput = (application: ApplicationRequest): string | null => {
   return null;
 };
 
-// Sanitize HTML to prevent XSS
 const escapeHtml = (text: string): string => {
   return text
     .replace(/&/g, "&amp;")
@@ -58,7 +59,6 @@ const handler = async (req: Request): Promise<Response> => {
   try {
     const application: ApplicationRequest = await req.json();
     
-    // Validate input
     const validationError = validateInput(application);
     if (validationError) {
       return new Response(
@@ -70,9 +70,36 @@ const handler = async (req: Request): Promise<Response> => {
       );
     }
 
-    console.log("Received application from:", application.email);
+    // Check submission count using service role
+    const supabaseAdmin = createClient(
+      Deno.env.get("SUPABASE_URL")!,
+      Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
+    );
 
-    // Sanitize all input before sending email
+    const normalizedEmail = application.email.trim().toLowerCase();
+
+    const { count, error: countError } = await supabaseAdmin
+      .from("career_submissions")
+      .select("*", { count: "exact", head: true })
+      .eq("email", normalizedEmail);
+
+    if (countError) {
+      console.error("Error checking submission count:", countError);
+      return new Response(
+        JSON.stringify({ error: "Failed to process your application. Please try again later." }),
+        { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    if ((count ?? 0) >= MAX_SUBMISSIONS_PER_EMAIL) {
+      return new Response(
+        JSON.stringify({ error: "LIMIT_REACHED", message: "You have already submitted the maximum number of applications (2) with this email address." }),
+        { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    console.log("Received application from:", normalizedEmail);
+
     const sanitizedApplication = {
       fullName: escapeHtml(application.fullName),
       email: escapeHtml(application.email),
@@ -106,16 +133,25 @@ const handler = async (req: Request): Promise<Response> => {
     });
 
     if ((emailResponse as any).error) {
-      // Log detailed error server-side only
       console.error("Resend error details:", (emailResponse as any).error);
-      // Return generic error to client
       return new Response(
         JSON.stringify({ error: "Failed to send application. Please try again later." }),
-        {
-          status: 500,
-          headers: { ...corsHeaders, "Content-Type": "application/json" },
-        }
+        { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
+    }
+
+    // Record the submission
+    const { error: insertError } = await supabaseAdmin
+      .from("career_submissions")
+      .insert({
+        email: normalizedEmail,
+        full_name: application.fullName,
+        position: application.position || null,
+      });
+
+    if (insertError) {
+      console.error("Error recording submission:", insertError);
+      // Email was sent successfully, so we still return success
     }
 
     console.log("Email sent successfully");
@@ -125,15 +161,10 @@ const handler = async (req: Request): Promise<Response> => {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   } catch (error: any) {
-    // Log detailed error server-side only
     console.error("Error sending application email:", error);
-    // Return generic error to client
     return new Response(
       JSON.stringify({ error: "An error occurred while submitting your application. Please try again later." }),
-      {
-        status: 500,
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-      }
+      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
   }
 };
